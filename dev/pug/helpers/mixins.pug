@@ -1,0 +1,39 @@
+mixin icon(name,mod)
+    if(mod)
+        svg(class="svg-sprite-icon icon-" + name + ' ' + mod)
+            use(xlink:href="static/images/sprite/symbol/sprite.svg#" + name)
+    else
+        svg(class="svg-sprite-icon icon-" + name)
+            use(xlink:href="static/images/sprite/symbol/sprite.svg#" + name)
+
+mixin breadcrumb(levels)
+    .breadcrumbs(aria-label="breadcrumb")
+        ol.breadcrumbs__list(itemscope itemtype="http://schema.org/BreadcrumbList")
+            each level, index in levels
+                //- Index is zero based
+                - var count = index+1
+
+                li.breadcrumbs__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                    a(href="#{level[1]}" aria-level!=count).breadcrumbs__link
+                        span(itemprop="name") #{level[0]}
+
+                        //- Don't show the divider on the last loop
+                    if count < levels.length
+                        i.breadcrumbs__symbol(aria-hidden="true").breadcrumbs__divider
+                    meta(itemprop="position" content!=count)
+
+mixin itemCard(type, name, link, image, description, details)
+    li(class="item " +type)
+        a(href="" +link target="_self").item__link
+            .item__body
+                picture.item__frame
+                    source(type="image/webp" srcset="static/images/content/" +image +".webp" )
+                    img(itemprop="image" src="static/images/content/" +image +".png").item__frame-image
+                .item__controls
+                    button(type="button").item__btn.item__btn--expand
+                    button(type="button").item__btn.item__btn--wish
+                    button(type="button").item__btn.item__btn--cart
+                .item__info
+                    b.item__description=description
+                    span.item__details=details
+            h2.item__name=name

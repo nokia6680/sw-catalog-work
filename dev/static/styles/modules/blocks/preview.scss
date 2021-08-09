@@ -1,0 +1,43 @@
+.preview {
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 4rem 4.375rem 4rem 8.75rem;
+
+    margin-bottom: 0.625rem;
+
+    &__wrapper {
+        width: 100%;
+
+        @include flex-setting(row, space-between, center);
+    }
+
+    &__info {
+        width: 55.78093306288032%;
+        @include flex-setting(column, flex-start, flex-start);
+    }
+
+    &__title {
+        @include font-setting($title-font, 2.625rem, 1.222, 400, $bordo);
+        margin-bottom: 1.25rem;
+    }
+
+    &__description {
+        @include font-setting($main-font, 1.25rem, 1.15, 400, rgba(51, 51, 51, 0.9));
+        text-align: left;
+        max-width: 100%;
+    }
+
+    &__frame {
+        width: 40.56795131845842%;
+        @include flex-setting(column, center, center);
+
+        &-image {
+            filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+        }
+    }
+}

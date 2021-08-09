@@ -1,0 +1,96 @@
+@mixin box($width,$height: $width) {
+    width: $width;
+    height: $height;
+}
+@mixin cover-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+$units: 1px !default;
+@mixin screen($res-first, $res-last: $res-first) {
+    @if $res-first == $res-last {
+        @media screen and (max-width: if(unitless($res-first), ($res-first - 1) *$units, $res-first)) {
+            @content;
+        }
+    } @else
+    if $res-first < $res-last {
+        @media screen and (min-width: if(unitless($res-first), $res-first*$units, $res-first)) and (max-width: if(unitless($res-last), $res-last*$units, $res-last)) {
+            @content;
+        }
+    }
+}
+@mixin min-screen($res) {
+    @media screen and (min-width: if(unitless($res), $res*$units, $res)) {
+        @content;
+    }
+}
+@mixin font-setting($family, $size, $line-height, $font-width, $color) {
+    font-family: $family;
+    font-size: $size;
+    line-height: $line-height;
+    font-weight: $font-width;
+    color: $color;
+}
+@mixin pseudo($pos: absolute, $content: '') {
+    @include flex-setting(column, center, center);
+    content: $content;
+    position: $pos;
+}
+@mixin flex-setting($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin checkbox-default {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+    padding-left: 2.125rem;
+}
+@mixin custom-checkbox {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(51, 51, 51, 0.8);
+    top: 0;
+    left: 0;
+}
+@mixin hover-checkbox {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $bordo;
+    transition: 0.2s ease-in;
+    top: 0;
+    left: 0;
+}
+@mixin checkbox-checked {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-color: $bordo;
+    background-color: $bordo;
+    top: 0;
+    left: 0;
+}
+@mixin checkbox-disabled {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-color: rgba(51, 51, 51, 0.5);
+    background-color: rgba(51, 51, 51, 0.5);
+    top: 0;
+    left: 0;
+}

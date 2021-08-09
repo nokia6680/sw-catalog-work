@@ -1,0 +1,33 @@
+.breadcrumbs {
+    width: auto;
+    @include flex-setting(column, center, center);
+
+    &__list {
+        width: auto;
+        @include flex-setting(row, flex-start, center);
+    }
+
+    &__item {
+        width: auto;
+        padding-right: 2.1875rem;
+        position: relative;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        @include font-setting($title-font, 1.125rem, 1.2, 400, rgba(0, 0, 0, 0.7));
+        text-decoration: none;
+    }
+
+    &__divider {
+        margin-left: 2.1875rem;
+        display: inline-flex;
+        width: 40px;
+        height: 1px;
+        background-color: black;
+        margin-bottom: 0.25rem;
+    }
+}

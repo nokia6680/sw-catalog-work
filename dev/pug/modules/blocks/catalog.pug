@@ -1,0 +1,27 @@
+section.catalog
+    .catalog__wrapper
+        .catalog__head
+            button(type="button").catalog__opener.js-filter-toggle
+            +breadcrumb([["Главная ", "/index.html"], ["Шампанские и игристые вина ", "#"]])
+        .catalog__body
+            .catalog__filter.filter
+                ul.filter__list
+                    li.filter__item
+                        b.filter__name.active Стекло
+                        ul.filter__options
+                            li.filter__options-item
+                                input(type="checkbox" name="filter-1-1" id="filter-1-1").filter__options-input
+                                label(for="filter-1-1").filter__options-label Бокалы
+                    li.filter__item
+                        b.filter__name.active Коньяки
+                        ul.filter__options
+                            li.filter__options-item
+                                input(type="checkbox" name="filter-2-1" id="filter-2-1").filter__options-input
+                                label(for="filter-2-1").filter__options-label Hine
+            ul.catalog__list
+                +itemCard('catalog__item', 'Point Gruner Veltliner', 'itemcard.html', 'bottle-1', 'Грюнер вельтлинер, Nigl, 2018 г.', 'Белое, сухое, 12%, 0.75 л')
+                +itemCard('catalog__item', 'Point Gruner Veltliner', 'itemcard.html', 'bottle-1', 'Грюнер вельтлинер, Nigl, 2018 г.', 'Белое, сухое, 12%, 0.75 л')
+                +itemCard('catalog__item', 'Point Gruner Veltliner', 'itemcard.html', 'bottle-1', 'Грюнер вельтлинер, Nigl, 2018 г.', 'Белое, сухое, 12%, 0.75 л')
+                +itemCard('catalog__item', 'Point Gruner Veltliner', 'itemcard.html', 'bottle-1', 'Грюнер вельтлинер, Nigl, 2018 г.', 'Белое, сухое, 12%, 0.75 л')
+                +itemCard('catalog__item', 'Point Gruner Veltliner', 'itemcard.html', 'bottle-1', 'Грюнер вельтлинер, Nigl, 2018 г.', 'Белое, сухое, 12%, 0.75 л')
+                +itemCard('catalog__item', 'Point Gruner Veltliner', 'itemcard.html', 'bottle-1', 'Грюнер вельтлинер, Nigl, 2018 г.', 'Белое, сухое, 12%, 0.75 л')

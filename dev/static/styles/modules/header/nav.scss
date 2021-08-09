@@ -1,0 +1,29 @@
+.nav {
+    width: 100%;
+    @include flex-setting(column, center, center);
+
+    &__list {
+        width: 100%;
+        @include flex-setting(row, flex-start, center);
+        gap: 1.25rem;
+    }
+
+    &__item {
+        width: auto;
+    }
+
+    &__link {
+        @include font-setting($main-font, 1.125rem, 1.222, 500, $white);
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s linear;
+
+        &:active,
+        &:hover {
+            color: $red;
+            transition: 0.2s linear;
+        }
+    }
+}
