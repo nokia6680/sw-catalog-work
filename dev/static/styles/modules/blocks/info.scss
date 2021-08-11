@@ -1,0 +1,30 @@
+.info {
+    width: 100%;
+
+    @include flex-setting(column, flex-start, center);
+
+    &__header {
+        width: 100%;
+        @include flex-setting(row, space-between, center);
+    }
+
+    &__name {
+        white-space: nowrap;
+    }
+
+    &__details {
+        width: 100%;
+        @include flex-setting(column, flex-start, flex-start);
+    }
+
+    &__checkout {
+        width: 100%;
+
+        @include flex-setting(row, space-between, center);
+    }
+
+    &__checkout-controls {
+        width: auto;
+        @include flex-setting(row, center, center);
+    }
+}

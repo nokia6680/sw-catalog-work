@@ -1,0 +1,13 @@
+.specs {
+    width: 100%;
+
+    @include flex-setting(row, flex-start, flex-start);
+
+    flex-wrap: wrap;
+
+    &__item {
+        width: 49%;
+
+        @include flex-setting(column, flex-start, flex-start);
+    }
+}

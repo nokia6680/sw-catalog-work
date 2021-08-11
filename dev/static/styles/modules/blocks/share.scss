@@ -1,0 +1,4 @@
+.share {
+    width: 100%;
+    @include flex-setting(row, flex-end, center);
+}
