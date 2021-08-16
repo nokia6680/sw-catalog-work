@@ -1,0 +1,13 @@
+<!--Блок интро главной страницы-->
+section.intro
+    .intro__wrapper
+        picture.intro__frame
+            source(type="image/webp" media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="static/images/content/intro-preview@3x.webp 3x" sizes="100vw")
+            source(type="image/webp" media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="static/images/content/intro-preview@2x.webp 2x" sizes="100vw")
+            source(type="image/webp" srcset="static/images/content/intro-preview@1x.webp" sizes="100vw")
+            source(media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="static/images/content/intro-preview@3x.jpg 3x" sizes="100vw")
+            source(media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="static/images/content/intro-preview@2x.jpg 2x" sizes="100vw")
+            img(itemprop="image" src="static/images/content/intro-preview@1x.jpg" sizes="100vw").intro__frame-image
+        .intro__info
+            h1.intro__title Заголовок 1-го уровня
+            p.intro__description Какое-то описание для входной группы

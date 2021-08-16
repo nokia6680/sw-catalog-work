@@ -1,5 +1,4 @@
-- var navLinks = [{name: 'Каталог', link: 'catalog.html'}, {name: 'Simple Wine Prive', link: 'prive.html'}]
-- var menuLinks = [{}, {}]
+- var menuLinks = [{name: 'Подменю 1', link: '#'}, {name: 'Подменю 2', link: '#'}]
 
 header.header
     .header__logo
@@ -7,9 +6,15 @@ header.header
             img(src="static/images/content/logo.svg" alt="Simple Wine").header__logo-img
     nav.header__nav.nav
         ul.nav__list
-            for i in navLinks
-                li.nav__item
-                    a(href="" +i.link).nav__link=i.name
+            li.nav__item
+                a(href="catalog.html" target="_self").nav__link Каталог
+                
+                ul.nav__submenu
+                    for i in menuLinks
+                        li.nav__subitem
+                            a(href="" +i.link target="_self").nav__sublink=i.name
+            li.nav__item
+                a(href="swp.html" target="_self").nav__link Simple Wine Prive
     .header__controls.controls
         button(type="button").controls__btn.controls__btn--search
         button(type="button").controls__btn.controls__btn--wish

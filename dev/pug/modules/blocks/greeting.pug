@@ -1,0 +1,13 @@
+<!--Блок приветственного текста от компании-->
+section.greeting
+    .greeting__wrapper
+        .greeting__info
+            h2.greeting__title Приветствие от компании
+            p.greeting__description SimpleWine является прямым поставщиком. Мы работаем только с хозяйствами, вина которых стали частью культурной традиции своего региона и достойны путешествия за много тысяч километров. SimpleWine гарантирует качество, подлинность, хранение и перевозку в соответствии с мировыми стандартами и по индивидуальному запросу может предоставить соответствующие сертификаты. Реализация продукции на территории РФ проходит в строгом соответствии с законом и под контролем ЕГАИС.
+        picture.greeting__frame
+            source(type="image/webp" media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="static/images/content/" +image +"@3x.webp 3x" sizes="100vw")
+            source(type="image/webp" media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="static/images/content/" +image +"@2x.webp 2x" sizes="100vw")
+            source(type="image/webp" srcset="static/images/content/" +image +"@1x.webp" sizes="100vw")
+            source(media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="static/images/content/" +image +"@3x.jpg 3x" sizes="100vw")
+            source(media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="static/images/content/" +image +"@2x.jpg 2x" sizes="100vw")
+            img(itemprop="image" src="static/images/content/" +image +"@1x.jpg" sizes="100vw").greeting__frame-image
