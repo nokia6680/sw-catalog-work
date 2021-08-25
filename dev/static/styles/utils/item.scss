@@ -5,17 +5,7 @@
         @include flex-setting(column, flex-start, center);
 
         &:hover {
-            .item__body {
-                &::after {
-                    opacity: 1;
-                    transition: 0.2s ease-in;
-                }
-            }
-            .item__info {
-                left: 1.5rem;
-                transition: 0.2s ease-in;
-                z-index: 3;
-            }
+
         }
     }
 

@@ -2,12 +2,17 @@
 section.greeting
     .greeting__wrapper
         .greeting__info
-            h2.greeting__title Приветствие от компании
-            p.greeting__description SimpleWine является прямым поставщиком. Мы работаем только с хозяйствами, вина которых стали частью культурной традиции своего региона и достойны путешествия за много тысяч километров. SimpleWine гарантирует качество, подлинность, хранение и перевозку в соответствии с мировыми стандартами и по индивидуальному запросу может предоставить соответствующие сертификаты. Реализация продукции на территории РФ проходит в строгом соответствии с законом и под контролем ЕГАИС.
+            h2.greeting__title Дорогие друзья!
+            p.greeting__description В этом году мы начинали работу над нашим каталогом с большим вдохновением и надеждой на то, что 2022 год принесет нам что-то совершенно новое и прекрасное.
+            p.greeting__description Мир продолжает меняться и все больше ускоряется под влиянием текущих событий. Поэтому мы все чаще начинаем ценить самые простые вещи, которые раньше казались обыденными: сходить с друзьями в ресторан, внезапно «сорваться» на романтические выходные в Европу, посетить матч любимой команды или выставку, «зажечь» на танцполе многолюдной вечеринки.
+            p.greeting__description Все, что мы представляем в каталоге Simple 2021|2022, совершенно и одновременно просто. Совершенно — благодаря усилиям мастеров, создавших эти винные и не винные шедевры. Просто — благодаря возможности с помощью любой позиции из каталога превратить обыденную ситуацию в праздник.
+            p.greeting__description Великие вина Бордо и Бургундии, современные воплощения старинных винодельческих традиций Италии, уникальные крепкие напитки со всего света и тончайшие бокалы, способные удивлять не меньше, чем самое лучшее вино.
+            p.greeting__description Выбирайте и наполняйте простые моменты красотой и радостью.
+            span.greeting__sign Искренне ваш, Simple
         picture.greeting__frame
-            source(type="image/webp" media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="static/images/content/" +image +"@3x.webp 3x" sizes="100vw")
-            source(type="image/webp" media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="static/images/content/" +image +"@2x.webp 2x" sizes="100vw")
-            source(type="image/webp" srcset="static/images/content/" +image +"@1x.webp" sizes="100vw")
-            source(media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="static/images/content/" +image +"@3x.jpg 3x" sizes="100vw")
-            source(media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="static/images/content/" +image +"@2x.jpg 2x" sizes="100vw")
-            img(itemprop="image" src="static/images/content/" +image +"@1x.jpg" sizes="100vw").greeting__frame-image
+            source(type="image/webp" media="(min-width: 1366px" srcset="static/images/content/greeting-preview-desktop.webp")
+            source(type="image/webp" media="(min-width: 720px" srcset="static/images/content/greeting-preview-tablet.webp")
+            source(type="image/webp" srcset="static/images/content/greeting-preview-mobile.webp")
+            source(media="(min-width: 1366px" srcset="static/images/content/greeting-preview-desktop.jpg")
+            source(media="(min-width: 720px)" srcset="static/images/content/greeting-preview-tablet.jpg")
+            img(itemprop="image" src="static/images/content/greeting-preview-mobile.jpg").greeting__frame-image

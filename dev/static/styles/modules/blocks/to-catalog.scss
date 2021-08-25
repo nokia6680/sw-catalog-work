@@ -1,0 +1,33 @@
+.to-catalog {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    @include flex-setting(column, center, center);
+
+    background-color: $white;
+
+    &__wrapper {
+        width: 100%;
+        @include flex-setting(column, flex-start, center);
+
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    &__title {
+        @include font-setting($text-font, 2rem, 1, 400, $bordo);
+        margin-bottom: 2rem;
+    }
+
+    &__list {
+        width: 100%;
+        max-width: 1060px;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 0.875rem;
+        grid-row-gap: 0.875rem;
+    }
+}
