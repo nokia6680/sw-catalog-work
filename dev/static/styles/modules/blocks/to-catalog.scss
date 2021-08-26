@@ -17,7 +17,7 @@
     }
 
     &__title {
-        @include font-setting($text-font, 2rem, 1, 400, $bordo);
+        @include font-setting($helve-font, 2rem, 1, 400, $bordo);
         margin-bottom: 2rem;
     }
 
@@ -26,8 +26,15 @@
         max-width: 1060px;
 
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 0.875rem;
         grid-row-gap: 0.875rem;
+
+        margin-bottom: 2rem;
+    }
+
+    &__link {
+        @include font-setting($helve-font, 1.5rem, 1, 300, $bordo);
+        text-decoration: none;
     }
 }
