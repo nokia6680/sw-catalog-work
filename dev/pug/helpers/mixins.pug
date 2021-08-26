@@ -22,7 +22,7 @@ mixin breadcrumb(levels)
                         i.breadcrumbs__symbol(aria-hidden="true").breadcrumbs__divider
                     meta(itemprop="position" content!=count)
 
-mixin itemCard(type, name, subname, link, image, nr, articulFirst, articulSecond, yearFirst, yearSecond, volume, location, country)
+mixin itemCard(type, name, fullname, subname, link, image, nr, articulFirst, articulSecond, yearFirst, yearSecond, volume, location, country)
     li(class="item " +type)
         a(href="" +link target="_self").item__link
             .item__body
@@ -38,10 +38,13 @@ mixin itemCard(type, name, subname, link, image, nr, articulFirst, articulSecond
                         b.item__info-nr=nr
                         .item__info-articul
                             span=articulFirst
+                                sup (1)
                             span=articulSecond
+                                sup (2)
                     .item__info-middle
                         h3.item__info-name=name
-                        span.item__info-subname=subname
+                        span.item__info-full=fullname
+                        b.item__info-subname
                         .item__info-specs
                             span=yearFirst
                             span=yearSecond
