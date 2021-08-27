@@ -17,8 +17,8 @@
     }
 
     &__title {
-        @include font-setting($helve-font, 2rem, 1, 400, $bordo);
-        margin-bottom: 2rem;
+        @include font-setting($title-font, 2.5rem, 1, 400, $bordo);
+        margin-bottom: 4rem;
     }
 
     &__list {
@@ -30,11 +30,19 @@
         grid-column-gap: 0.875rem;
         grid-row-gap: 0.875rem;
 
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
 
     &__link {
-        @include font-setting($helve-font, 1.5rem, 1, 300, $bordo);
+        @include font-setting($title-font, 2rem, 1, 400, $bordo);
+        opacity: 0.6;
         text-decoration: none;
+        transition: 0.3s ease-in;
+
+        &:hover,
+        &:active {
+            opacity: 1;
+            transition: 0.3s ease-in;
+        }
     }
 }

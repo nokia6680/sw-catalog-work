@@ -9,12 +9,20 @@
     font-style: $style;
   }
 }
-@include font-face('Forum', '../fonts/Forum', 400, 'normal');
-@include font-face('FuturaC', '../fonts/FuturaLightC', 300, 'normal');
-@include font-face('FuturaC', '../fonts/FuturaBookC', 400, 'normal');
-@include font-face('FuturaC', '../fonts/FuturaMediumC', 500, 'normal');
-@include font-face('Geometria', '../fonts/Geometria', 400, 'normal');
-@include font-face('HeliosC', '../fonts/HeliosC', 400, 'normal');
-@include font-face('HeliosC', '../fonts/HeliosC-Bold', 700, 'normal');
-@include font-face('HeliosC', '../fonts/HeliosLightC', 300, 'normal');
-@include font-face('Gotham Pro', '../fonts/GothamPro-Light', 300, 'normal');
+@include font-face('Forum', '../fonts/Forum/Forum', 400, 'normal');
+@include font-face('FuturaC', '../fonts/Futura/FuturaLightC', 300, 'normal');
+@include font-face('FuturaC', '../fonts/Futura/FuturaBookC', 400, 'normal');
+@include font-face('FuturaC', '../fonts/Futura/FuturaMediumC', 500, 'normal');
+@include font-face('Geometria', '../fonts/Geometria/Geometria', 400, 'normal');
+@include font-face('HeliosC', '../fonts/HeliosC/HeliosC', 400, 'normal');
+@include font-face('HeliosC', '../fonts/HeliosC/HeliosC-Bold', 700, 'normal');
+@include font-face('HeliosC', '../fonts/HeliosC/HeliosLightC', 300, 'normal');
+@include font-face('Gotham Pro', '../fonts/GothamPro/GothamPro-Light', 300, 'normal');
+@include font-face('Helvetica', '../fonts/Helvetica/Helvetica-Light', 300, 'normal');
+@include font-face('Helvetica', '../fonts/Helvetica/Helvetica', 400, 'normal');
+@include font-face('Helvetica', '../fonts/Helvetica/Helvetica-Bold', 700, 'normal');
+@include font-face('HelveticaNeue', '../fonts/Helvetica Neue/HelveticaNeue-Light', 300, 'normal');
+@include font-face('HelveticaNeue', '../fonts/Helvetica Neue/HelveticaNeue-Thin', 200, 'normal');
+@include font-face('HelveticaNeue', '../fonts/Helvetica Neue/HelveticaNeue', 400, 'normal');
+@include font-face('HelveticaNeue', '../fonts/Helvetica Neue/HelveticaNeue-Medium', 500, 'normal');
+@include font-face('HelveticaNeue', '../fonts/Helvetica Neue/HelveticaNeue-Bold', 700, 'normal');
