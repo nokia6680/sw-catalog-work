@@ -3,7 +3,7 @@
     max-width: 1200px;
 
     margin: 0 auto;
-
+    margin-bottom: 0.25rem;
     @include flex-setting(column, center, center);
 
     background-color: $white;

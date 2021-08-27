@@ -1,0 +1,60 @@
+.greeting {
+    width: 100%;
+    max-width: 1200px;
+    @include flex-setting(column, center, center);
+
+    background-color: $white;
+
+    margin: 0 auto;
+    margin-bottom: 0.25rem;
+
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+
+    &__info {
+        height: 100%;
+
+        @include flex-setting(column, flex-start, flex-start);
+
+        padding: 2rem 4.375rem 0 4.375rem;
+    }
+
+    &__title {
+        @include font-setting($helvetica-neue-font, 2rem, 1.222, 200, $pink);
+        margin-bottom: 1.5rem;
+    }
+
+    &__description {
+        @include font-setting($helios-font, 0.875rem, 1.222, 300, $black);
+        margin-bottom: 1.125rem;
+    }
+
+    &__sign {
+        max-width: 20%;
+        @include font-setting($helios-font, 0.875rem, 1.222, 300, $black);
+        font-style: italic;
+        text-align: right;
+
+        align-self: flex-end;
+    }
+
+    &__frame {
+        width: 100%;
+        height: 100%;
+        @include flex-setting(column, center, center);
+
+        overflow: hidden;
+
+        &-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+}
