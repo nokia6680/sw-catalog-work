@@ -6,5 +6,50 @@
     max-width: 1200px;
     margin: 0 auto;
 
-    background-color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.25rem;
+
+    &__wrapper {
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title {
+        position: absolute;
+
+        top: 4.375rem;
+        left: 4.375rem;
+
+        @include font-setting($geometria-font, 2.5rem, 1, 400, $white);
+        text-transform: uppercase;
+    }
+
+    &__logo {
+        width: 152px;
+        height: 56px;
+        object-fit: contain;
+
+        position: absolute;
+        right: 4.375rem;
+        bottom: 4.375rem;
+    }
+
+    &__annual {
+        width: 135px;
+        position: absolute;
+        @include flex-setting(row, space-between, center);
+
+        top: 21.625rem;
+        right: 18.25rem;
+
+        span {
+            @include font-setting($geometria-font, 3rem, 1, 400, $white);
+            letter-spacing: -0.02em;
+
+            &:last-child {
+                color: $darkred;
+            }
+        }
+    }
 }

@@ -1,0 +1,18 @@
+.swp {
+    width: 100%;
+    max-width: 1200px;
+
+    @include flex-setting(column, flex-start, center);
+
+    margin: 0 auto;
+    margin-bottom: 0.25rem;
+
+    &__wrapper {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        background-color: $white;
+    }
+}

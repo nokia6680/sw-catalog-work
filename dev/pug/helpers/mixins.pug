@@ -54,3 +54,9 @@ mixin itemCard(type, name, category, subname, link, image, nr, articulFirst, art
                         span.item__info-country=country
                         span.item__info-type
             h2.item__name=name
+
+mixin priveListItem(description, type)
+    li(class="swp__list-item " +type)
+        span
+        p.swp__list-description=description
+            
