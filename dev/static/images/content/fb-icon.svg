@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.38 9.03">
+  <defs>
+    <style>
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: #700328;
+        mix-blend-mode: multiply;
+      }
+    </style>
+  </defs>
+  <g class="cls-1">
+    <g id="Слой_2" data-name="Слой 2">
+      <g id="Layer_1" data-name="Layer 1">
+        <path class="cls-2" d="M8.86,0H.52A.51.51,0,0,0,0,.5v8A.51.51,0,0,0,.52,9H5V5.53H3.8V4.17H5v-1a1.67,1.67,0,0,1,1.81-1.8,9.07,9.07,0,0,1,1.09.06V2.64H7.17c-.59,0-.69.27-.69.66v.87H7.87L7.69,5.53H6.48V9H8.86a.51.51,0,0,0,.52-.5V.5A.51.51,0,0,0,8.86,0"/>
+      </g>
+    </g>
+  </g>
+</svg>

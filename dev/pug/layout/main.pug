@@ -11,7 +11,8 @@ html(lang="ru-RU")
         <![endif]-->
         meta(name="viewport" content="width=device-width,initial-scale=1")
         meta(name="keywords" content="")
-        link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+        link(rel="stylesheet" type='text/css' href="static/css/styles.css") 
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet")
@@ -21,6 +22,7 @@ html(lang="ru-RU")
             include ../modules/blocks/intro
             include ../modules/blocks/greeting
             include ../modules/blocks/swp
+
             section.gs
                 .gs__wrapper
                     img(itemprop="image" src="static/images/content/gs-image-full.svg" alt="Green Selection").gs__bg
@@ -47,6 +49,7 @@ html(lang="ru-RU")
                         a(href="https://www.instagram.com/simplewinetravel/" target="_blank").st__links-insta simplewinetravel
                         a(href="https://www.facebook.com/simplewtravel" target="_blank").st__links-fb simplewtravel
                         a(href="http://www.simpletravel.ru/" target="_blank").st__links-site www.simpletravel.ru
+            include ../modules/blocks/gift-sert
             //include ../modules/blocks/packing
             //include ../modules/blocks/services
 
@@ -54,4 +57,6 @@ html(lang="ru-RU")
         //script(src="static/js/vendor/jquery-3.3.1.min.js")
         //script(src="static/js/vendor/libs.js")
         script(src="static/js/main.js")
+        script(src="https://unpkg.com/swiper/swiper-bundle.js")
+        script(src="static/js/slider.js")
         block script

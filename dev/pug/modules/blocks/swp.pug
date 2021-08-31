@@ -2,10 +2,10 @@ section.swp
     .swp__wrapper
         .swp__left
             picture.swp__frame
-                source(type="image/webp" media="(min-width: 1280px" srcset="static/images/content/swp-desktop.webp")
+                source(type="image/webp" media="(min-width: 1280px" srcset="static/images/content/swp-desktop_3.webp")
                 source(type="image/webp" media="(min-width: 720px" srcset="static/images/content/swptablet.webp")
                 source(type="image/webp" srcset="static/images/content/swp-mobile.webp")
-                source(media="(min-width: 1280px" srcset="static/images/content/swp-desktop.jpg")
+                source(media="(min-width: 1280px" srcset="static/images/content/swp-desktop_3.png")
                 source(media="(min-width: 720px)" srcset="static/images/content/swp-tablet.jpg")
                 img(itemprop="image" src="static/images/content/swp-mobile.jpg").swp__frame-image
             .swp__info
@@ -30,3 +30,72 @@ section.swp
             .swp__bottom
                 p.swp__description Чтобы стать участником SimpleWine Privé и получить доступ ко всем привилегиям, свяжитесь с персональным менеджером или оставьте заявку, отсканировав QR-код.
                 img(src="static/images/content/swp-qr.svg" alt="SWP QR-code").swp__qr
+                
+    .swp__slider.swp-slider
+        .swp-slider__wrapper.swiper-container
+            .swiper-wrapper
+                .swp-slider__item.swiper-slide
+                    .swp-slider__info
+                        b.swp-slider__title Создание и аудит винных коллекций
+                        p.swp-slider__description Любая винная коллекция нуждается в правильных условиях хранения, особенно когда речь заходит о винах, предназначенных для длительной выдержки. Эксперты SimpleWine Privé  предложат клиентам весь спектр систем хранения: от винного шкафа до проектирования, строительства и обслуживания винных погребов. 
+                        p.swp-slider__description Для владельцев винных коллекций разработан комплекс профессиональных услуг «Винный аудит». После тщательного осмотра коллекции эксперт предоставит подробный отчет, включающий в себя советы по наилучшей организации пространства, таймлайн дегустаций, оценку стоимости и рекомендации по развитию.
+                    picture.swp-slider__frame
+                        source(srcset="static/images/content/swp-option-1.webp" type="image/webp")
+                        img(src="static/images/content/swp-option-1.jpg" alt="").swp-slider__frame-image
+                .swp-slider__item.swiper-slide
+                    .swp-slider__info
+                        b.swp-slider__title Организация частных дегустаций и винных ужинов
+                        p.swp-slider__description Ведущие эксперты Simple организуют дегустацию «под ключ» и интегрируют ее в любое праздничное событие:
+                        ul.swp-slider__list
+                            li
+                                p.swp-slider__description подберут винные сеты, интересные как начинающим ценителям, так и профессионалам с самым серьёзным опытом
+                            li
+                                p.swp-slider__description проведут дегустацию или винный ужин для любого количества участников
+                            li
+                                p.swp-slider__description помогут с выбором площадки для любого формата
+                    picture.swp-slider__frame
+                        source(srcset="static/images/content/swp-option-2.webp" type="image/webp")
+                        img(src="static/images/content/swp-option-2.jpg" alt="").swp-slider__frame-image
+                .swp-slider__item.swiper-slide
+                    .swp-slider__info
+                        b.swp-slider__title Поздравим от вашего имени
+                        p.swp-slider__description Если у вас нет возможности вручить подарок лично, персональный менеджер SimpleWine Privé сделает это за вас: поможет выбрать идеальное подарочное решение для бизнес-партнёра, сотрудника или близкого человека, оформит открытку от вашего имени и обеспечит получение подарка в нужное время и в удобном месте.
+                    picture.swp-slider__frame
+                        source(srcset="static/images/content/swp-option-3.webp" type="image/webp")
+                        img(src="static/images/content/swp-option-3.jpg" alt="").swp-slider__frame-image
+                .swp-slider__item.swiper-slide
+                    .swp-slider__info
+                        b.swp-slider__title Винный wishlist
+                        p.swp-slider__description Менеджер SimpleWine Privé поможет составить винный wishlist к любому празднику: с ним подарки от друзей и близких гарантированно станут желанными.
+                    picture.swp-slider__frame
+                        source(srcset="static/images/content/swp-option-4.webp" type="image/webp")
+                        img(src="static/images/content/swp-option-4.jpg" alt="").swp-slider__frame-image
+            button(type="button").swp-slider__prev
+            button(type="button").swp-slider__next
+        .swp-slider__footer
+            ul.swp-slider__contacts
+                li.swp-slider__contacts-item
+                    span.swp-slider__contacts-name Москва:
+                    a(href="tel:+74955105001" target="_blank").swp-slider__contacts-link +7 495 510 5001
+                    a(href="mailto:vip@simple.ru" target="_blank").swp-slider__contacts-link vip@simple.ru
+                li.swp-slider__contacts-item
+                    span.swp-slider__contacts-name Санкт-Петербург:
+                    a(href="tel:+78123631100" target="_blank").swp-slider__contacts-link +7 812 363 1100
+                    a(href="mailto:vip-spb@simple.ru" target="_blank").swp-slider__contacts-link vip-spb@simple.ru
+                li.swp-slider__contacts-item
+                    span.swp-slider__contacts-name Регионы:
+                    a(href="tel:+79067128582" target="_blank").swp-slider__contacts-link +7 906 712 8582
+                    a(href="mailto:vip-region@simple.ru" target="_blank").swp-slider__contacts-link vip-region@simple.ru
+                    
+            ul.swp-slider__links
+                li.swp-slider__links-item
+                    span.additional *5001
+                li.swp-slider__links-item
+                    a(href="https://simplewine.ru/prive/" alt="_blank").swp-slider__links-site simplewine.ru/prive
+                li.swp-slider__links-item
+                    ul.swp-slider__social
+                        li.swp-slider__social-item
+                            a(href="#" target="_blank").swp-slider__social-link.fb
+                        li.swp-slider__social-item
+                            a(href="#" target="_blank").swp-slider__social-link.in
+                    span.hash SimpleWine

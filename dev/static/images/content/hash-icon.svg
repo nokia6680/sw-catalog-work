@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.31 9.01">
+  <defs>
+    <style>
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: #700328;
+        mix-blend-mode: multiply;
+      }
+    </style>
+  </defs>
+  <g class="cls-1">
+    <g id="Слой_2" data-name="Слой 2">
+      <g id="Layer_1" data-name="Layer 1">
+        <g>
+          <path class="cls-2" d="M7.46,4.1h-1l-.29.82h1L6.79,6h-1L5.29,7.41H4.17L4.68,6H3.79L3.28,7.41H2.15L2.67,6h-1l.39-1.06H3l.29-.82h-1L2.71,3h1l.51-1.43H5.34L4.84,3h.89l.5-1.43H7.36L6.85,3h1L7.46,4.1M8.07,0H1.24A1.23,1.23,0,0,0,0,1.2V7.81A1.22,1.22,0,0,0,1.24,9H8.07a1.21,1.21,0,0,0,1.24-1.2V1.2A1.22,1.22,0,0,0,8.07,0Z"/>
+          <polyline class="cls-2" points="4.14 4.92 5.07 4.92 5.37 4.1 4.44 4.1 4.14 4.92"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

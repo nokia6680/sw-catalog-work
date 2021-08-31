@@ -1,7 +1,8 @@
 .st {
     width: 100%;
     margin: 0 auto;
-
+    margin-bottom: 0.25rem;
+    
     @include flex-setting(column, center, center);
 
     align-self: center;

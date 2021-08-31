@@ -15,4 +15,119 @@
 
         background-color: $white;
     }
+
+    &__left {
+        width: 100%;
+        height: 100%;
+
+        @include flex-setting(column, flex-start, center);
+
+        position: relative;
+    }
+
+    &__info {
+        position: absolute;
+
+        @include flex-setting(column, flex-start, center);
+
+        right: 4rem;
+        bottom: 4rem;
+
+        &-logo {
+            width: 220px;
+            height: 50px;
+
+            object-fit: contain;
+            margin-bottom: 2rem;
+        }
+
+        .swp__description {
+            max-width: 250px;
+        }
+    }
+
+    &__description {
+        @include font-setting($geometria-font, 0.625rem, 1.222, 300, #4A4A49);
+        letter-spacing: -0.02em;
+    }
+
+    &__right {
+        width: 100%;
+        height: 100%;
+
+        @include flex-setting(column, flex-start, center);
+
+        padding: 2rem 3rem 0 3rem;
+    }
+
+    &__head {
+        width: 100%;
+        @include flex-setting(column, flex-start, center);
+
+        margin-bottom: 1.5rem;
+
+        &-frame {
+            margin-bottom: 1rem;
+        }
+
+        .swp__description {
+            max-width: 340px;
+            font-weight: 400;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1.25rem;
+        grid-row-gap: 1.25rem;
+
+        margin-bottom: 1rem;
+
+        &-item {
+            @include flex-setting(column, flex-start, flex-start);
+
+            span {
+                display: block;
+
+                width: 28px;
+                height: 24px;
+                margin-bottom: 0.5rem;
+
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            @for $i from 1 through 9 {
+                &.icon-#{$i} {
+                    span {
+                        background-image: url('../images/content/icon-' + $i + '.svg');
+                    }
+                }
+            }
+
+            .swp__description {
+                font-weight: 300;
+                color: #000;
+            }
+        }
+    }
+
+    &__bottom {
+        width: 100%;
+        @include flex-setting(row, space-between, center);
+
+        .swp__description {
+            max-width: 63%;
+            color: #000;
+        }
+    }
+
+    &__qr {
+        margin-right: 1.5rem;
+        width: 60px;
+        height: 60px;
+    }
 }
