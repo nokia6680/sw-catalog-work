@@ -1,1 +1,16 @@
-footer { flex: 0 0 auto; }
+.footer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include flex-setting(column, center, center);
+
+    &__wrapper {
+        width: 100%;
+
+        @include flex-setting(column, flex-start, center);
+
+        padding: 4rem 4rem;
+
+        background-color: $white;
+    }
+}

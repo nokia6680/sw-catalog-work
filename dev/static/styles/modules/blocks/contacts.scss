@@ -1,0 +1,44 @@
+.contacts {
+    width: 100%;
+
+    @include flex-setting(column, flex-start, center);
+
+    &__wrapper {
+        width: 100%;
+
+        display: grid;
+        grid-template-areas:
+            'msk ...'
+            'spb rest'
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 4rem;
+        justify-content: space-between;
+
+        margin-bottom: 4rem;
+    }
+
+    &__block {
+        &--msk {
+            grid-area: msk;
+        }
+
+        &--spb {
+            grid-area: spb;
+        }
+
+        &--rest {
+            grid-area: rest;
+        }
+    }
+
+    &__bottom {
+        width: 100%;
+        @include flex-setting(row, space-between, center);
+    }
+
+    &__logo {
+        max-height: 80px;
+        object-fit: contain;
+    }
+}

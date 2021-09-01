@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174 18.86">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #acafb2;
+        stroke-miterlimit: 10;
+        stroke-width: 0.81px;
+      }
+
+      .cls-2 {
+        fill: #acafb2;
+      }
+    </style>
+  </defs>
+  <g id="Слой_2" data-name="Слой 2">
+    <g id="Layer_1" data-name="Layer 1">
+      <g>
+        <line class="cls-1" x1="172" y1="7.38" x2="172" y2="14.44"/>
+        <path class="cls-2" d="M172,13.46,174,12.27l.05.07-1.27,3.19c-.24,1.11-.49,2.22-.73,3.33-.25-1.11-.49-2.22-.73-3.33L170,12.34l0-.07Z"/>
+      </g>
+      <rect class="cls-2" x="1.7" y="7.38" width="170.08" height="1.12"/>
+      <g>
+        <line class="cls-1" x1="2" y1="7.38" x2="2" y2="14.44"/>
+        <path class="cls-2" d="M2,13.46l2-1.19,0,.07L2.73,15.53c-.24,1.11-.49,2.22-.73,3.33-.25-1.11-.49-2.22-.73-3.33L0,12.34l0-.07Z"/>
+      </g>
+      <rect class="cls-2" x="83.53" y="3.69" width="8.5" height="1.12" transform="translate(83.53 92.04) rotate(-90)"/>
+    </g>
+  </g>
+</svg>
