@@ -41,4 +41,13 @@
         max-height: 80px;
         object-fit: contain;
     }
+
+    &__link {
+        @include font-setting($helios-font, 1rem, 1.222, 300, $black);
+        text-decoration: none;
+    }
+
+    &__title {
+        @include font-setting($helios-font, 1rem, 1.222, 400, $pink);
+    }
 }
