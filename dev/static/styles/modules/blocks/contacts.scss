@@ -13,6 +13,7 @@
         ;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 4rem;
+        grid-row-gap: 2rem;
         justify-content: space-between;
 
         margin-bottom: 4rem;
@@ -21,6 +22,19 @@
     &__block {
         &--msk {
             grid-area: msk;
+
+            @include flex-setting(row, flex-start, center);
+            flex-wrap: wrap;
+
+            .contacts__title {
+                width: 100%;
+            }
+
+            .contacts__link:first-of-type {
+                display: block;
+                width: 100%;
+                margin-bottom: 0.125rem;
+            }
         }
 
         &--spb {
@@ -49,5 +63,6 @@
 
     &__title {
         @include font-setting($helios-font, 1rem, 1.222, 400, $pink);
+        margin-bottom: 0.125rem;
     }
 }
