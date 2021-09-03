@@ -44,6 +44,8 @@
 
             .nav__item {
                 opacity: 1;
+                transform: scaleX(1);
+                transform-origin: left;
                 transition: 1s ease-in;
                 pointer-events: all;
             }
@@ -55,9 +57,11 @@
         width: auto;
 
         opacity: 0;
+        transform: scaleX(0);
+        transform-origin: left;
         pointer-events: none;
 
-        transition: 1s ease-in;
+        transition: 0.1s ease-in;
     }
 
     &__link {
