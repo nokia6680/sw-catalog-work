@@ -57,7 +57,14 @@ textarea { vertical-align: middle; }
 
 textarea { resize: none; }
 
-section { position: relative; }
+section {
+    position: relative;
+    min-height: 80vh;
+}
+
+main {
+    
+}
 
 input,
 select,
