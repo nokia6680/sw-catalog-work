@@ -12,12 +12,12 @@
         width: 100%;
         @include flex-setting(column, flex-start, center);
 
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
 
     &__title {
-        @include font-setting($title-font, 2.5rem, 1, 400, $bordo);
+        @include font-setting($geometria-font, 2.5rem, 1, 400, $pink);
         margin-bottom: 4rem;
     }
 
@@ -34,7 +34,7 @@
     }
 
     &__link {
-        @include font-setting($title-font, 2rem, 1, 400, $bordo);
+        @include font-setting($geometria-font, 2rem, 1, 400, $pink);
         opacity: 0.6;
         text-decoration: none;
         transition: 0.3s ease-in;

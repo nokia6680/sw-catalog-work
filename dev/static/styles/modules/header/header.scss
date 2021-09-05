@@ -7,7 +7,7 @@
         width: 100%;
         @include flex-setting(row, flex-start, center);
         max-width: 1200px;
-        padding: 2.1875rem 4.375rem;
+        padding: 2.1875rem 0;
     }
 
     &__logo {
