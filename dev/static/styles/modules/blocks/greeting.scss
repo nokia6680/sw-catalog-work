@@ -13,7 +13,7 @@
         height: 100%;
 
         display: grid;
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 70% 30%;
     }
 
     &__info {
@@ -21,22 +21,22 @@
 
         @include flex-setting(column, flex-start, flex-start);
 
-        padding: 4rem 4.375rem 2.5rem 4.375rem;
+        padding: 4rem 4.375rem 4rem 4.375rem;
     }
 
     &__title {
-        @include font-setting($helvetica-neue-font, 2rem, 1.222, 200, $pink);
-        margin-bottom: 1.5rem;
+        @include font-setting($helvetica-neue-font, 2.5rem, 1.222, 200, $pink);
+        margin-bottom: 2rem;
     }
 
     &__description {
-        @include font-setting($helios-font, 0.875rem, 1.222, 300, $black);
+        @include font-setting($geometria-font, 1rem, 1.222, 300, $black);
         margin-bottom: 1.125rem;
     }
 
     &__sign {
         max-width: 20%;
-        @include font-setting($helios-font, 0.875rem, 1.222, 300, $black);
+        @include font-setting($geometria-font, 1rem, 1.222, 400, $black);
         font-style: italic;
         text-align: right;
 

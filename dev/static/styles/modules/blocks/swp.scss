@@ -11,18 +11,33 @@
         width: 100%;
 
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 42% 58%;
 
         background-color: $white;
+
+        margin-bottom: 0.25rem;
     }
 
     &__left {
         width: 100%;
         height: 100%;
 
-        @include flex-setting(column, flex-start, center);
+        @include flex-setting(column, stretch, center);
 
         position: relative;
+    }
+
+    &__frame {
+        @include flex-setting(column, center, flex-start);
+        height: 100%;
+        width: 100%;
+
+        &-image {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
     }
 
     &__info {
@@ -30,12 +45,12 @@
 
         @include flex-setting(column, flex-start, center);
 
-        right: 4rem;
-        bottom: 4rem;
+        right: 2rem;
+        bottom: 3rem;
 
         &-logo {
-            width: 220px;
-            height: 50px;
+            width: 240px;
+            height: 60px;
 
             object-fit: contain;
             margin-bottom: 2rem;
@@ -47,7 +62,7 @@
     }
 
     &__description {
-        @include font-setting($geometria-font, 0.625rem, 1.222, 300, #4A4A49);
+        @include font-setting($geometria-font, 1rem, 1.222, 300, $black);
         letter-spacing: -0.02em;
     }
 
@@ -57,23 +72,13 @@
 
         @include flex-setting(column, flex-start, center);
 
-        padding: 2rem 3rem 0 3rem;
+        padding: 3rem 3rem 3rem 3rem;
     }
 
     &__head {
-        width: 100%;
-        @include flex-setting(column, flex-start, center);
-
-        margin-bottom: 1.5rem;
-
-        &-frame {
-            margin-bottom: 1rem;
-        }
-
-        .swp__description {
-            max-width: 340px;
-            font-weight: 400;
-        }
+        @include font-setting($geometria-font, 1rem, 1.222, 300, $black);
+        letter-spacing: -0.02em;
+        margin-bottom: 3rem;
     }
 
     &__list {
@@ -83,7 +88,9 @@
         grid-column-gap: 1.25rem;
         grid-row-gap: 1.25rem;
 
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
+
+        overflow: hidden;
 
         &-item {
             @include flex-setting(column, flex-start, flex-start);
@@ -109,8 +116,27 @@
             }
 
             .swp__description {
-                font-weight: 300;
+                font-size: 0.75rem;
+                font-weight: 400;
                 color: #000;
+            }
+
+            &:nth-child(2) {
+                .swp__description {
+                    max-width: 70%;
+                }
+            }
+
+            &:nth-child(5) {
+                .swp__description {
+                    max-width: 60%;
+                }
+            }
+
+            &:last-child {
+                .swp__description {
+                    max-width: 65%;
+                }
             }
         }
     }
@@ -120,14 +146,14 @@
         @include flex-setting(row, space-between, center);
 
         .swp__description {
+            font-weight: 300;
             max-width: 63%;
             color: #000;
         }
     }
 
     &__qr {
-        margin-right: 1.5rem;
-        width: 60px;
-        height: 60px;
+        width: 76px;
+        height: 76px;
     }
 }

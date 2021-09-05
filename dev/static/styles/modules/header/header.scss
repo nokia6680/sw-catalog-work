@@ -1,12 +1,14 @@
 .header {
     width: 100%;
-    @include flex-setting(row, flex-start, center);
+    @include flex-setting(row, center, center);
     background-color: rgba(255, 255, 255, 0.2);
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2.1875rem 4.375rem;
-    margin-bottom: 0.25rem;
+
+    &__wrapper {
+        width: 100%;
+        @include flex-setting(row, flex-start, center);
+        max-width: 1200px;
+        padding: 2.1875rem 4.375rem;
+    }
 
     &__logo {
         @include flex-setting(column, center, center);
