@@ -17,7 +17,7 @@
     }
 
     &__title {
-        @include font-setting($geometria-font, 2.5rem, 1, 400, $pink);
+        @include font-setting($helvetica-neue-font, 2.5rem, 1, 400, $pink);
         margin-bottom: 4rem;
     }
 
@@ -34,7 +34,7 @@
     }
 
     &__link {
-        @include font-setting($geometria-font, 2rem, 1, 400, $pink);
+        @include font-setting($geometria-font, 2rem, 1, 700, $pink);
         opacity: 0.6;
         text-decoration: none;
         transition: 0.3s ease-in;

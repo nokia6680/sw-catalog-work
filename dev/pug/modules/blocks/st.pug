@@ -1,0 +1,58 @@
+section.st
+    .st__wrapper
+        .st__left
+            img(src="static/images/content/st-logo.svg" alt="Simple Travel").st__logo
+            h2.st__title
+                span.st__title-text Уникальные авторские
+                span.st__title-text.small эногастрономические туры
+            .st__slider.swiper-container-st
+                .swiper-wrapper
+                    .st__slide.swiper-slide
+                        h3.st__subtitle Путешествия по России
+                        span.st__note групповые туры
+                        ul.st__list
+                            li.st__item
+                                h3.st__name Винная мозаика 
+                                span.st__subname Краснодарского края
+                                p.st__description дегустации лучших вин и блюд региона, посещение современных производств
+                                b.st__about 7 дней - 6 ночей
+                            li.st__item
+                                h3.st__name Винный уикенд  
+                                span.st__subname в Краснодарском крае
+                                p.st__description выходные в компании винных экспертов, знакомство с российскими терруарами
+                                b.st__about 4 дня - 3 ночи
+                    .st__slide.swiper-slide
+                        h3.st__subtitle C Simple Travel вы сможете
+                        p.st__description.box посетить культовые винодельческие хозяйства по всему миру, пообщаться с виноделами, познакомиться с лучшими винами и кухней выбранного региона
+                        p.st__description.box спланировать индивидуальный тур или выбрать готовую программу из уникального портфеля авторских туров компании
+                    .st__slide.swiper-slide
+                        h3.st__subtitle.thin И не только вино
+                        p.st__description.box Simple Travel предоставляет полный спектр услуг для частных и корпоративных клиентов в сегментах Business Travel, MICE, Event
+                .st__controls
+                    button(type="button").st__prev
+                    button(type="button").st__next
+        .st__right
+            picture.st__frame
+                source(type="image/webp" media="(min-width: 1280px" srcset="static/images/content/st-bg.webp")
+                //source(type="image/webp" media="(min-width: 720px" srcset="static/images/content/greeting-preview-tablet.webp")
+                source(type="image/webp" srcset="static/images/content/greeting-preview-mobile.webp")
+                source(media="(min-width: 1280px" srcset="static/images/content/st-bg.jpg")
+                //source(media="(min-width: 720px)" srcset="static/images/content/greeting-preview-tablet.jpg")
+                img(itemprop="image" src="static/images/content/greeting-preview-mobile.jpg").st__frame-image
+        .st__bottom
+            ul.st__bonus
+                li.st__bonus-item
+                    b.st__bonus-name Внимание! Действует акция:
+                    span.st__bonus-description при покупке любого тура дарим сет игристых вин Balaklava Brut Reserve
+                li.st__bonus-item
+                    b.st__bonus-name Идея для подарка:
+                    span.st__bonus-description Сертификат на путешествие от Simple Travel
+            .st__contacts
+                img(src="static/images/content/st-qr.svg" alt="Simple Travel QR code").st__qr
+                
+                .st__links
+                    a(href="mailto:booking@simpletravel.ru" target="_blank").st__links-mail booking@simpletravel.ru
+                    a(href="tel:+74957755552" target="_blank").st__links-tel +7 495 775 55 52
+                    a(href="https://www.instagram.com/simplewinetravel/" target="_blank").st__links-insta simplewinetravel
+                    a(href="https://www.facebook.com/simplewtravel" target="_blank").st__links-fb simplewtravel
+                    a(href="http://www.simpletravel.ru/" target="_blank").st__links-site www.simpletravel.ru

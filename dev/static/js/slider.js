@@ -44,19 +44,14 @@ const swiper2 = new Swiper('.swiper-container', {
     }
 });
 
-const swiper3 = new Swiper('.swiper-container-swp', {
+const swiper3 = new Swiper('.swiper-container-st', {
     slidesPerView: 1,
     spaceBetween: 0,
     grabCursor: true,
     speed: 1000,
-    effect: "creative",
-    creativeEffect: {
-        prev: {
-            shadow: true,
-            translate: ["-20%", 0, -1],
-        },
-        next: {
-            translate: ["100%", 0, 0],
-        },
-    },
+
+    navigation: {
+        nextEl: '.st__next',
+        prevEl: '.st__prev',
+    }
 });

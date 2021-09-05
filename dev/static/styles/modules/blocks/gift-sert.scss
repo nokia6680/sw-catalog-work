@@ -16,7 +16,7 @@
     }
 
     &__title {
-        @include font-setting($geometria-font, 2.5rem, 1.222, 500, $pink);
+        @include font-setting($helvetica-neue-font, 2.5rem, 1.222, 400, $pink);
         margin-bottom: 1.25rem;
     }
 

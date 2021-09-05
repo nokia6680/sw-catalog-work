@@ -1,13 +1,19 @@
 .how-order {
     width: 100%;
-
+    max-width: 1200px;
     @include flex-setting(column, flex-start, center);
 
-    margin-bottom: 4rem;
+    margin-bottom: 0.25rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: $white;
+
+    padding: 4rem 4rem;
 
     &__title {
-        @include font-setting($geometria-font, 2.5rem, 1.222, 400, $pink);
-        margin-bottom: 3rem;
+        @include font-setting($helvetica-neue-font, 2.5rem, 1.222, 400, $pink);
+        margin-bottom: 2rem;
     }
 
     &__wrapper {
@@ -15,7 +21,7 @@
 
         @include flex-setting(column, flex-start, center);
 
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
     }
 
     &__heading {
@@ -33,7 +39,7 @@
             width: 100%;
             @include flex-setting(column, center, center);
 
-            max-height: 40px;
+            max-height: 30px;
 
             position: relative;
 
@@ -100,7 +106,7 @@
         }
 
         &-image {
-            max-height: 40px;
+            max-height: 30px;
             object-fit: contain;
         }
     }
@@ -273,12 +279,12 @@
     }
 
     &__name {
-        @include font-setting($helios-font, 0.875rem, 1.222, 700, $black);
+        @include font-setting($geometria-font, 0.875rem, 1.222, 700, $black);
         margin-bottom: 0.5rem;
     }
 
     &__info {
-        @include font-setting($helios-font, 0.625rem, 1.222, 300, $gray);
+        @include font-setting($geometria-font, 0.625rem, 1.222, 300, $gray);
         margin-bottom: 0.5rem;
     }
 
@@ -296,6 +302,7 @@
         border-radius: 10px;
 
         position: relative;
+
 
         &::after {
             position: absolute;
@@ -337,13 +344,13 @@
     &__subtitle {
         align-self: flex-start;
 
-        @include font-setting($helios-font, 1.125rem, 1.222, 700, $black);
+        @include font-setting($geometria-font, 1.125rem, 1.222, 700, $black);
         margin-bottom: 0.875rem;
     }
 
     &__note {
         align-self: flex-start;
-        @include font-setting($helios-font, 1rem, 1.222, 400, #ACAFB2);
+        @include font-setting($geometria-font, 1rem, 1.222, 400, #ACAFB2);
 
         &:first-of-type {
             margin-left: -0.625rem;

@@ -13,9 +13,6 @@ html(lang="ru-RU")
         meta(name="keywords" content="")
         link(rel="stylesheet" type='text/css' href="static/css/styles.css") 
         link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
-        link(rel="preconnect" href="https://fonts.googleapis.com")
-        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-        link(href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet")
     body
         include ../modules/header/header
         main.main
@@ -35,21 +32,11 @@ html(lang="ru-RU")
                         +itemCard('single', 'Château Ducru-Beaucaillou', '2ème Grand Cru Classé', '(Saint-Julien)', 'itemcard.html', 'bordo-2-11', '2-11', '108199', '', '2012', '', '0.75 л', 'Château Ducru-Beaucaillou', 'Франция, Бордо')
                         +itemCard('single', 'Château Les Carmes Haut-Brion', '', '(Pessac-Léognan)', 'itemcard.html', 'bordo-2-12', '2-12', '108447', '', '2016', '', '0.75 л', 'Château Les Carmes Haut-Brion', 'Франция, Бордо')
                     a(href="#" target="_self").to-catalog__link В каталог
-
-            section.st
-                .st__wrapper
-                    img(itemprop="image" src="static/images/content/st.svg" alt="Simple Travel").st__bg
-                    
-                    .st__links
-                        a(href="mailto:booking@simpletravel.ru" target="_blank").st__links-mail booking@simpletravel.ru
-                        a(href="tel:+74957755552" target="_blank").st__links-tel +7 495 775 55 52
-                        a(href="https://www.instagram.com/simplewinetravel/" target="_blank").st__links-insta simplewinetravel
-                        a(href="https://www.facebook.com/simplewtravel" target="_blank").st__links-fb simplewtravel
-                        a(href="http://www.simpletravel.ru/" target="_blank").st__links-site www.simpletravel.ru
+            include ../modules/blocks/st
             include ../modules/blocks/gift-sert
             //include ../modules/blocks/packing
             //include ../modules/blocks/services
-
+            include ../modules/blocks/order
         include ../modules/footer/footer
         //script(src="static/js/vendor/jquery-3.3.1.min.js")
         //script(src="static/js/vendor/libs.js")
