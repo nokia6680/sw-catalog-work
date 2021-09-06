@@ -4,7 +4,7 @@
 
     &__button {
         @include flex-setting(column, center, center);
-        @include font-setting($main-font, 1.25rem, 1.222, 500, $white);
+        @include font-setting($main-font, 1.25rem, 1.222, 500, $bordo);
         background-color: transparent;
         border: none;
         padding: 0;
@@ -16,7 +16,7 @@
 
         &:active,
         &:hover {
-            color: $red;
+            color: $pink;
             transition: 0.2s linear;
         }
     }
@@ -34,6 +34,7 @@
         opacity: 0;
         top: 4rem;
         transition: all 0.5s ease-in;
+        box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.2);
 
         &.active {
             max-height: 400px;
@@ -41,6 +42,7 @@
             top: 5rem;
             opacity: 1;
             transition: all 0.5s ease-in;
+            box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.2);
 
             .nav__item {
                 opacity: 1;
