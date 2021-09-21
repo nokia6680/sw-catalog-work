@@ -1,41 +1,17 @@
+-var navLinks = [{link: '#swp', name: 'SimpleWine Privé'}, {link: '#gs', name: 'Green Selection'}, {link: '#gifts', name: 'Подарочный сертификат'}, {link: '#order', name: 'Как заказать'}]
+-var headBtn = [{link: '/cart', name: 'Корзина', type: 'cart'}, {link: '/wishlist', name: 'Избранное', type: 'wish'}, {link: '/contacts', name: 'Контакты', type: 'contacts'}]
+
 header.header
     .header__logo
         a(href="index.html" target="_selft").header__logo-link
             img(src="static/images/content/simple-logo.svg" alt="Simple Wine").header__logo-img
     nav.header__nav.nav
-        button(type="button").nav__button.js-menuOpener Каталог
-            
         ul.nav__list
-            li.nav__item
-                a(href="#" target="_self").nav__link Шампанские и игристые вина
-            li.nav__item
-                a(href="#" target="_self").nav__link Вина Бордо
-            li.nav__item
-                a(href="#" target="_self").nav__link Fine and rare wines
-            li.nav__item
-                a(href="#" target="_self").nav__link Тихие вина
-                a(href="#" target="_self").nav__sublink Франция
-                a(href="#" target="_self").nav__sublink Италия
-                a(href="#" target="_self").nav__sublink Старый свет
-                a(href="#" target="_self").nav__sublink Новый свет
-            li.nav__item
-                a(href="#" target="_self").nav__link Green Selection
-            li.nav__item
-                a(href="#" target="_self").nav__link Big Russian Wine
-            li.nav__item
-                a(href="#" target="_self").nav__link Вина высокогорья
-            li.nav__item
-                a(href="#" target="_self").nav__link Десертные, крепленые вина и саке
-            li.nav__item
-                a(href="#" target="_self").nav__link Крепкие напитки
-            li.nav__item
-                a(href="#" target="_self").nav__link Стекло и винные аксессуары
-            li.nav__item
-                a(href="#" target="_self").nav__link Премиальные подарочные решения
-            li.nav__item
-                a(href="#" target="_self").nav__link Корпоративные решения и упаковка
-    .header__controls.controls
-        button(type="button").controls__btn.controls__btn--search
-        button(type="button").controls__btn.controls__btn--wish
-        button(type="button").controls__btn.controls__btn--cart
-        button(type="button").controls__btn.controls__btn--login
+            for i in navLinks
+                li.nav__list-item
+                    a(href="" +i.link target="_self").nav__list-link=i.name
+
+        ul.nav__controls
+            for i in headBtn
+                li(class="nav__controls-item " +i.type)
+                    a(href="" +i.link target="_self").nav__controls-link=i.name

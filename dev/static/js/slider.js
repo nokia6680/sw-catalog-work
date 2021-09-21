@@ -31,8 +31,7 @@ const swiper2 = new Swiper('.swiper-container', {
     effect: "creative",
     creativeEffect: {
         prev: {
-            shadow: true,
-            translate: ["-20%", 0, -1],
+            translate: [0, 0, -400],
         },
         next: {
             translate: ["100%", 0, 0],

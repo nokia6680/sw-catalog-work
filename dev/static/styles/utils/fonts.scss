@@ -16,7 +16,7 @@
 @include font-face('Geometria', '../fonts/Geometria/Geometria', 400, 'normal');
 @include font-face('Geometria', '../fonts/Geometria/Geometria-Thin', 200, 'normal');
 @include font-face('Geometria', '../fonts/Geometria/Geometria-Light', 300, 'normal');
-@include font-face('Geometria', '../fonts/Geometria/Geometria-Medium', 500, 'normal');
+@include font-face('Geometria', '../fonts/Geometria/Geometria-Medium', 550, 'normal');
 @include font-face('Geometria', '../fonts/Geometria/Geometria-Bold', 700, 'normal');
 @include font-face('HeliosC', '../fonts/HeliosC/HeliosC', 400, 'normal');
 @include font-face('HeliosC', '../fonts/HeliosC/HeliosC-Bold', 700, 'normal');
@@ -25,11 +25,11 @@
 @include font-face('Helvetica', '../fonts/Helvetica/Helvetica-Light', 300, 'normal');
 @include font-face('Helvetica', '../fonts/Helvetica/Helvetica', 400, 'normal');
 @include font-face('Helvetica', '../fonts/Helvetica/Helvetica-Bold', 700, 'normal');
-@include font-face('HelveticaNeue', '../fonts/Helvetica Neue/HelveticaNeue-Light', 300, 'normal');
-@include font-face('HelveticaNeue', '../fonts/Helvetica Neue/HelveticaNeue-Thin', 200, 'normal');
-@include font-face('HelveticaNeue', '../fonts/Helvetica Neue/HelveticaNeue', 400, 'normal');
-@include font-face('HelveticaNeue', '../fonts/Helvetica Neue/HelveticaNeue-Medium', 500, 'normal');
-@include font-face('HelveticaNeue', '../fonts/Helvetica Neue/HelveticaNeue-Bold', 700, 'normal');
+@include font-face('HelveticaNeueCyr', '../fonts/Helvetica Neue/HelveticaNeueCyr-Light', 300, 'normal');
+@include font-face('HelveticaNeueCyr', '../fonts/Helvetica Neue/HelveticaNeueCyr-Thin', 200, 'normal');
+@include font-face('HelveticaNeueCyr', '../fonts/Helvetica Neue/HelveticaNeueCyr-Roman', 400, 'normal');
+@include font-face('HelveticaNeueCyr', '../fonts/Helvetica Neue/HelveticaNeueCyr-Medium', 500, 'normal');
+@include font-face('HelveticaNeueCyr', '../fonts/Helvetica Neue/HelveticaNeueCyr-Bold', 700, 'normal');
 @include font-face('Lato', '../fonts/Lato/Lato-Light', 300, 'normal');
 @include font-face('Lato', '../fonts/Lato/Lato-Regular', 400, 'normal');
 @include font-face('Lato', '../fonts/Lato/Lato-Black', 900, 'normal');

@@ -1,13 +1,43 @@
 <!--Блок интро главной страницы-->
 section.intro
     .intro__wrapper
-        h1.intro__title Каталог подарков 2021-2022
-        img(src="static/images/content/intro-logo.svg" alt="SimpleWine").intro__logo
-
+        h1.intro__title Каталог подарков
+        .intro__annual
+            span 21
+            span 22
         picture.intro__frame
             source(type="image/webp" media="(min-width: 1280px" srcset="static/images/content/intro-bg.webp")
             //source(type="image/webp" media="(min-width: 720px" srcset="static/images/content/intro-preview-tablet.webp")
-            source(type="image/webp" srcset="static/images/content/intro-preview-mobile.webp")
+            //source(type="image/webp" srcset="static/images/content/intro-preview-mobile.webp")
             source(media="(min-width: 1280px" srcset="static/images/content/intro-bg.jpg")
             //source(media="(min-width: 720px)" srcset="static/images/content/intro-preview-tablet.jpg")
             img(itemprop="image" src="static/images/content/intro-preview-mobile.jpg").intro__frame-image
+    ul.intro__menu.menu
+        li.menu__item
+            a(href="#" target="_self").menu__link Шампанские и игристые вина
+        li.menu__item
+            a(href="#" target="_self").menu__link Вина Бордо
+        li.menu__item
+            a(href="#" target="_self").menu__link Fine and rare wines
+        li.menu__item.inner
+            a(href="#" target="_self").menu__link Тихие вина
+            a(href="#" target="_self").menu__sublink Франция
+            a(href="#" target="_self").menu__sublink Италия
+            a(href="#" target="_self").menu__sublink Старый свет
+            a(href="#" target="_self").menu__sublink Новый свет
+        li.menu__item
+            a(href="#" target="_self").menu__link Green Selection
+        li.menu__item
+            a(href="#" target="_self").menu__link Big Russian Wine
+        li.menu__item
+            a(href="#" target="_self").menu__link Вина высокогорья
+        li.menu__item
+            a(href="#" target="_self").menu__link Десертные, крепленые вина и саке
+        li.menu__item
+            a(href="#" target="_self").menu__link Крепкие напитки
+        li.menu__item
+            a(href="#" target="_self").menu__link Стекло и винные аксессуары
+        li.menu__item
+            a(href="#" target="_self").menu__link Премиальные подарочные решения
+        li.menu__item
+            a(href="#" target="_self").menu__link Корпоративные решения и упаковка

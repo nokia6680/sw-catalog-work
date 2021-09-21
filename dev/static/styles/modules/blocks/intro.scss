@@ -1,13 +1,12 @@
 .intro {
     width: 100%;
-
-    @include flex-setting(column, center, center);
-
-    max-width: 1200px;
+    max-width: 1920px;
     margin: 0 auto;
 
-    margin-bottom: 0.5rem;
-    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 1080px 1fr;
+    justify-content: center;
+    align-items: start;
 
     &__wrapper {
         position: relative;
@@ -19,36 +18,63 @@
     &__title {
         position: absolute;
 
-        top: 4.375rem;
-        left: 4.375rem;
+        bottom: 6.25rem;
+        right: 12.125rem;
 
-        @include font-setting($helvetica-neue-font, 3rem, 1, 400, $white);
+        @include font-setting($roboto-font, 3.125rem, 3.75rem, 500, $white);
         text-transform: uppercase;
-        text-align: left;
-        max-width: 50%;
+        z-index: 2;
     }
 
-    &__logo {
-        width: 203px;
-        height: 88px;
-        object-fit: contain;
+    &__frame {
+        padding-bottom: 81.48148148148148%;
+        position: relative;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
 
-        position: absolute;
-        left: 4.375rem;
-        bottom: 1rem;
+        &-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @supports (aspect-ratio: 16 / 13.03703703703704) {
+        .intro__frame {
+            height: 100%;
+            position: relative;
+            padding-bottom: 0;
+        }
+
+        .intro__frame-image {
+            position: relative;
+            top: auto;
+            left: auto;
+            bottom: auto;
+            right: auto;
+
+            aspect-ratio: 16 / 13.03703703703704;
+        }
     }
 
     &__annual {
-        width: 135px;
+        width: 183px;
         position: absolute;
         @include flex-setting(row, space-between, center);
 
-        top: 16.625rem;
-        right: 18.25rem;
+        top: 18.9375rem;
+        right: 17.1875rem;
+        z-index: 2;
 
         span {
-            @include font-setting($geometria-font, 3rem, 1, 400, $white);
-            letter-spacing: -0.02em;
+            @include font-setting($roboto-font, 3.875rem, 4.625rem, 500, $white);
 
             &:last-child {
                 color: $darkred;
