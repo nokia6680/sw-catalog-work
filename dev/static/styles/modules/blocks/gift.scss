@@ -2,22 +2,39 @@
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
-    @include flex-setting(row, space-between, center);
+    @include flex-setting(column, center, center);
+
+    padding-top: 10rem;
+    padding-bottom: 16.875rem;
+
+    background-color: $bg-pink;
+
+    &__wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 570px 1fr;
+        justify-content: start;
+
+        max-width: 1160px;
+
+        position: relative;
+    }
 
     &__info {
-        width: 50%;
+        padding-top: 2rem;
+        width: 100%;
         max-width: 570px;
 
         @include flex-setting(column, flex-start, flex-start);
     }
 
     &__title {
-        @include font-setting($roboto-font, 3rem, 3.625rem, 500, $pink);
+        @include font-setting($roboto-font, 3rem, 3.625rem, 500, $black);
         margin-bottom: 1.25rem;
     }
 
     &__description {
-        @include font-setting($helvetica-neue-font, 1.5rem, 1.2, 500, $black);
+        @include font-setting($helvetica-neue-font, 1.5rem, 1.2, 550, $black);
         margin-bottom: 2rem;
     }
 
@@ -28,17 +45,17 @@
     }
 
     &__item {
-        padding-left: 2.5rem;
+        padding-left: 2.875rem;
         position: relative;
         width: 100%;
-        margin-bottom: 0.75rem;
+        margin-bottom: 1.875rem;
 
         &:last-child {
             margin-bottom: 0;
         }
 
         span {
-            @include font-setting($geometria-font, 1rem, 1.222, 300, $gray);
+            @include font-setting($helvetica-neue-font, 1.25rem, 1.2, 400, $black);
             text-align: left;
         }
 
@@ -56,8 +73,8 @@
 
         &.icon-1 {
             &::after {
-                width: 25px;
-                height: 20px;
+                width: 20px;
+                height: 13px;
 
                 background-image: url('../images/content/gift-icon-1.svg');
 
@@ -67,30 +84,30 @@
 
         &.icon-2 {
             &::after {
-                width: 30px;
-                height: 25px;
+                width: 23px;
+                height: 22px;
 
                 background-image: url('../images/content/gift-icon-2.svg');
 
-                top: -0.4375rem;
+                top: -0.125rem;
             }
         }
 
         &.icon-3 {
             &::after {
                 width: 25px;
-                height: 25px;
+                height: 17px;
 
                 background-image: url('../images/content/gift-icon-3.svg');
 
-                top: -0.25rem;
+                top: 0.125rem;
             }
         }
 
         &.icon-4 {
             &::after {
-                width: 26px;
-                height: 22px;
+                width: 21.5px;
+                height: 21.5px;
 
                 background-image: url('../images/content/gift-icon-4.svg');
 
@@ -100,25 +117,30 @@
 
         &.icon-5 {
             &::after {
-                width: 26px;
-                height: 26px;
+                width: 24px;
+                height: 18.5px;
 
                 background-image: url('../images/content/gift-icon-5.svg');
 
-                top: -0.25rem;
+                top: -0.125rem;
             }
         }
     }
 
     &__frame {
+        position: absolute;
+        top: 0;
+        right: -4rem;
+        height: 709px;
+
         @include flex-setting(column, center, center);
 
-        max-height: 420px;
+        max-height: 709px;
 
         &-image {
             width: 100%;
             height: 100%;
-            max-height: 420px;
+            max-height: 709px;
             object-fit: contain;
             filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.265));
         }

@@ -1,63 +1,69 @@
-section.how-order
-    h2.how-order__title Заказать вино просто
-    
-    .how-order__wrapper
-        ul.how-order__heading
-            li.how-order__heading-item
-                img(src="static/images/content/swine-logo.svg" alt="SimpleWine").how-order__heading-image
-            li.how-order__heading-item
-                img(src="static/images/content/swp-logo.svg" alt="SimpleWinePrive").how-order__heading-image
-            li.how-order__heading-item
-                img(src="static/images/content/simple-logo.svg" alt="Simple").how-order__heading-image
-        .how-order__content
-            .how-order__body.first
-                h3.how-order__name В винотеке SimpleWine
-                ul.how-order__list 
-                    li.how-order__item
-                        span Найдите близлежащую винотеку на 
-                            a(href="https://www.simplewine.ru/nashi-vinoteki" target="_blank") simplewine.ru/nashi-vinoteki
-                    li.how-order__item
-                        span Кавист поможет определиться с выбором
-                    li.how-order__item
-                        span Вам упакуют заказ и помогут донести его до машины
-            .how-order__body.second
-                h3.how-order__name Онлайн-витрина
-                ul.how-order__list
-                    li.how-order__item
-                        span Выбирайте лучшее на 
-                            a(href="https://www.simplewine.ru" target="_blank") simplewine.ru
-                    li.how-order__item
-                        span После оформления заказа оператор позвонит Вам для подтверждения
-                    li.how-order__item
-                        span Получите заказ в винотеке SimpleWine удобным для Вас способом
-            .how-order__body.third
-                h3.how-order__name У персонального менеджера
-                span.how-order__info (для членов клуба)
-                ul.how-order__list 
-                    li.how-order__item
+section.order
+    .order__wrapper
+        h2.order__title Заказать вино просто
+        
+        .order__block.--sw
+            .order__block-head
+                img(src="static/images/content/swine-logo.svg" alt="SimpleWine").order__block-image
+            
+            .order__block-body
+                .order__block-item
+                    h3.order__name В винотеке SimpleWine
+                    ul.order__list 
+                        li.order__list-item
+                            span Найдите близлежащую винотеку на 
+                                a(href="https://www.simplewine.ru/nashi-vinoteki" target="_blank") simplewine.ru/nashi-vinoteki
+                        li.order__list-item
+                            span Кавист поможет определиться с выбором
+                        li.order__list-item
+                            span Вам упакуют заказ и помогут донести его до машины
+                                
+                .order__block-item
+                    h3.order__name Онлайн-витрина
+                    ul.order__list
+                        li.order__list-item
+                            span Выбирайте лучшее
+                                br 
+                                | на 
+                                a(href="https://www.simplewine.ru" target="_blank") simplewine.ru
+                        li.order__list-item
+                            span После оформления заказа оператор позвонит Вам для подтверждения
+                        li.order__list-item
+                            span Получите заказ в винотеке SimpleWine удобным для Вас способом
+        .order__block.--swp
+            .order__block-head
+                img(src="static/images/content/swp-logo.svg" alt="SimpleWinePrive").order__block-image
+            .order__block-item
+                h3.order__name У персонального менеджера
+                ul.order__list 
+                    li.order__list-item
                         span 
                             | Позвоните 
                             a(href="tel:+74955106865" target="_blank") +7 495 510 6865 
                             | или напишите: 
                             a(href="mailto:vip@simple.ru" target="_blank") vip@simple.ru
-                    li.how-order__item
+                    li.order__list-item
                         span Менеджер поможет определиться с выбором
-                    li.how-order__item
+                    li.order__list-item
                         span Получите заказ удобным для Вас способом
-            .how-order__body.fourth
-                h3.how-order__name У корпоративного менеджера
-                ul.how-order__list 
-                    li.how-order__item
+        .order__block.--s
+            .order__block-head
+                img(src="static/images/content/simple-logo.svg" alt="Simple").order__block-image
+            .order__block-item
+                h3.order__name У корпоративного менеджера
+                ul.order__list 
+                    li.order__list-item
                         span 
                             | Позвоните 
                             a(href="tel:+74955106865" target="_blank") +7 495 510 6865 
                             | или напишите: 
                             a(href="mailto:vip@simple.ru" target="_blank") vip@simple.ru
-                    li.how-order__item
+                    li.order__list-item
                         span Менеджер поможет определиться с выбором
-                    li.how-order__item
+                    li.order__list-item
                         span Получите заказ удобным для Вас способом
-
-    b.how-order__subtitle Все вина можно заказать в подарочной упаковке.
-    p.how-order__note * Подробности уточняйте у менеджера по телефону.
-    p.how-order__note Simple не осуществляет дистанционную продажу алкогольной продукции, как того требует действующее законодательство РФ.
+                        
+        .order__details
+            b.order__subtitle Все вина можно заказать в подарочной упаковке.
+            p.order__note * Подробности уточняйте у менеджера по телефону.
+            p.order__note Simple не осуществляет дистанционную продажу алкогольной продукции, как того требует действующее законодательство РФ.

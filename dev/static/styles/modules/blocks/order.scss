@@ -1,0 +1,186 @@
+.order {
+    width: 100%;
+    @include flex-setting(column, center, center);
+
+    margin: 0 auto;
+    background-color: $white;
+
+    padding: 10rem 4rem;
+
+    &__wrapper {
+        width: 100%;
+        max-width: 1160px;
+        display: grid;
+        grid-template-areas:
+            'title ... ...'
+            'block1 block2 block3'
+            'details ... ...'
+        ;
+
+        grid-template-columns: 560px 260px 260px;
+        grid-column-gap: 2.5rem;
+        justify-content: space-between;
+        align-content: start;
+    }
+
+    &__title {
+        grid-area: title;
+        @include font-setting($roboto-font, 3rem, 3.625rem, 500, $black);
+
+        margin-bottom: 2.25rem;
+    }
+
+    &__block {
+        width: 100%;
+        height: 100%;
+        @include flex-setting(column, flex-start, center);
+
+        &-head {
+            width: 100%;
+            min-height: 55px;
+            @include flex-setting(column, flex-end, center);
+            margin-bottom: 2.25rem;
+        }
+
+        &-body {
+            width: 100%;
+
+            @include flex-setting(row, flex-start, flex-start);
+
+            padding: 1.875rem 1.5rem 2.375rem 1.5rem;
+            border: 1px solid #CECECE;
+            border-radius: 10px;
+
+            .order__block-item:first-of-type {
+                margin-right: 6.875rem;
+            }
+        }
+
+        &.--sw {
+            grid-area: block1;
+
+            .order__block-image {
+                width: 188px;
+                height: 30px;
+                object-fit: contain;
+            }
+        }
+
+        &.--swp {
+            grid-area: block2;
+
+            .order__block-image {
+                width: 234px;
+                height: 55px;
+                object-fit: contain;
+            }
+
+            .order__block-item {
+                width: 100%;
+
+                @include flex-setting(column, flex-start, flex-start);
+
+                padding: 1.875rem 1.5rem 2.375rem 1.5rem;
+                border: 1px solid #CECECE;
+                border-radius: 10px;
+            }
+        }
+
+        &.--s {
+            grid-area: block3;
+
+            .order__block-image {
+                width: 98px;
+                height: 36px;
+                object-fit: contain;
+            }
+
+            .order__block-item {
+                width: 100%;
+
+                @include flex-setting(column, flex-start, flex-start);
+
+                padding: 1.875rem 1rem 2.375rem 1.5rem;
+                border: 1px solid #CECECE;
+                border-radius: 10px;
+            }
+        }
+
+        &-item {
+            width: 100%;
+            height: 100%;
+            @include flex-setting(column, flex-start, flex-start);
+        }
+    }
+
+    &__name {
+        @include font-setting($helvetica-neue-font, 0.9375rem, 1.125rem, 500, $black);
+        margin-bottom: 2.375rem;
+    }
+
+    &__list {
+        width: 100%;
+        max-width: 176px;
+        @include flex-setting(column, flex-start, center);
+
+        &-item {
+            width: 100%;
+            margin-bottom: 3.75rem;
+
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+
+                width: 1px;
+                height: 30px;
+
+                background-color: $pink;
+
+                bottom: -45px;
+                left: 1.25rem;
+            }
+
+            span {
+                @include font-setting($helvetica-neue-font, 0.8125rem, 1rem, 400, $black);
+                text-align: left;
+                display: inherit;
+
+                a {
+                    color: $black;
+                    text-decoration: underline;
+                    word-break: break-all;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__details {
+        margin-top: 3.125rem;
+        padding-left: 1.5rem;
+
+        grid-area: details;
+        @include flex-setting(column, flex-start, flex-start);
+    }
+
+    &__subtitle {
+        @include font-setting($helvetica-neue-font, 1.375rem, 1.625rem, 500, $black);
+        margin-bottom: 2.625rem;
+    }
+
+    &__note {
+        @include font-setting($helvetica-neue-font, 0.8125rem, 1rem, 400, #6D6D6D);
+        &:first-of-type {
+            margin-bottom: 0.625rem;
+        }
+    }
+}
