@@ -1,0 +1,210 @@
+.subscribe {
+    width: 100%;
+
+    background-color: $black;
+
+    @include flex-setting(column, center, center);
+
+    padding-top: 2.5rem;
+    padding-bottom: 2.625rem;
+
+    &__wrapper {
+        width: 100%;
+
+        max-width: 1160px;
+
+        @include flex-setting(row, flex-start, center);
+    }
+
+    &__title {
+        @include font-setting($helvetica-neue-font, 1.375rem, 1.625rem, 400, $white);
+    }
+
+    &__form {
+        width: auto;
+        margin-left: auto;
+        margin-right: 0;
+        @include flex-setting(row, flex-start, center);
+    }
+
+    &__content {
+        width: 380px;
+        @include flex-setting(row, center, center);
+        margin-right: 2.5rem;
+        position: relative;
+    }
+
+    &__input {
+        width: 100%;
+        height: 33px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #999;
+        padding-bottom: 0.75rem;
+        @include font-setting($roboto-font, 1.0625rem, 1.25rem, 400, $white);
+        transition: 0.2s ease-in;
+        
+        &:hover,
+        &:active,
+        &:focus {
+            border-color: $pink;
+            transition: 0.2s ease-in;
+        }
+    }
+
+    &__error {
+        position: absolute;
+
+        bottom: -0.875rem;
+        left: 0.125rem;
+
+        @include font-setting($roboto-font, 0.625rem, 1, 400, $pink);
+
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__list {
+        @include flex-setting(row, flex-end, center);
+        position: absolute;
+        width: 190px;
+        height: 33px;
+
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+
+        .select-hidden {
+            display: none;
+            visibility: hidden;
+            padding-right: 0.75rem;
+        }
+
+        .select {
+          cursor: pointer;
+
+          position: relative;
+          @include flex-setting(column, center, center);
+          @include font-setting($roboto-font, 1.0625rem, 1.25rem, 400, #999);
+          width: 190px;
+          transition: 0.2s linear;
+          height: 33px;
+
+          &:hover {
+            color: $white;
+            transition: 0.2s linear;
+          }
+        }
+
+        .select-styled {
+            @include flex-setting(row, flex-end, center);
+            position: absolute;
+            padding-right: 1rem;
+            width: 100%;
+            top: -0.625rem;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: transparent;
+            transition: 0.2s linear;
+
+            &::after {
+                position: absolute;
+                content: '';
+
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.681641 1.0459L5.36353 5.72778L10.0454 1.0459' stroke='%23999999'/%3E%3C/svg%3E");
+
+                width: 11px;
+                height: 7px;
+
+                top: 1.25rem;
+                right: 0;
+                transition: 0.2s linear;
+            }
+
+            &:hover {
+                transition: 0.2s linear;
+
+                &::after {
+                    background-image: url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.681641 1.0459L5.36353 5.72778L10.0454 1.0459' stroke='%23ffffff'/%3E%3C/svg%3E");
+                    transition: 0.2s linear;
+                }
+            }
+
+            &:active, &.active {
+                &::after {
+                    transform: rotate(180deg);
+                    background-image: url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.681641 1.0459L5.36353 5.72778L10.0454 1.0459' stroke='%23ffffff'/%3E%3C/svg%3E");
+                    transition: 0.2s linear;
+                }
+            }
+        }
+
+        .select-options {
+            width: 190px;
+            display: none;
+            position: absolute;
+            top: 33px;
+            right: 0;
+            left: 0;
+            z-index: 999;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background-color: #4d4d4d;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-top: none;
+
+            li {
+                @include flex-setting(row, flex-end, center);
+                height: 50px;
+                margin: 0;
+                padding: 0 0.9375rem 0 0;
+                transition: all 0.15s ease-in;
+
+                &:not(:first-child) {
+                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+                }
+
+            a {
+                color: $black;
+                text-decoration: none;
+            }
+
+            &:hover {
+                color: $black;
+                background: #4d4d4d;
+                transition: 0.2s linear;
+            }
+          }
+        }
+    }
+
+    &__submit {
+        width: auto;
+        height: 50px;
+
+        @include flex-setting(column, center, center);
+        @include font-setting($roboto-font, 0.9375rem, 1.125rem, 400, $white);
+        border: 1px solid #CECECE;
+        background-color: transparent;
+        padding: 0 3.375rem;
+
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s ease-in;
+
+        &:hover,
+        &:active {
+            background-color: $pink;
+            border-color: $pink;
+            transition: 0.2s ease-in;
+        }
+    }
+}

@@ -151,6 +151,15 @@
                     color: $black;
                     text-decoration: underline;
                     word-break: break-all;
+                    transition: 0.2s ease-in;
+                    cursor: pointer;
+                    outline: none;
+
+                    &:hover,
+                    &:active {
+                        color: $pink;
+                        transition: 0.2s ease-in;
+                    }
                 }
             }
 

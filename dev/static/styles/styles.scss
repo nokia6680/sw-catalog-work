@@ -5,69 +5,85 @@
 @import "utils/sprite";
 @import "utils/fluid-font";
 @import "utils/item";
-@import "utils/breadcrumbs";
-//@include sprites($spritesheet-sprites);
+@import "utils/breadcrumbs"; //@include sprites($spritesheet-sprites);
 
 html {
-  font-family: 'Lato', Arial, serif;
-  font-size: 16px;
-  height: 100%;
+    font-family: 'Lato', Arial, serif;
+    font-size: 16px;
+    height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
-  height: 100%;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-
-  background-color: $white;
+    height: 100%;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: $white;
 }
 
 *,
-*::before,
-*::after { box-sizing: border-box; }
-
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
-ol, ul {
-  list-style: none;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
 }
 
 img {
-  max-width: 100%;
-  display: block;
+    max-width: 100%;
+    display: block;
 }
 
-input,
 button,
-textarea,
-select { font: inherit; }
+input,
+select,
+textarea {
+    font: inherit;
+}
 
 audio,
 canvas,
 iframe,
 img,
 svg,
-video,
-textarea { vertical-align: middle; }
+textarea,
+video {
+    vertical-align: middle;
+}
 
-textarea { resize: none; }
+textarea {
+    resize: none;
+}
 
 section {
     position: relative;
 }
 
-main {
+main {}
 
-}
-
+button,
 input,
-select,
-button { outline: none; }
-
+select {
+    outline: none;
+}
 //Модули
 @import "modules/modules";

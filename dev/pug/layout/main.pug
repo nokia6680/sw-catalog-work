@@ -15,7 +15,8 @@ html(lang="ru-RU")
         link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-        link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+        link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")
     body
         include ../modules/header/header
         main.main
@@ -27,11 +28,15 @@ html(lang="ru-RU")
             include ../modules/blocks/gift
             //include ../modules/blocks/packing
             //include ../modules/blocks/services
+            include ../modules/blocks/custom
             include ../modules/blocks/order
+            include ../modules/blocks/subscribe
+            include ../modules/blocks/contacts
         include ../modules/footer/footer
-        //script(src="static/js/vendor/jquery-3.3.1.min.js")
+        script(src="static/js/vendor/jquery-3.3.1.min.js")
         //script(src="static/js/vendor/libs.js")
         script(src="static/js/main.js")
         script(src="https://unpkg.com/swiper/swiper-bundle.js")
         script(src="static/js/slider.js")
+        script(src="static/js/select.js")
         block script

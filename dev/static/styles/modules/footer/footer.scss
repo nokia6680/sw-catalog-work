@@ -1,16 +1,63 @@
 .footer {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: #F5F5F5;
+
     @include flex-setting(column, center, center);
+
+    padding-top: 2.125rem;
+    padding-bottom: 3.375rem;
 
     &__wrapper {
         width: 100%;
+        max-width: 1160px;
 
-        @include flex-setting(column, flex-start, center);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 6.125rem;
+        justify-content: start;
+        align-items: center;
+    }
 
-        padding: 4rem 4rem;
+    &__block {
+        width: 100%;
 
-        background-color: $white;
+        @include flex-setting(row, flex-start, center);
+
+        &:first-child {
+            .footer__link:first-child {
+                margin-right: 1.75rem;
+            }
+        }
+    }
+
+    &__link,
+    &__copy,
+    &__origin {
+        @include font-setting($helvetica-neue-font, 0.75rem, 1.125rem, 400, #9F9F9F);
+        text-decoration: none;
+    }
+
+    &__link {
+        transition: 0.2s ease-in;
+        cursor: pointer;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $pink;
+            transition: 0.2s ease-in;
+        }
+    }
+
+    &__origin a {
+        color: #9F9F9F;
+        transition: 0.2s ease-in;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $pink;
+            transition: 0.2s ease-in;
+        }
     }
 }

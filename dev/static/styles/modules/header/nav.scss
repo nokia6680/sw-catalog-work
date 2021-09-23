@@ -2,25 +2,6 @@
     width: 100%;
     @include flex-setting(row, flex-start, center);
 
-    &__button {
-        @include flex-setting(column, center, center);
-        @include font-setting($main-font, 1.25rem, 1.222, 500, $bordo);
-        background-color: transparent;
-        border: none;
-        padding: 0;
-
-        text-transform: uppercase;
-        cursor: pointer;
-        outline: none;
-        transition: 0.2s linear;
-
-        &:active,
-        &:hover {
-            color: $pink;
-            transition: 0.2s linear;
-        }
-    }
-
     &__list {
         width: 100%;
         @include flex-setting(row, flex-start, center);
@@ -35,7 +16,7 @@
             display: block;
             padding-top: 0.25rem;
             padding-bottom: 0.25rem;
-            @include font-setting($helvetica-neue-font, 0.9375rem, 1, 500, $black);
+            @include font-setting($helvetica-neue-font, 0.9375rem, 1, 550, $black);
             text-decoration: none;
 
             position: relative;
@@ -163,7 +144,7 @@
             display: block;
             padding-top: 0.25rem;
             padding-bottom: 0.25rem;
-            @include font-setting($helvetica-neue-font, 0.9375rem, 1, 500, $black);
+            @include font-setting($helvetica-neue-font, 0.9375rem, 1, 550, $black);
             text-decoration: none;
 
             position: relative;
