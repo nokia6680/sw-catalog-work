@@ -32,6 +32,43 @@
         width: 100%;
         height: 0;
         overflow: hidden;
+        @include flex-setting(column, center, center);
+
+        &::after {
+            position: absolute;
+            content: '';
+
+            width: 177px;
+            height: 177px;
+
+            background-image: url('../images/content/ball-big.png');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            top: 3rem;
+            left: 21.875rem;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+
+            width: 73px;
+            height: 74px;
+
+            background-image: url('../images/content/ball-small.png');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            top: 7.1875rem;
+            right: 10rem;
+
+            transform: rotate(30deg);
+
+            z-index: 2;
+        }
 
         &-image {
             position: absolute;

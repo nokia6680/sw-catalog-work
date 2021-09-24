@@ -43,14 +43,24 @@ const swiper2 = new Swiper('.swiper-container', {
     }
 });
 
-const swiper3 = new Swiper('.swiper-container-st', {
+const swiper3 = new Swiper('.custom-swiper', {
     slidesPerView: 1,
     spaceBetween: 0,
     grabCursor: true,
+    slideClass: 'custom__item',
     speed: 1000,
+    effect: "creative",
+    creativeEffect: {
+        prev: {
+            translate: ["-120%", 0, -500],
+        },
+        next: {
+            translate: ["120%", 0, -500],
+        },
+    },
 
     navigation: {
-        nextEl: '.st__next',
-        prevEl: '.st__prev',
+        nextEl: '.custom__next',
+        prevEl: '.custom__prev',
     }
 });

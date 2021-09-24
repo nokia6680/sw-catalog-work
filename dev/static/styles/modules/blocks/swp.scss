@@ -4,6 +4,7 @@
     @include flex-setting(column, flex-start, center);
 
     margin: 0 auto;
+    overflow-x: hidden;
 
     &__wrapper {
         width: 100%;
