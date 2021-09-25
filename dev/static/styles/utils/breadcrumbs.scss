@@ -9,7 +9,7 @@
 
     &__item {
         width: auto;
-        padding-right: 2.1875rem;
+        padding-right: 1.25rem;
         position: relative;
 
         &:last-child {
@@ -18,16 +18,26 @@
     }
 
     &__link {
-        @include font-setting($title-font, 1.125rem, 1.2, 400, rgba(0, 0, 0, 0.7));
+        @include font-setting($helvetica-neue-font, 0.75rem, 0.75rem, 400, #cecece);
         text-decoration: none;
+        transition: 0.2s ease-in;
+
+        cursor: pointer;
+        outline: none;
+
+        &:hover,
+        &:active {
+            color: $white;
+            transition: 0.2s ease-in;
+        }
     }
 
     &__divider {
-        margin-left: 2.1875rem;
+        margin-left: 1.25rem;
         display: inline-flex;
-        width: 40px;
+        width: 6px;
         height: 1px;
-        background-color: black;
+        background-color: #cecece;
         margin-bottom: 0.25rem;
     }
 }

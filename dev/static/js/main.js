@@ -1,8 +1,11 @@
-var menuOpener = document.querySelector('.js-menuOpener');
-var menuOverlay = document.querySelector('.nav__list');
+var catOpener = document.querySelector('.js-catalog');
+var navCat = document.querySelector('.nav');
+var catalogBody = document.querySelector('.menu');
 
-if (menuOpener) {
-    menuOpener.addEventListener('click', function () {
-        menuOverlay.classList.toggle('active');
+
+if (catOpener) {
+    catOpener.addEventListener('click', function () {
+        navCat.classList.toggle('catalog-opened');
+        catalogBody.classList.toggle('opened');
     });
 };

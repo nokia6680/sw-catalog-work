@@ -1,6 +1,25 @@
 .nav {
     width: 100%;
     @include flex-setting(row, flex-start, center);
+    padding-right: 14.0625rem;
+
+    position: relative;
+
+    &.catalog-opened {
+        &::after {
+            position: absolute;
+            content: '';
+
+            width: 56px;
+            height: 79px;
+
+            background: linear-gradient(90deg, rgba(222, 0, 124, 0) 0%, rgba(222, 0, 124, 0.19) 100%);
+
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
 
     &__list {
         width: 100%;
@@ -144,7 +163,7 @@
             display: block;
             padding-top: 0.25rem;
             padding-bottom: 0.25rem;
-            @include font-setting($helvetica-neue-font, 0.9375rem, 1, 550, $black);
+            @include font-setting($helvetica-neue-font, 0.9375rem, 1, 400, $black);
             text-decoration: none;
 
             position: relative;

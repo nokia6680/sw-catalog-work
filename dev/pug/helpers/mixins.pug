@@ -22,39 +22,36 @@ mixin breadcrumb(levels)
                         i.breadcrumbs__symbol(aria-hidden="true").breadcrumbs__divider
                     meta(itemprop="position" content!=count)
 
-mixin itemCard(type, name, category, subname, link, image, nr, articulFirst, articulSecond, yearFirst, yearSecond, volume, location, country)
+mixin itemCard(type, link, image, articul, name, originLink, origin, colorLink, color, sugarLink, sugar, volumeLink, volume, price)
     li(class="item " +type)
-        a(href="" +link target="_self").item__link
-            .item__body
-                picture.item__frame
-                    source(type="image/webp" srcset="static/images/content/" +image +".webp" )
-                    img(itemprop="image" src="static/images/content/" +image +".png").item__frame-image
-                .item__controls
-                    button(type="button").item__btn.item__btn--expand
-                    button(type="button").item__btn.item__btn--wish
-                    button(type="button").item__btn.item__btn--cart
-                .item__info
-                    .item__info-top
-                        b.item__info-nr=nr
-                        .item__info-articul
-                            span=articulFirst
-                                sup (1)
-                            span=articulSecond
-                                sup (2)
-                    .item__info-middle
-                        h3.item__info-name=name
-                        span.item__info-category=category
-                        b.item__info-subname=subname
-                        .item__info-specs
-                            span=yearFirst
-                            span=yearSecond
-                            span.item__info-volume=volume
-                    .item__info-bottom
-                        span.item__info-locate=location
-                        span.item__info-country=country
-                        span.item__info-type
-            h2.item__name=name
-
+        // Фото бутылки + добавление в корзину
+        .item__body
+            // Артикул и кнопка добавления в вишлист
+            .item__head
+                .item__articul
+                    span.item__articul-name Артикул: 
+                    span.item__articul-nr=articul
+                button(type="button").item__wishlist.js-to-wishlist
+            // Фото бутылки
+            picture.item__frame
+                source(type="image/webp" srcset="static/images/content/" +image +".webp" )
+                img(itemprop="image" src="static/images/content/" +image +".png").item__frame-image
+            .item__overlay
+                .item__overlay-count
+                    button(type="button").item__overlay-btn.item__overlay-btn-decrease -
+                    input(type="number" name="item-counter" id="item-counter" placeholder="0").item__overlay-input
+                    button(type="button").item__overlay-btn.item__overlay-btn-increase +
+                button(type="button").item__overlay-cart.js-to-cart В корзину
+        // Название, детали и цена
+        .item__bottom
+            a(href="" +link target="_self").item__name=name
+            .item__details
+                a(href="" +originLink target="_self").item__details-link=origin + ', '
+                a(href="" +colorLink target="_self").item__details-link=color + ', '
+                a(href="" +sugarLink target="_self").item__details-link=sugar + ', '
+                a(href="" +volumeLink target="_self").item__details-link=volume + ' л'
+            b.item__price=price + '₽'
+                
 mixin priveListItem(description, type)
     li(class="swp__list-item " +type)
         span

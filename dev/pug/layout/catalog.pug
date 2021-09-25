@@ -3,22 +3,73 @@ block variables
 
 doctype html
 html(lang="ru-RU")
-	head
-		meta(charset="utf-8")
-		title #{title}
-		<!--[if IE]>
-		meta(http-equiv='X-UA-Compatible', content="IE = edge")
-		<![endif]-->
-		meta(name="viewport" content="width=device-width,initial-scale=1")
-		meta(name="keywords" content="")
-		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
-	body
-		include ../modules/header/header
-		main.main
-			include ../modules/blocks/preview
-			include ../modules/blocks/catalog
-		include ../modules/footer/footer
-		//script(src="static/js/vendor/jquery-3.3.1.min.js")
-		//script(src="static/js/vendor/libs.js")
-		script(src="static/js/main.js")
-		block script
+    head
+        meta(charset="utf-8")
+        title #{title}
+        <!--[if IE]>
+        meta(http-equiv='X-UA-Compatible', content="IE = edge")
+        <![endif]-->
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        meta(name="keywords" content="")
+        link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+        link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")
+    body
+        include ../modules/header/header
+        main.main
+            include ../modules/blocks/preview
+            section.catalog
+                .catalog__filter
+                    ul.catalog__filter-list
+                        li.catalog__filter-item
+                            button(type="button" data-sort="fra" onclick="openOffer(event, 'fra')" id="defaultOpen").catalog__filter-btn.active Франция
+                        li.catalog__filter-item
+                            button(type="button" data-sort="ita" onclick="openOffer(event, 'ita')").catalog__filter-btn Италия
+                        li.catalog__filter-item
+                            button(type="button" data-sort="old" onclick="openOffer(event, 'old')").catalog__filter-btn Новый свет
+                        li.catalog__filter-item
+                            button(type="button" data-sort="new" onclick="openOffer(event, 'new')").catalog__filter-btn Старый свет
+                .catalog__wrapper
+                    ul.catalog__list#fra
+                        +itemCard('', 'itemcard.html', 'bottle-1', '124852', 'Вино Johnson Estate Sauvignon Blanc', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
+                        +itemCard('', 'itemcard.html', 'bottle-2', '124852', 'Кагор Южнобережный', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
+                        +itemCard('', 'itemcard.html', 'bottle-3', '124852', 'Вино Kindzmarauli Shumi', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
+                    ul.catalog__list#ita
+                        +itemCard('', 'itemcard.html', 'bottle-3', '124852', 'Вино Johnson Estate Sauvignon Blanc', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
+                        +itemCard('', 'itemcard.html', 'bottle-2', '124852', 'Кагор Южнобережный', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
+                        +itemCard('', 'itemcard.html', 'bottle-1', '124852', 'Вино Kindzmarauli Shumi', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
+                    ul.catalog__list#old
+                        +itemCard('', 'itemcard.html', 'bottle-1', '124852', 'Вино Johnson Estate Sauvignon Blanc', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
+                        +itemCard('', 'itemcard.html', 'bottle-2', '124852', 'Кагор Южнобережный', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
+                        +itemCard('', 'itemcard.html', 'bottle-3', '124852', 'Вино Kindzmarauli Shumi', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
+                    ul.catalog__list#new
+                        +itemCard('', 'itemcard.html', 'bottle-3', '124852', 'Вино Johnson Estate Sauvignon Blanc', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
+                        +itemCard('', 'itemcard.html', 'bottle-2', '124852', 'Кагор Южнобережный', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
+                        +itemCard('', 'itemcard.html', 'bottle-1', '124852', 'Вино Kindzmarauli Shumi', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
+                .catalog__bottom
+                    .catalog__pagination
+                        button(type="button").catalog__pagination-prev
+                        ul.catalog__pagination-list
+                            li.catalog__pagination-item
+                                a(href="#" target="_self").catalog__pagination-link.active 1
+                            li.catalog__pagination-item
+                                a(href="#" target="_self").catalog__pagination-link 2
+                            li.catalog__pagination-item
+                                a(href="#" target="_self").catalog__pagination-link 3
+                        button(type="button").catalog__pagination-next
+                    button(type="button").catalog__more Загрузить ещё
+                    a(href="#top" target="_self" id="js-to-top").catalog__top Наверх
+            include ../modules/blocks/subscribe
+            include ../modules/blocks/contacts
+        include ../modules/footer/footer
+        script(src="static/js/vendor/jquery-3.3.1.min.js")
+        //script(src="static/js/vendor/libs.js")
+        script(src="static/js/main.js")
+        script(src="https://unpkg.com/swiper/swiper-bundle.js")
+        script(src="static/js/slider.js")
+        script(src="static/js/select.js")
+        script(src="static/js/tabs-review-2.js")
+        block script

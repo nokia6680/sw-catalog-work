@@ -1,11 +1,23 @@
 .menu {
     width: 100%;
-
+    max-width: 0;
+    overflow: hidden;
+    padding-top: 5.3125rem;
+    min-height: 880px;
     @include flex-setting(column, flex-start, flex-start);
 
-    padding: 5.3125rem 0 0 4.75rem;
-
+    background-color: $white;
     gap: 1.375rem;
+
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    transition: 0.4s ease-in;
+
+    &.opened {
+        padding-left: 4.75rem;
+        max-width: 840px;
+        transition: 0.4s ease-in;
+    }
 
     &__item {
         @include flex-setting(column, flex-start, flex-start);
