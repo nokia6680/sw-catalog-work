@@ -12,18 +12,27 @@ html(lang="ru-RU")
         meta(name="viewport" content="width=device-width,initial-scale=1")
         meta(name="keywords" content="")
         link(rel="stylesheet" type='text/css' href="static/css/styles.css")
-        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
         link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
-    body
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+        link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")
+    body.body-itemcard
         include ../modules/header/header
-        main.main
+        main.main.main--card
+            +breadcrumb([["Главная ", "/index.html"], ["Шампанские и игристые вина ", "#"], ["Chianti Riserva ", "#"]])
+            
             section.itemcard
-                +breadcrumb([["Главная ", "/index.html"], ["Шампанские и игристые вина ", "#"], ["Chateau Cheval Blanc ", "#"]])
-
-                article.itemcard__wrapper
-                    <!--Изображения-->
-                    section.itemcard__gallery.gallery
-                        .gallery__slider.swiper-container.gallery-top
+                .itemcard__head
+                    h1.itemcard__title Вино Chianti Riserva, Melini, 2017 г.
+                    .itemcard__details
+                        span.itemcard__details-articul Артикул: 123456
+                        span.itemcard__details-subtitle Кьянти Ризерва
+                    button(type="button").itemcard__wishlist
+                .itemcard__body
+                    <!--Галерея-->
+                    .itemcard__gallery.gallery
+                        .gallery__slider.swiper-container-top.gallery-top
                             .swiper-wrapper
                                 .gallery__item.swiper-slide
                                     picture.gallery__frame
@@ -50,7 +59,7 @@ html(lang="ru-RU")
                                         source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
                                         img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image
                             .fraction-pagination
-                        .gallery__slider.swiper-container.gallery-thumbs
+                        .gallery__slider.swiper-container-thumbs.gallery-thumbs
                             .swiper-wrapper
                                 .gallery__item.gallery__item--thumb.swiper-slide
                                     picture.gallery__frame.gallery__frame--thumb
@@ -80,43 +89,26 @@ html(lang="ru-RU")
                             button(type="button").gallery__prev-th
                             button(type="button").gallery__next-th
                     <!--Блок информации о продукте-->
-                    section.itemcard__info.info
-                        .info__header
-                            h2.info__name Chateau Cheval Blank
-                            ul.info__share.share
-                                li.share__item
-                                    a(href="#" target="_blank").share__link
-                                        i.fab.fa-twitter
-                                li.share__item
-                                    a(href="#" target="_blank").share__link
-                                        i.fab.fa-facebook-f
-                                li.share__item
-                                    a(href="#" target="_blank").share__link
-                                        i.fab.fa-vk 
-                                li.share__item
-                                    a(href="#" target="_blank").share__link
-                                        i.fab.fa-instagram
-                        .info__details
-                            p.info__description "Белая лошадь" - именно так переводится с французского название поместья Cheval Blanc, хотя происхождение его доподлинно неизвестно.
-                            p.info__description Ферментация и мацерация длятся 3-4 недели в емкостях из нержавеющей стали и цемента при температурном контроле. Перед бутилированием вино осветляется, но не фильтруется.
-                        ul.info__specs.specs
-                            for i in specsPremeur
-                                li.specs__item
-                                    b.specs__name=i.name
-                                    span.specs__description=i.description
-                        .info__checkout
-                            b.info__price 62990  ₽
-                            .info__checkout-controls
-                                button(type="button").info__checkout-wishlist
-                                .info__checkout-quantity
-                                    button(type="button").info__checkout-quantity-less -
-                                    span.info__checkout-quantity-curr 0
-                                    button(type="button").info__checkout-quantity-more +
-                                button(type="button").info__checkout-cart
+                    .itemcard__info
+                        ul.itemcard__specs
+                            for i in specsItems
+                                li.itemcard__specs-item
+                                    span.itemcard__specs-name=i.name
+                                    span.itemcard__specs-description=i.description
+                        .itemcard__bottom
+                            .itemcard__quantity
+                                button(type="button").itemcard__quantity-decrease -
+                                input(type="number" name="card-quantity" id="card-quantity" placeholder="0").itemcard__quantity-input
+                                button(type="button").itemcard__quantity-increase +
+                            button(type="button").itemcard__purchase В корзину
+                            b.itemcard__price 1 005 ₽
+            include ../modules/blocks/subscribe
+            include ../modules/blocks/contacts
         include ../modules/footer/footer
-        //script(src="static/js/vendor/jquery-3.3.1.min.js")
+        script(src="static/js/vendor/jquery-3.3.1.min.js")
         //script(src="static/js/vendor/libs.js")
         script(src="static/js/main.js")
         script(src="https://unpkg.com/swiper/swiper-bundle.js")
         script(src="static/js/slider.js")
+        script(src="static/js/select.js")
         block script

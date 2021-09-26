@@ -3,8 +3,9 @@
     @include flex-setting(column, center, center);
 
     &__list {
-        width: auto;
+        width: 100%;
         @include flex-setting(row, flex-start, center);
+        max-width: 1160px;
     }
 
     &__item {

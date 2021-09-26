@@ -86,5 +86,61 @@ input,
 select {
     outline: none;
 }
+
+.body-index {
+    .header__catalog {
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    .menu {
+        max-width: 840px;
+        padding-left: 4.75rem;
+        transition: none;
+    }
+
+    .menu__item {
+        pointer-events: auto;
+        transform: scale(1) translateY(0px);
+        will-change: transform;
+        opacity: 1;
+
+        @for $i from 1 through $menuItems {
+            &:nth-child(#{$i}) {
+                transition-delay: #{0.06 * $i+0.2}s;
+            }
+        }
+    }
+}
+
+.body-itemcard {
+    .header {
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .breadcrumbs {
+        margin-bottom: 3.125rem;
+    }
+
+    .breadcrumbs__link {
+        color: #838383;
+        transition: 0.2s $cubic;
+
+        &:hover,
+        &:active {
+            color: $pink;
+            transition: 0.2s $cubic;
+        }
+    }
+
+    .breadcrumbs__divider {
+        background-color: #838383;
+    }
+}
+
+.main--card {
+    padding-top: 2.625rem;
+    margin: 0 auto;
+}
 //Модули
 @import "modules/modules";
