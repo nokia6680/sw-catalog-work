@@ -126,6 +126,22 @@
                         transition: 0.3s ease-in;
                     }
                 }
+
+                &.not-empty {
+                    &::before {
+                        position: absolute;
+                        content: '';
+
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 2.5px;
+
+                        background-color: $pink;
+
+                        top: 0.0625rem;
+                        left: 1.125rem;
+                    }
+                }
             }
 
             &.--wish {
@@ -143,6 +159,22 @@
                     .nav__controls-link::after {
                         transform: scaleX(1);
                         transition: 0.3s ease-in;
+                    }
+                }
+
+                &.not-empty {
+                    &::before {
+                        position: absolute;
+                        content: '';
+
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 2.5px;
+
+                        background-color: $pink;
+
+                        top: 0.0625rem;
+                        left: 1.125rem;
                     }
                 }
             }

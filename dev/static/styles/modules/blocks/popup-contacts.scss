@@ -1,0 +1,74 @@
+.popup-contacts {
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @include flex-setting(column, center, center);
+
+    background: rgba(128, 128, 128, 0.2);
+    backdrop-filter: blur(80px);
+
+    z-index: 999;
+
+    display: none;
+
+    &.active {
+        display: flex;
+    }
+
+    &__wrapper {
+        @include flex-setting(column, flex-start, center);
+
+        padding: 1.875rem 1.875rem 4.625rem 4.25rem;
+
+        background-color: $white;
+
+        width: 480px;
+    }
+
+    &__closer {
+        display: block;
+
+        width: 28px;
+        height: 28px;
+
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='-0.625' x2='19' y2='-0.625' transform='matrix(0.707107 0.707107 0.707107 -0.707107 1.28125 0.38665)' stroke='black' stroke-width='1.25'/%3E%3Cline x1='0.839308' y1='14.3797' x2='14.2743' y2='0.944704' stroke='black' stroke-width='1.25'/%3E%3C/svg%3E");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-color: transparent;
+        border: none;
+
+        cursor: pointer;
+        outline: none;
+
+        align-self: flex-end;
+
+        margin-bottom: 0.625rem;
+        transition: 0.2s $cubic;
+
+        &:hover,
+        &:active {
+            background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='-0.625' x2='19' y2='-0.625' transform='matrix(0.707107 0.707107 0.707107 -0.707107 1.28125 0.38665)' stroke='%23e6007e' stroke-width='1.25'/%3E%3Cline x1='0.839308' y1='14.3797' x2='14.2743' y2='0.944704' stroke='%23e6007e' stroke-width='1.25'/%3E%3C/svg%3E");
+            transition: 0.2s $cubic;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        @include flex-setting(column, flex-start, flex-start);
+
+        .contacts__block {
+            margin-bottom: 2.5rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

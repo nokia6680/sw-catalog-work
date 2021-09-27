@@ -1,51 +1,52 @@
 -var navLinks = [{link: '#swp', name: 'SimpleWine Privé'}, {link: '#gifts', name: 'Подарочный сертификат'}, {link: '#custom', name: 'Персонализация'}, {link: '#order', name: 'Как заказать'}]
--var headBtn = [{link: '/cart', name: 'Корзина', type: '--cart'}, {link: '/wishlist', name: 'Избранное', type: '--wish'}, {link: '/contacts', name: 'Контакты', type: '--contacts'}]
+-var headBtn = [{link: 'cart.html', name: 'Корзина', type: '--cart'}, {link: 'favorites.html', name: 'Избранное', type: '--wish'}, {link: '#', name: 'Контакты', type: '--contacts'}]
 
 header.header
-    .header__logo
-        a(href="index.html" target="_self").header__logo-link
-            img(src="static/images/content/simple-logo.svg" alt="Simple Wine").header__logo-img
-    nav.header__nav.nav
-        ul.nav__list
-            for i in navLinks
-                li.nav__list-item
-                    a(href="" +i.link target="_self").nav__list-link=i.name
+    .header__wrapper
+        .header__logo
+            a(href="index.html" target="_self").header__logo-link
+                img(src="static/images/content/simple-logo.svg" alt="Simple Wine").header__logo-img
+        nav.header__nav.nav
+            ul.nav__list
+                for i in navLinks
+                    li.nav__list-item
+                        a(href="" +i.link target="_self").nav__list-link=i.name
 
-        ul.nav__controls
-            for i in headBtn
-                li(class="nav__controls-item " +i.type)
-                    a(href="" +i.link target="_self").nav__controls-link=i.name
-                    
-    button(type="button").header__catalog.js-catalog Каталог
-    
-    ul.header__menu.menu
-        li.menu__item
-            a(href="#" target="_self").menu__link Шампанские и игристые вина
-        li.menu__item
-            a(href="#" target="_self").menu__link Вина Бордо
-        li.menu__item
-            a(href="#" target="_self").menu__link Fine and rare wines
-        li.menu__item
-            a(href="catalog.html" target="_self").menu__link Тихие вина
-            
-            .menu__item-inner
-                a(href="#" target="_self").menu__sublink Франция
-                a(href="#" target="_self").menu__sublink Италия
-                a(href="#" target="_self").menu__sublink Старый свет
-                a(href="#" target="_self").menu__sublink Новый свет
-        li.menu__item
-            a(href="#" target="_self").menu__link Green Selection
-        li.menu__item
-            a(href="#" target="_self").menu__link Big Russian Wine
-        li.menu__item
-            a(href="#" target="_self").menu__link Вина высокогорья
-        li.menu__item
-            a(href="#" target="_self").menu__link Десертные, крепленые вина и саке
-        li.menu__item
-            a(href="#" target="_self").menu__link Крепкие напитки
-        li.menu__item
-            a(href="#" target="_self").menu__link Стекло и винные аксессуары
-        li.menu__item
-            a(href="#" target="_self").menu__link Премиальные подарочные решения
-        li.menu__item
-            a(href="#" target="_self").menu__link Корпоративные решения и упаковка
+            ul.nav__controls
+                for i in headBtn
+                    li(class="nav__controls-item " +i.type)
+                        a(href="" +i.link target="_self").nav__controls-link=i.name
+                        
+        button(type="button").header__catalog.js-catalog Каталог
+        
+        ul.header__menu.menu
+            li.menu__item
+                a(href="#" target="_self").menu__link Шампанские и игристые вина
+            li.menu__item
+                a(href="#" target="_self").menu__link Вина Бордо
+            li.menu__item
+                a(href="#" target="_self").menu__link Fine and rare wines
+            li.menu__item
+                a(href="catalog.html" target="_self").menu__link Тихие вина
+                
+                .menu__item-inner
+                    a(href="#" target="_self").menu__sublink Франция
+                    a(href="#" target="_self").menu__sublink Италия
+                    a(href="#" target="_self").menu__sublink Старый свет
+                    a(href="#" target="_self").menu__sublink Новый свет
+            li.menu__item
+                a(href="#" target="_self").menu__link Green Selection
+            li.menu__item
+                a(href="#" target="_self").menu__link Big Russian Wine
+            li.menu__item
+                a(href="#" target="_self").menu__link Вина высокогорья
+            li.menu__item
+                a(href="#" target="_self").menu__link Десертные, крепленые вина и саке
+            li.menu__item
+                a(href="#" target="_self").menu__link Крепкие напитки
+            li.menu__item
+                a(href="#" target="_self").menu__link Стекло и винные аксессуары
+            li.menu__item
+                a(href="#" target="_self").menu__link Премиальные подарочные решения
+            li.menu__item
+                a(href="#" target="_self").menu__link Корпоративные решения и упаковка

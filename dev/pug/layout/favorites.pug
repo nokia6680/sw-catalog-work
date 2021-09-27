@@ -12,32 +12,27 @@ html(lang="ru-RU")
         meta(name="viewport" content="width=device-width,initial-scale=1")
         meta(name="keywords" content="")
         link(rel="stylesheet" type='text/css' href="static/css/styles.css") 
-        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
         link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")
-    body.body-index
+    body
         include ../modules/header/header
         main.main
-            include ../modules/blocks/intro
-            //include ../modules/blocks/greeting
-            include ../modules/blocks/swp
-            //include ../modules/blocks/green-selection
-            //include ../modules/blocks/st
-            include ../modules/blocks/gift
-            //include ../modules/blocks/packing
-            //include ../modules/blocks/services
-            include ../modules/blocks/custom
-            include ../modules/blocks/order
+            +breadcrumb([["Главная ", "/index.html"], ["Избранное ", "#"]])
+            
+            section.favorites
+                .favorites__wrapper
+                    h1.favorites__title Избранное
+                    ul.favorites__list
+                        +itemCard('favorites__item', 'itemcard.html', 'bottle-1', '124852', 'Вино Johnson Estate Sauvignon Blanc', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
+                        +itemCard('favorites__item', 'itemcard.html', 'bottle-2', '124852', 'Кагор Южнобережный', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
+                        +itemCard('favorites__item', 'itemcard.html', 'bottle-3', '124852', 'Вино Kindzmarauli Shumi', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
             include ../modules/blocks/subscribe
             include ../modules/blocks/contacts
         include ../modules/footer/footer
-        include ../modules/blocks/popup-contacts
         script(src="static/js/vendor/jquery-3.3.1.min.js")
         //script(src="static/js/vendor/libs.js")
         script(src="static/js/main.js")
-        script(src="https://unpkg.com/swiper/swiper-bundle.js")
-        script(src="static/js/slider.js")
         script(src="static/js/select.js")
         block script

@@ -23,6 +23,19 @@ body {
     overflow-x: hidden;
 }
 
+.body-404 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    main {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
 *,
 *::after,
 *::before {
@@ -79,7 +92,9 @@ section {
     position: relative;
 }
 
-main {}
+main {
+
+}
 
 button,
 input,
@@ -121,20 +136,22 @@ select {
     .breadcrumbs {
         margin-bottom: 3.125rem;
     }
+}
 
+.body-catalog {
     .breadcrumbs__link {
-        color: #838383;
+        color: #cecece;
         transition: 0.2s $cubic;
 
         &:hover,
         &:active {
-            color: $pink;
+            color: $white;
             transition: 0.2s $cubic;
         }
     }
 
     .breadcrumbs__divider {
-        background-color: #838383;
+        background-color: $white;
     }
 }
 

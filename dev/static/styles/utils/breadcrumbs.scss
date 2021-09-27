@@ -19,7 +19,7 @@
     }
 
     &__link {
-        @include font-setting($helvetica-neue-font, 0.75rem, 0.75rem, 400, #cecece);
+        @include font-setting($helvetica-neue-font, 0.75rem, 0.75rem, 400, #838383);
         text-decoration: none;
         transition: 0.2s ease-in;
 
@@ -28,7 +28,7 @@
 
         &:hover,
         &:active {
-            color: $white;
+            color: $pink;
             transition: 0.2s ease-in;
         }
     }
@@ -38,7 +38,7 @@
         display: inline-flex;
         width: 6px;
         height: 1px;
-        background-color: #cecece;
+        background-color: #838383;
         margin-bottom: 0.25rem;
     }
 }

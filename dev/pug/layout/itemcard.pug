@@ -12,7 +12,7 @@ html(lang="ru-RU")
         meta(name="viewport" content="width=device-width,initial-scale=1")
         meta(name="keywords" content="")
         link(rel="stylesheet" type='text/css' href="static/css/styles.css")
-        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        //link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
@@ -33,33 +33,13 @@ html(lang="ru-RU")
                     <!--Галерея-->
                     .itemcard__gallery.gallery
                         .gallery__slider.swiper-container-top.gallery-top
-                            .swiper-wrapper
-                                .gallery__item.swiper-slide
-                                    picture.gallery__frame
-                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
-                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image
-                                .gallery__item.swiper-slide
-                                    picture.gallery__frame
-                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
-                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image
-                                .gallery__item.swiper-slide
-                                    picture.gallery__frame
-                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
-                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image
-                                .gallery__item.swiper-slide
-                                    picture.gallery__frame
-                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
-                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image
-                                .gallery__item.swiper-slide
-                                    picture.gallery__frame
-                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
-                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image
-                                .gallery__item.swiper-slide
-                                    picture.gallery__frame
-                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
-                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image
-                            .fraction-pagination
-                        .gallery__slider.swiper-container-thumbs.gallery-thumbs
+                            //.swiper-wrapper
+                            .gallery__item
+                                picture.gallery__frame
+                                    source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
+                                    img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image
+                            //.fraction-pagination
+                        //.gallery__slider.swiper-container-thumbs.gallery-thumbs
                             .swiper-wrapper
                                 .gallery__item.gallery__item--thumb.swiper-slide
                                     picture.gallery__frame.gallery__frame--thumb
@@ -85,7 +65,7 @@ html(lang="ru-RU")
                                     picture.gallery__frame.gallery__frame--thumb
                                         source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
                                         img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image.gallery__frame-image--thumb
-                        .gallery__controls
+                        //.gallery__controls
                             button(type="button").gallery__prev-th
                             button(type="button").gallery__next-th
                     <!--Блок информации о продукте-->
@@ -96,19 +76,20 @@ html(lang="ru-RU")
                                     span.itemcard__specs-name=i.name
                                     span.itemcard__specs-description=i.description
                         .itemcard__bottom
-                            .itemcard__quantity
-                                button(type="button").itemcard__quantity-decrease -
-                                input(type="number" name="card-quantity" id="card-quantity" placeholder="0").itemcard__quantity-input
-                                button(type="button").itemcard__quantity-increase +
-                            button(type="button").itemcard__purchase В корзину
                             b.itemcard__price 1 005 ₽
+                            .itemcard__checkout
+                                .itemcard__quantity
+                                    button(type="button").itemcard__quantity-decrease -
+                                    input(type="number" name="card-quantity" id="card-quantity" placeholder="0").itemcard__quantity-input
+                                    button(type="button").itemcard__quantity-increase +
+                                button(type="button").itemcard__purchase В корзину
             include ../modules/blocks/subscribe
             include ../modules/blocks/contacts
         include ../modules/footer/footer
         script(src="static/js/vendor/jquery-3.3.1.min.js")
         //script(src="static/js/vendor/libs.js")
         script(src="static/js/main.js")
-        script(src="https://unpkg.com/swiper/swiper-bundle.js")
-        script(src="static/js/slider.js")
+        //script(src="https://unpkg.com/swiper/swiper-bundle.js")
+        //script(src="static/js/slider.js")
         script(src="static/js/select.js")
         block script
