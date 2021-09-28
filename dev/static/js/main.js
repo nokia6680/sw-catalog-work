@@ -31,20 +31,11 @@ if (popupReactCloser) {
 };
 
 var contactsOpener = document.querySelector('.--contacts');
-var contactsBody = document.querySelector('.popup-contacts');
-var contactsCloser = document.querySelector('.popup-contacts__closer');
+var contactsBody = document.querySelector('.header__contacts');
 
 if (contactsOpener) {
     contactsOpener.addEventListener('click', function () {
-        contactsBody.classList.add('active');
-        bodyLayer.classList.add('no-scroll');
-    });
-};
-
-if (contactsCloser) {
-    contactsCloser.addEventListener('click', function () {
-        contactsBody.classList.remove('active');
-        bodyLayer.classList.remove('no-scroll');
+        contactsBody.classList.toggle('opened');
     });
 };
 
