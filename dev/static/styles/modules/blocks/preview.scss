@@ -4,6 +4,8 @@
     margin-left: auto;
     margin-right: auto;
 
+    margin-bottom: 2.5rem;
+
     @include flex-setting(column, center, center);
 
     &__frame {
@@ -42,7 +44,7 @@
 
     &__wrapper {
         position: absolute;
-        top: 2.625rem;
+        top: auto;
         bottom: 6.25rem;
         left: 50%;
         transform: translateX(-50%);

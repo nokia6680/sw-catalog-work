@@ -21,6 +21,7 @@ html(lang="ru-RU")
         include ../modules/header/header
         main.main
             include ../modules/blocks/preview
+            +breadcrumb([["Главная ", "/index.html"], ["Каталог ", "/catalog.html"], ["Вина ", "#"]])
             section.catalog
                 .catalog__filter
                     ul.catalog__filter-list
@@ -35,7 +36,7 @@ html(lang="ru-RU")
                 .catalog__wrapper
                     ul.catalog__list#fra
                         +itemCard('', 'itemcard.html', 'bottle-1', '124852', 'Вино Johnson Estate Sauvignon Blanc', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
-                        +itemCard('', 'itemcard.html', 'bottle-2', '124852', 'Кагор Южнобережный', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
+                        +itemCard('', 'itemcard-text.html', 'bottle-2', '124852', 'Кагор Южнобережный', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
                         +itemCard('', 'itemcard.html', 'bottle-3', '124852', 'Вино Kindzmarauli Shumi', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')
                     ul.catalog__list#ita
                         +itemCard('', 'itemcard.html', 'bottle-3', '124852', 'Вино Johnson Estate Sauvignon Blanc', '', 'Новая Зеландия', '', 'белое', '', 'сухое' , '', '0.75', '2 990 ')

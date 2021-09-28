@@ -1,3 +1,14 @@
+$(function() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 79) {
+            $('header').addClass('scrolling');
+        } else {
+            $('header').removeClass('scrolling');
+        }
+    });
+});
+
+
 var catOpener = document.querySelector('.js-catalog');
 var navCat = document.querySelector('.nav');
 var catalogBody = document.querySelector('.menu');
@@ -35,6 +46,7 @@ var contactsBody = document.querySelector('.header__contacts');
 
 if (contactsOpener) {
     contactsOpener.addEventListener('click', function () {
+        event.preventDefault();
         contactsBody.classList.toggle('opened');
     });
 };

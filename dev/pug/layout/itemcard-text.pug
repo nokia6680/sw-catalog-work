@@ -1,0 +1,96 @@
+include ../helpers/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="utf-8")
+        title #{title}
+        <!--[if IE]>
+        meta(http-equiv='X-UA-Compatible', content="IE = edge")
+        <![endif]-->
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        meta(name="keywords" content="")
+        link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+        //link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+        link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")
+    body.body-itemcard
+        include ../modules/header/header
+        main.main.main--card
+            +breadcrumb([["Главная ", "/index.html"], ["Шампанские и игристые вина ", "#"], ["Chianti Riserva ", "#"]])
+            
+            section.itemcard
+                .itemcard__head
+                    h1.itemcard__title Вино Chianti Riserva, Melini, 2017 г.
+                    .itemcard__details
+                        span.itemcard__details-articul Артикул: 123456
+                        span.itemcard__details-subtitle Кьянти Ризерва
+                    button(type="button").itemcard__wishlist
+                .itemcard__body
+                    <!--Галерея-->
+                    .itemcard__gallery.gallery
+                        .gallery__slider.swiper-container-top.gallery-top
+                            //.swiper-wrapper
+                            .gallery__item
+                                picture.gallery__frame
+                                    source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
+                                    img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image
+                            //.fraction-pagination
+                        //.gallery__slider.swiper-container-thumbs.gallery-thumbs
+                            .swiper-wrapper
+                                .gallery__item.gallery__item--thumb.swiper-slide
+                                    picture.gallery__frame.gallery__frame--thumb
+                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
+                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image.gallery__frame-image--thumb
+                                .gallery__item.gallery__item--thumb.swiper-slide
+                                    picture.gallery__frame.gallery__frame--thumb
+                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
+                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image.gallery__frame-image--thumb
+                                .gallery__item.gallery__item--thumb.swiper-slide
+                                    picture.gallery__frame.gallery__frame--thumb
+                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
+                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image.gallery__frame-image--thumb
+                                .gallery__item.gallery__item--thumb.swiper-slide
+                                    picture.gallery__frame.gallery__frame--thumb
+                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
+                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image.gallery__frame-image--thumb
+                                .gallery__item.gallery__item--thumb.swiper-slide
+                                    picture.gallery__frame.gallery__frame--thumb
+                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
+                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image.gallery__frame-image--thumb
+                                .gallery__item.gallery__item--thumb.swiper-slide
+                                    picture.gallery__frame.gallery__frame--thumb
+                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
+                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image.gallery__frame-image--thumb
+                        //.gallery__controls
+                            button(type="button").gallery__prev-th
+                            button(type="button").gallery__next-th
+                    <!--Блок информации о продукте-->
+                    .itemcard__info
+                        p.itemcard__description Насыщенный темно-пурпурный цвет и комплексный аромат, в котором раскрываются самые разнообразные оттенки: черная смородина, слива, пряности, сандал, мята, шоколад, табак. Сбалансированное во вкусе вино, с мощной танинной структуой, которая станет округлой и бархатистой через несколько лет. Идеальный образец для закладки в погреб.
+                        ul.itemcard__specs
+                            for i in specsItems
+                                li.itemcard__specs-item
+                                    span.itemcard__specs-name=i.name
+                                    span.itemcard__specs-description=i.description
+                        .itemcard__bottom
+                            b.itemcard__price 1 005 ₽
+                            .itemcard__checkout
+                                .itemcard__quantity
+                                    button(type="button").itemcard__quantity-decrease -
+                                    input(type="number" name="card-quantity" id="card-quantity" placeholder="0").itemcard__quantity-input
+                                    button(type="button").itemcard__quantity-increase +
+                                button(type="button").itemcard__purchase В корзину
+            include ../modules/blocks/subscribe
+            include ../modules/blocks/contacts
+        include ../modules/footer/footer
+        script(src="static/js/vendor/jquery-3.3.1.min.js")
+        //script(src="static/js/vendor/libs.js")
+        script(src="static/js/main.js")
+        //script(src="https://unpkg.com/swiper/swiper-bundle.js")
+        //script(src="static/js/slider.js")
+        script(src="static/js/select.js")
+        block script

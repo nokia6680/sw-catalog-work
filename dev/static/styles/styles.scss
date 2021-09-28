@@ -96,6 +96,10 @@ main {
 
 }
 
+.main {
+    padding-top: 4.9375rem;
+}
+
 button,
 input,
 select {
@@ -126,6 +130,28 @@ select {
             }
         }
     }
+
+    .header {
+        &.scrolling {
+            .menu__item {
+                transform: scale(1.15) translateY(-30px);
+                opacity: 0;
+                transition: transform 0.5s $cubic, opacity 0.6s $cubic;
+
+                @for $i from 1 through $menuItems {
+                    &:nth-child(#{$i}) {
+                        transition-delay: #{0.56 - ($i * 0.07)}s;
+                    }
+                }
+            }
+
+            .menu {
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.2s linear 0.3s;
+            }
+        }
+    }
 }
 
 .body-itemcard {
@@ -138,25 +164,8 @@ select {
     }
 }
 
-.body-catalog {
-    .breadcrumbs__link {
-        color: #cecece;
-        transition: 0.2s $cubic;
-
-        &:hover,
-        &:active {
-            color: $white;
-            transition: 0.2s $cubic;
-        }
-    }
-
-    .breadcrumbs__divider {
-        background-color: $white;
-    }
-}
-
 .main--card {
-    padding-top: 2.625rem;
+    padding-top: calc(4.9375rem + 2.625rem);
     margin: 0 auto;
 }
 //Модули
