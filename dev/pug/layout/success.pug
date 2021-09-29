@@ -1,0 +1,38 @@
+include ../helpers/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="utf-8")
+        title #{title}
+        <!--[if IE]>
+        meta(http-equiv='X-UA-Compatible', content="IE = edge")
+        <![endif]-->
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        meta(name="keywords" content="")
+        link(rel="stylesheet" type='text/css' href="static/css/styles.css") 
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+        link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")
+    body.body-height
+        include ../modules/header/header
+        main.main.main--card
+            +breadcrumb([["Главная ", "/index.html"], ["Заказ ", "#"]])
+            .success
+                .success__wrapper
+                    h1.success__title Спасибо за оформление заказа
+                    p.success__description Спасибо за оформление заказа! Наш сотрудник свяжется с вами в ближайшее время
+
+                    .success__controls
+                        button(type="button").success__btn Распечатать заказ
+                        a(href="catalog.html" target="_self").success__link Вернуться в каталог
+            include ../modules/blocks/subscribe
+            include ../modules/blocks/contacts
+        include ../modules/footer/footer
+        script(src="static/js/vendor/jquery-3.3.1.min.js")
+        //script(src="static/js/vendor/libs.js")
+        script(src="static/js/main.js")
+        script(src="static/js/select.js")
+        block script

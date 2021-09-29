@@ -22,24 +22,24 @@ if (catOpener) {
     });
 };
 
-var popupReactOpener = document.querySelector('.cart__submit');
-var popupReactCloser = document.querySelector('.popup-reaction__closer');
-var popupBody = document.querySelector('.popup-reaction');
-var bodyLayer = document.querySelector('.body');
+//var popupReactOpener = document.querySelector('.cart__submit');
+//var popupReactCloser = document.querySelector('.popup-reaction__closer');
+//var popupBody = document.querySelector('.popup-reaction');
+//var bodyLayer = document.querySelector('.body');
 
-if (popupReactOpener) {
-    popupReactOpener.addEventListener('click', function () {
-        popupBody.classList.add('active');
-        bodyLayer.classList.add('no-scroll');
-    });
-};
+//if (popupReactOpener) {
+//    popupReactOpener.addEventListener('click', function () {
+//        popupBody.classList.add('active');
+//        bodyLayer.classList.add('no-scroll');
+//    });
+//};
 
-if (popupReactCloser) {
-    popupReactCloser.addEventListener('click', function () {
-        popupBody.classList.remove('active');
-        bodyLayer.classList.remove('no-scroll');
-    });
-};
+//if (popupReactCloser) {
+//    popupReactCloser.addEventListener('click', function () {
+//        popupBody.classList.remove('active');
+//        bodyLayer.classList.remove('no-scroll');
+//    });
+//};
 
 var contactsOpener = document.querySelector('.--contacts');
 var contactsBody = document.querySelector('.header__contacts');

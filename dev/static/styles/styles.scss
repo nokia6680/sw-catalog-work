@@ -21,9 +21,11 @@ body {
     line-height: 1.5;
     background-color: $white;
     overflow-x: hidden;
+
+    &::-webkit-scrollbar { width: 0; }
 }
 
-.body-404 {
+.body-height {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -97,6 +99,7 @@ main {
 }
 
 .main {
+    width: 100%;
     padding-top: 4.9375rem;
 }
 
@@ -110,6 +113,7 @@ select {
     .header__catalog {
         visibility: hidden;
         pointer-events: none;
+        transform: scale(0);
     }
 
     .menu {
@@ -153,7 +157,6 @@ select {
         }
     }
 }
-
 .body-itemcard {
     .header {
         border-bottom: 1px solid #e6e6e6;

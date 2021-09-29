@@ -4,7 +4,7 @@
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: 1080px 1fr;
+    grid-template-columns: 56.25% 1fr;
     justify-content: center;
     align-items: start;
 
@@ -85,7 +85,7 @@
 
     @supports (aspect-ratio: 16 / 13.03703703703704) {
         .intro__frame {
-            height: 100%;
+            height: auto;
             position: relative;
             padding-bottom: 0;
         }

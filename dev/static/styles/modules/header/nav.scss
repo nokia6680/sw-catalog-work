@@ -52,6 +52,8 @@
             outline: none;
             transition: 0.3s $cubic;
 
+            white-space: nowrap;
+
             &::after {
                 position: absolute;
                 content: '';
@@ -63,7 +65,7 @@
                 left: 0;
 
                 transform: scaleX(0);
-                transform-origin: left;
+                transform-origin: center;
                 transition: 0.3s $cubic;
             }
 
@@ -73,6 +75,7 @@
                 transition: 0.3s $cubic;
                 &::after {
                     transform: scaleX(1);
+                    transform-origin: center;
                     transition: 0.3s $cubic;
                 }
             }
@@ -130,6 +133,7 @@
 
                     .nav__controls-link::after {
                         transform: scaleX(1);
+                        transform-origin: center;
                         transition: 0.3s ease-in;
                     }
                 }
@@ -170,6 +174,7 @@
 
                     .nav__controls-link::after {
                         transform: scaleX(1);
+                        transform-origin: center;
                         transition: 0.3s ease-in;
                     }
                 }
@@ -210,6 +215,7 @@
 
                     .nav__controls-link::after {
                         transform: scaleX(1);
+                        transform-origin: center;
                         transition: 0.3s ease-in;
                     }
                 }
@@ -241,8 +247,58 @@
                 left: 0;
 
                 transform: scaleX(0);
-                transform-origin: left;
+                transform-origin: center;
                 transition: 0.3s $cubic;
+            }
+        }
+    }
+
+    @supports not (aspect-ratio: 1 / 1) {
+        .nav__list-item {
+            margin-right: 2.1875rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .nav__controls-item {
+            margin-right: 1.9375rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1680px) {
+    .nav {
+        padding-right: 0.625rem;
+
+        &__list {
+            gap: 1.25rem;
+        }
+
+        &__controls {
+            gap: 1.25rem;
+        }
+
+        @supports not (aspect-ratio: 1 / 1) {
+            .nav__list-item {
+                margin-right: 1.25rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            .nav__controls-item {
+                margin-right: 1.25rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
             }
         }
     }
