@@ -7,9 +7,17 @@
     background-color: $white;
     max-width: 1160px;
 
-    padding: 3.625rem 0 5.125rem 0;
+    padding: 4.125rem 0 5.125rem 0;
 
     @include flex-setting(column, flex-start, flex-start);
+
+    &__about {
+        @include font-setting($helvetica-neue-font, 1.4375rem, 1.75rem, 400, $black);
+        max-width: 700px;
+
+        margin-bottom: 6.25rem;
+        text-align: left;
+    }
 
     &__filter {
         width: 100%;

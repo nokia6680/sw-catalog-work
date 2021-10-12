@@ -1,0 +1,250 @@
+.corporate {
+    width: 100%;
+
+    @include flex-setting(column, center, center);
+
+    background-color: #E2ECF5;
+
+    padding-top: 5.625rem;
+    padding-bottom: 3.75rem;
+
+    &__wrapper {
+        width: 100%;
+        max-width: 1160px;
+        @include flex-setting(column, flex-start, flex-start);
+    }
+
+    &__title {
+        @include font-setting($roboto-font, 3rem, 3.625rem, 500, $black);
+
+        margin-bottom: 2.125rem;
+    }
+
+    &__body {
+        width: 100%;
+        @include flex-setting(row, space-between, flex-start);
+
+        margin-bottom: 3.625rem;
+    }
+
+    &__info {
+        width: 100%;
+        max-width: 660px;
+
+        @include flex-setting(column, flex-start, flex-start);
+
+        margin-right: 2.5rem;
+        margin-top: 2.5rem;
+    }
+
+    &__description {
+        @include font-setting($helvetica-neue-font, 1.4375rem, 1.75rem, 550, $black);
+        text-align: left;
+        margin-bottom: 1rem;
+
+        &:last-of-type {
+            margin-bottom: 3.125rem;
+        }
+    }
+
+    &__services {
+        width: 100%;
+
+        @include flex-setting(column, flex-start, flex-start);
+
+        &-title {
+            width: 100%;
+            @include font-setting($helvetica-neue-font, 2rem, 2.375rem, 500, $black);
+            padding-bottom: 1.4375rem;
+            text-align: left;
+
+            border-bottom: 1px solid $white;
+        }
+
+        &-list {
+            width: 100%;
+
+            @include flex-setting(column, flex-start, flex-start);
+        }
+
+        &-item {
+            position: relative;
+
+            width: 100%;
+            @include flex-setting(column, flex-start, flex-start);
+
+            padding-top: 1.4375rem;
+            text-align: left;
+
+            border-bottom: 1px solid $white;
+
+            max-height: 72px;
+            overflow: hidden;
+            transition: 0.4s $cubic;
+
+            cursor: pointer;
+            outline: none;
+
+            &::after {
+                position: absolute;
+                content: '';
+
+                top: 1.4375rem;
+                right: 0;
+
+                width: 24px;
+                height: 24px;
+
+                background-position: 50% 50%;
+                background-size: 50%;
+                background-repeat: no-repeat;
+                background-image: url("data:image/svg+xml,%3Csvg width='11' height='6' viewBox='0 0 11 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.838806 0.499939L5.33887 5L9.83893 0.499938' stroke='%236D6D6D'/%3E%3C/svg%3E");
+                transition: 0.4s $cubic;
+            }
+
+            &.active {
+                max-height: 300px;
+                transition: 0.4s $cubic;
+
+                &::after {
+                    transform: rotate(180deg);
+                    transition: 0.4s $cubic;
+                }
+            }
+        }
+
+        &-name {
+            @include font-setting($helvetica-neue-font, 1.375rem, 1.625rem, 550, $black);
+            margin-bottom: 1.4375rem;
+        }
+
+        &-text {
+            @include font-setting($helvetica-neue-font, 1.25rem, 1.5rem, 400, $black);
+            margin-bottom: 1.4375rem;
+        }
+    }
+
+    &__person {
+        width: 100%;
+        max-width: 460px;
+
+        background-color: $white;
+
+        @include flex-setting(column, flex-start, flex-start);
+
+        border-radius: 10px;
+        border: 1px solid #E2ECF5;
+
+        padding: 2.5rem 2.5rem;
+
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+
+            width: 54px;
+            height: 44px;
+
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            background-image: url('../images/content/ticks.svg');
+
+            top: 2.5rem;
+            right: 2.5rem;
+        }
+    }
+
+    &__photo {
+        @include flex-setting(column, center, center);
+
+        width: 128px;
+        height: 128px;
+
+        border-radius: 64px;
+        overflow: hidden;
+
+        margin-bottom: 1.25rem;
+
+        &-image {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+        }
+    }
+
+    &__name {
+        @include font-setting($helvetica-neue-font, 2rem, 2.375rem, 550, $black);
+        margin-bottom: 0.3125rem;
+    }
+
+    &__position {
+        @include font-setting($helvetica-neue-font, 1.25rem, 1.5rem, 400, $black);
+        margin-bottom: 2.5rem;
+        max-width: 360px;
+    }
+
+    &__about {
+        @include font-setting($helvetica-neue-font, 0.8125rem, 1rem, 400, $black);
+        text-align: left;
+        max-width: 360px;
+        margin-bottom: 1.375rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__contacts {
+        width: 100%;
+        @include flex-setting(column, flex-start, flex-start);
+
+        &-item {
+            width: 100%;
+            @include flex-setting(row, flex-start, center);
+        }
+
+        &-city,
+        &-link {
+            @include font-setting($helvetica-neue-font, 0.9375rem, 1.125rem, 400, #6d6d6d);
+            text-decoration: none;
+        }
+
+        &-city {
+            margin-right: 0.25rem;
+        }
+
+        &-link {
+            transition: 0.4s $cubic;
+
+            &:first-of-type {
+                margin-right: 0.875rem;
+
+                position: relative;
+
+
+                &::after {
+                    position: absolute;
+                    content: '/';
+
+                    @include font-setting($helvetica-neue-font, 0.9375rem, 1.125rem, 400, #6d6d6d);
+
+                    width: 6px;
+                    height: 15px;
+
+                    top: 0;
+                    right: -0.625rem;
+                }
+            }
+
+            &:hover,
+            &:active {
+                color: $pink;
+                transition: 0.4s $cubic;
+            }
+        }
+    }
+}

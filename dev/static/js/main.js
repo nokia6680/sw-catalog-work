@@ -51,13 +51,13 @@ if (contactsOpener) {
     });
 };
 
-//var upperItem = document.getElementsByClassName('menu__item');
-//var elNodes = document.querySelectorAll(".menu__item");
+var upperItem = document.getElementsByClassName('corporate__services-item');
+var elNodes = document.querySelectorAll(".corporate__services-item");
 //
-//for (var i = 0; i < upperItem.length; i++) {
-//    var elem = upperItem[i];
-//    elem.addEventListener("click", function() {
-//        event.preventDefault();
-//        this.classList.toggle("pressed");
-//    });
-//}
+for (var i = 0; i < upperItem.length; i++) {
+    var elem = upperItem[i];
+    elem.addEventListener("click", function() {
+        event.preventDefault();
+        this.classList.toggle("active");
+    });
+}

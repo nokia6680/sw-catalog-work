@@ -23,13 +23,7 @@
 
     &__body {
         width: 100%;
-
-        display: grid;
-        grid-template-columns: 65.51724137931034% 31.03448275862069%;
-        grid-column-gap: 2.5rem;
-
-        justify-content: space-between;
-        align-items: start;
+        @include flex-setting(column, flex-start, center);
     }
 
     &__list {
@@ -40,7 +34,7 @@
 
     &__item {
         width: 100%;
-        min-height: 216px;
+        min-height: 226px;
 
         display: grid;
         grid-template-columns: 160px 1fr;
@@ -54,11 +48,6 @@
         border-bottom: 1px solid #C4C4C4;
 
         margin-bottom: 1.875rem;
-
-        &:last-child {
-            margin-bottom: 0;
-            border-bottom: none;
-        }
     }
 
     &__frame {
@@ -113,7 +102,7 @@
 
         background-position: 50% 50%;
         background-repeat: no-repeat;
-        background-size: 80%;
+        background-size: 70%;
         background-color: transparent;
         border: none;
 
@@ -212,11 +201,12 @@
         width: 100%;
         height: auto;
 
+        max-width: 300px;
+        align-self: flex-end;
+
         @include flex-setting(column, flex-start, flex-start);
 
-        padding: 2.0625rem 1.8125rem;
-
-        border: 1px solid #C4C4C4;
+        padding: 2.875rem 0 0 0;
     }
 
     &__subtitle {
@@ -281,9 +271,9 @@
         height: 54px;
 
         @include flex-setting(column, center, center);
-        @include font-setting($helvetica-neue-font, 1.4375rem, 1.75rem, 550, $black);
+        @include font-setting($helvetica-neue-font, 1.4375rem, 1.75rem, 550, $white);
 
-        background-color: transparent;
+        background-color: $pink;
         border: 1px solid $pink;
 
         cursor: pointer;
@@ -294,8 +284,8 @@
         &:hover,
         &:active,
         &:focus {
-            background-color: $pink;
-            color: $white;
+            background-color: $white;
+            color: $black;
             transition: 0.2s $cubic;
         }
     }

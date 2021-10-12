@@ -68,6 +68,7 @@
     }
 
     &__description {
+        display: none;
         @include font-setting($helvetica-neue-font, 1.4375rem, 1.75rem, 550, $white);
         text-align: left;
     }
