@@ -184,3 +184,11 @@
         }
     }
 }
+
+@media only screen and (max-width: 1440px) {
+    .header {
+        &__contacts {
+            right: 8.795rem;
+        }
+    }
+}

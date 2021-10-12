@@ -63,7 +63,7 @@
     }
 
     &__title {
-        @include font-setting($roboto-font, 3rem, 3.625rem, 500, $white);
+        @include font-setting($geometria-font, 3rem, 3.625rem, 500, $white);
         margin-bottom: 2.75rem;
     }
 

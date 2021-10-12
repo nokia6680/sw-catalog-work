@@ -7,12 +7,29 @@
     grid-template-columns: 56.25% 1fr;
     justify-content: center;
     align-items: start;
+    overflow: hidden;
 
     &__wrapper {
         position: relative;
 
         width: 100%;
         height: 100%;
+
+        &::after {
+            position: absolute;
+            content: '';
+
+            width: 898px;
+            height: 724px;
+
+            background-image: url('../images/content/gates.png');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            bottom: -2rem;
+            left: 1.125rem;
+        }
     }
 
     &__title {
