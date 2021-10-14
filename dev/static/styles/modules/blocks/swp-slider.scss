@@ -197,3 +197,173 @@
         right: calc((var(--width) / 2));
     }
 }
+
+@media only screen and (max-width: 719px) {
+    .swp-slider {
+        padding-top: 1.875rem;
+        padding-bottom: 1.875rem;
+
+        .swiper-container-text {
+            order: 2;
+        }
+
+        .swiper-container-images {
+            order: 1;
+        }
+
+        &__item {
+            min-height: 0;
+            grid-template-columns: 1fr;
+            align-items: stretch;
+
+            &:first-of-type {
+                position: relative;
+
+                .swp-slider__title {
+                    max-width: 100%;
+                }
+
+                .swp-slider__frame {
+                    width: 100%;
+                    height: 100%;
+
+                    position: relative;
+
+                    top: auto;
+                    right: auto;
+
+                    &-image {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            &:nth-of-type(2) {
+                .swp-slider__description {
+                    margin-bottom: 1.75rem;
+                }
+
+                .swp-slider__frame {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+
+                    top: auto;
+                    right: auto;
+
+                    &-image {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                .swp-slider__title {
+                    max-width: 100%;
+                }
+
+                .swp-slider__head {
+                    max-width: 558px;
+                }
+
+                .swp-slider__frame {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+
+                    top: auto;
+                    right: auto;
+
+                    &-image {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        &__info {
+            order: 2;
+            padding: 2.5rem 1.5625rem 1.875rem 1.5625rem;
+        }
+
+        &__title {
+            font-size: 2rem;
+            line-height: 2.375rem;
+            margin-bottom: 1.625rem;
+        }
+
+        &__head {
+            font-size: 1.125rem;
+            line-height: 1.375rem;
+            max-width: 732px;
+            margin-bottom: 1.625rem;
+        }
+
+        &__description {
+            font-size: 1rem;
+            line-height: 1.1875rem;
+        }
+
+        &__list li {
+            padding-left: 2.25rem;
+
+            .swp-slider__description {
+                margin-bottom: 0.875rem;
+            }
+
+            &::after {
+                width: 16px;
+                height: 1px;
+                top: 0.875rem;
+            }
+        }
+
+        &__frame {
+            order: 1;
+            height: 0;
+            width: 100%;
+            position: relative;
+            padding-bottom: 89.0625%;
+
+            &-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &__prev,
+        &__next {
+            display: none;
+        }
+
+        @supports (aspect-ratio: 4 / 3.5625) {
+            .swp-slider__frame {
+                height: auto;
+                position: relative;
+                padding-bottom: 0;
+            }
+
+            .swp-slider__frame-image {
+                position: relative;
+                top: auto;
+                left: auto;
+                bottom: auto;
+                right: auto;
+                aspect-ratio: 4 / 3.5625;
+            }
+        }
+    }
+}

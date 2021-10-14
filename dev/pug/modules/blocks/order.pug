@@ -2,67 +2,85 @@ section.order#order
     .order__wrapper
         h2.order__title Заказать вино просто
         
-        .order__block.--sw
-            .order__block-head
-                img(src="static/images/content/swine-logo.svg" alt="SimpleWine").order__block-image
-            
-            .order__block-body
-                .order__block-item
-                    h3.order__name В винотеке SimpleWine
-                    ul.order__list 
-                        li.order__list-item
-                            span Найдите близлежащую винотеку на 
-                                a(href="https://www.simplewine.ru/nashi-vinoteki" target="_blank") simplewine.ru/nashi-vinoteki
-                        li.order__list-item
-                            span Кавист поможет определиться с выбором
-                        li.order__list-item
-                            span Вам упакуют заказ и помогут донести его до машины
-                                
-                .order__block-item
-                    h3.order__name Онлайн-витрина
-                    ul.order__list
-                        li.order__list-item
-                            span Выбирайте лучшее
-                                br 
-                                | на 
-                                a(href="https://www.simplewine.ru" target="_blank") simplewine.ru
-                        li.order__list-item
-                            span После оформления заказа оператор позвонит Вам для подтверждения
-                        li.order__list-item
-                            span Получите заказ в винотеке SimpleWine удобным для Вас способом
-        .order__block.--swp
-            .order__block-head
-                img(src="static/images/content/swp-logo.svg" alt="SimpleWinePrive").order__block-image
-            .order__block-item
-                h3.order__name У персонального менеджера
-                ul.order__list 
-                    li.order__list-item
-                        span 
-                            | Позвоните 
-                            a(href="tel:+74955106865" target="_blank") +7 495 510 6865 
-                            | или напишите: 
-                            a(href="mailto:vip@simple.ru" target="_blank") vip@simple.ru
-                    li.order__list-item
-                        span Менеджер поможет определиться с выбором
-                    li.order__list-item
-                        span Получите заказ удобным для Вас способом
-        .order__block.--s
-            .order__block-head
-                img(src="static/images/content/simple-logo.svg" alt="Simple").order__block-image
-            .order__block-item
-                h3.order__name У корпоративного менеджера
-                ul.order__list 
-                    li.order__list-item
-                        span 
-                            | Позвоните 
-                            a(href="tel:+74955106865" target="_blank") +7 495 510 6865 
-                            | или напишите: 
-                            a(href="mailto:vip@simple.ru" target="_blank") vip@simple.ru
-                    li.order__list-item
-                        span Менеджер поможет определиться с выбором
-                    li.order__list-item
-                        span Получите заказ удобным для Вас способом
-                        
+        .order__slider.swiper-container-order
+            .swiper-wrapper
+                .order__block.swiper-slide.--sw
+                    .order__block-head
+                        img(src="static/images/content/swine-logo.svg" alt="SimpleWine").order__block-image
+                    
+                    .order__block-body
+                        .order__block-item
+                            h3.order__name В винотеке SimpleWine
+                            ul.order__list 
+                                li.order__list-item
+                                    span Найдите близлежащую винотеку на 
+                                        a(href="https://www.simplewine.ru/nashi-vinoteki" target="_blank") simplewine.ru/nashi-vinoteki
+                                li.order__list-item
+                                    span Кавист поможет определиться с выбором
+                                li.order__list-item
+                                    span Вам упакуют заказ и помогут донести его до машины
+                                        
+                        .order__block-item
+                            h3.order__name Онлайн-витрина
+                            ul.order__list
+                                li.order__list-item
+                                    span Выбирайте лучшее
+                                        br 
+                                        | на 
+                                        a(href="https://www.simplewine.ru" target="_blank") simplewine.ru
+                                li.order__list-item
+                                    span После оформления заказа оператор позвонит Вам для подтверждения
+                                li.order__list-item
+                                    span Получите заказ в винотеке SimpleWine удобным для Вас способом
+                .order__block.swiper-slide.--sw.--sw-desktop
+                    .order__block-head
+                        img(src="static/images/content/swine-logo.svg" alt="SimpleWine").order__block-image
+
+                    .order__block-item
+                        h3.order__name Онлайн-витрина
+                        ul.order__list
+                            li.order__list-item
+                                span Выбирайте лучшее
+                                    br 
+                                    | на 
+                                    a(href="https://www.simplewine.ru" target="_blank") simplewine.ru
+                            li.order__list-item
+                                span После оформления заказа оператор позвонит Вам для подтверждения
+                            li.order__list-item
+                                span Получите заказ в винотеке SimpleWine удобным для Вас способом
+                .order__block.swiper-slide.--swp
+                    .order__block-head
+                        img(src="static/images/content/swp-logo.svg" alt="SimpleWinePrive").order__block-image
+                    .order__block-item
+                        h3.order__name У персонального менеджера
+                        ul.order__list 
+                            li.order__list-item
+                                span 
+                                    | Позвоните 
+                                    a(href="tel:+74955106865" target="_blank") +7 495 510 6865 
+                                    | или напишите: 
+                                    a(href="mailto:vip@simple.ru" target="_blank") vip@simple.ru
+                            li.order__list-item
+                                span Менеджер поможет определиться с выбором
+                            li.order__list-item
+                                span Получите заказ удобным для Вас способом
+                .order__block.swiper-slide.--s
+                    .order__block-head
+                        img(src="static/images/content/simple-logo.svg" alt="Simple").order__block-image
+                    .order__block-item
+                        h3.order__name У корпоративного менеджера
+                        ul.order__list 
+                            li.order__list-item
+                                span 
+                                    | Позвоните 
+                                    a(href="tel:+74955106865" target="_blank") +7 495 510 6865 
+                                    | или напишите: 
+                                    a(href="mailto:vip@simple.ru" target="_blank") vip@simple.ru
+                            li.order__list-item
+                                span Менеджер поможет определиться с выбором
+                            li.order__list-item
+                                span Получите заказ удобным для Вас способом
+
         .order__details
             b.order__subtitle Все вина можно заказать в подарочной упаковке.
             p.order__note * Подробности уточняйте у менеджера по телефону.

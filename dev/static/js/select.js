@@ -1,4 +1,4 @@
-$('select').each(function(){
+$('.select').each(function(){
     var $this = $(this), numberOfOptions = $(this).children('option').length;
 
     $this.addClass('select-hidden');
@@ -14,6 +14,7 @@ $('select').each(function(){
 
     for (var i = 0; i < numberOfOptions; i++) {
         $('<li />', {
+            'id': 'select-item',
             text: $this.children('option').eq(i).text(),
             rel: $this.children('option').eq(i).val()
         }).appendTo($list);

@@ -140,4 +140,96 @@
             }
         }
     }
+
+    &__connect {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 719px) {
+    .swp {
+        &__wrapper {
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            grid-template-areas:
+                'logo'
+                'details'
+                'list'
+                'connect'
+            ;
+
+            margin-bottom: 3.125rem;
+            align-items: start;
+            justify-content: center;
+
+            padding-top: 3.4375rem;
+            padding-left: 1.5625rem;
+            padding-right: 1.5625rem;
+            padding-bottom: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &__link {
+            width: 335px;
+            height: 76px;
+
+            margin-bottom: 3.625rem;
+        }
+
+        &__details {
+            margin-bottom: 3.4375rem;
+
+            &-head {
+                font-size: 1.125rem;
+                line-height: 1.375rem;
+
+                margin-bottom: 1.25rem;
+            }
+
+            &-description {
+                font-size: 1rem;
+                line-height: 1.1875rem;
+                margin-bottom: 0;
+            }
+        }
+
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 1.5625rem;
+            grid-row-gap: 2.5rem;
+            margin-bottom: 4.125rem;
+
+            &-item {
+                span {
+                    margin-bottom: 1.875rem;
+                }
+            }
+        }
+
+        &__connect {
+            display: block;
+            @include font-setting($helvetica-neue-font, 1rem, 1.1875rem, 400, $darkgray);
+
+            text-align: left;
+            max-width: 95%;
+
+            &-link {
+                color: $darkgray;
+                text-decoration: underline;
+                transition: 0.4s $cubic;
+
+                cursor: pointer;
+
+                &:hover,
+                &:active {
+                    color: $pink;
+                    text-decoration-color: $pink;
+                    transition: 0.4s $cubic;
+                }
+            }
+        }
+    }
 }

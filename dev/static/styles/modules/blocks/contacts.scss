@@ -110,3 +110,46 @@
         }
     }
 }
+
+@media only screen and (max-width: 719px) {
+    .contacts {
+        padding-top: 3.125rem;
+        padding-bottom: 3.125rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        &__wrapper {
+            grid-template-columns: 1fr;
+            grid-row-gap: 2.375rem;
+            justify-content: start;
+            align-items: start;
+        }
+
+        &__social {
+            margin-bottom: 1.125rem;
+
+            &-item {
+                width: 32px;
+                height: 32px;
+                margin-right: 0.625rem;
+                border-radius: 16px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            &-link {
+                border-radius: 16px;
+
+                .fa-facebook-f::before {
+                    font-size: 1.125rem;
+                }
+
+                .fa-instagram::before {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+    }
+}

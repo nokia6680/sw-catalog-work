@@ -23,25 +23,61 @@ var galleryTop = new Swiper('.gallery-top', {
     }
 });
 
-const swiper2 = new Swiper('.swiper-container', {
-    slidesPerView: 1,
+var swpThumbs = new Swiper('.swiper-container-images', {
     spaceBetween: 0,
-    grabCursor: true,
-    speed: 1000,
-    effect: "creative",
-    creativeEffect: {
-        prev: {
-            translate: [0, 0, -400],
+    slidesPerView: 1,
+    breakpoints: {
+        375: {
+            slidesPerView: 1.165,
+            spaceBetween: 13,
+            speed: 1000,
+            touchRatio: 0.2,
+            slideToClickedSlide: true,
+            controller: {
+                inverse: false,
+            },
+            navigation: {
+                nextEl: '.swp-slider__next',
+                prevEl: '.swp-slider__prev',
+            },
         },
-        next: {
-            translate: ["100%", 0, 0],
+
+        1680: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            grabCursor: true,
+            speed: 1000,
+            controller: {
+                inverse: false,
+            },
+
+            navigation: {
+                nextEl: '.swp-slider__next',
+                prevEl: '.swp-slider__prev',
+            },
         },
+    }
+});
+
+var swpImages = new Swiper('.swiper-container-text', {
+    spaceBetween: 0,
+    slidesPerView: 1,
+    speed: 1300,
+    touchRatio: 0.2,
+    slideToClickedSlide: true,
+
+    controller: {
+        inverse: false,
     },
+
     navigation: {
         nextEl: '.swp-slider__next',
         prevEl: '.swp-slider__prev',
-    }
+    },
 });
+
+swpThumbs.controller.control = swpImages;
+swpImages.controller.control = swpThumbs;
 
 const swiper3 = new Swiper('.custom-swiper', {
     slidesPerView: 1,
@@ -64,3 +100,36 @@ const swiper3 = new Swiper('.custom-swiper', {
         prevEl: '.custom__prev',
     }
 });
+
+// breakpoint where swiper will be destroyed
+// and switches to a dual-column layout
+const breakpoint = window.matchMedia('(min-width: 720px)');
+// keep track of swiper instances to destroy later
+let swiperOrder;
+const breakpointChecker = function() {
+    // if larger viewport and multi-row layout needed
+    if (breakpoint.matches === true) {
+        // clean up old instances and inline styles when available
+        if (swiperOrder !== undefined) swiperOrder.destroy(true, true);
+        // or/and do nothing
+        return;
+        // else if a small viewport and single column layout needed
+    } else if (breakpoint.matches === false) {
+        // fire small viewport version of swiper
+        return enableSwiper();
+    }
+};
+
+const enableSwiper = function() {
+    swiperOrder = new Swiper('.swiper-container-order', {
+        slidesPerView: 1.125,
+        spaceBetween: 20,
+        grabCursor: true,
+        speed: 1000,
+    });
+};
+
+// keep an eye on viewport size changes
+breakpoint.addListener(breakpointChecker);
+// kickstart
+breakpointChecker();
