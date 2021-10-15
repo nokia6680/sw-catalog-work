@@ -187,11 +187,22 @@ select {
 
 .body-itemcard {
     .header {
-        border-bottom: 1px solid #e6e6e6;
+        border-bottom: 1px solid #E2ECF5;
     }
 
+
     .breadcrumbs {
-        margin-bottom: 3.125rem;
+        margin-bottom: 2.5rem;
+    }
+
+    @media only screen and (min-width: 720px) {
+        .header {
+            border-color: #e6e6e6;
+        }
+
+        .breadcrumbs {
+            margin-bottom: 3.125rem;
+        }
     }
 }
 

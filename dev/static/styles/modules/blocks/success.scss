@@ -105,3 +105,62 @@
         }
     }
 }
+
+@media only screen and (max-width: 719px) {
+    .success {
+        padding-top: 2.5rem;
+        margin-bottom: 2.625rem;
+
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        &__title {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+            margin-bottom: 3.125rem;
+        }
+
+        &__description {
+            font-size: 1.125rem;
+            line-height: 1.5625rem;
+            margin-bottom: 3.125rem;
+        }
+
+        &__controls {
+            width: 100%;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &__btn {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+
+            width: 100%;
+            height: 50px;
+            padding: 0;
+            margin-right: 0;
+            margin-bottom: 1.125rem;
+
+            border-color: $pink;
+        }
+
+        &__link {
+            font-size: 1rem;
+            line-height: 1.1875rem;
+
+            &::before {
+                position: absolute;
+                content: '';
+
+                width: 100%;
+                height: 1px;
+
+                background-color: #E2ECF5;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+}

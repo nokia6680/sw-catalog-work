@@ -48,4 +48,93 @@
 
         object-fit: contain;
     }
+
+    &__link {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 719px) {
+    .error {
+        padding-bottom: 2.625rem;
+
+        &__wrapper {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+
+            &::before {
+                width: 318px;
+                height: 163px;
+                bottom: 0%;
+                background-image: url("data:image/svg+xml,%3Csvg width='318' height='163' viewBox='0 0 318 163' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='158.831' cy='81.2018' rx='158.565' ry='80.862' fill='%23DE007C'/%3E%3C/svg%3E");
+                filter: blur(45px);
+            }
+        }
+
+        &__title {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+            margin-bottom: 3.5rem;
+        }
+
+        &__image {
+            width: 335px;
+            height: 152px;
+            margin-bottom: 5.5rem;
+        }
+
+        &__link {
+            display: block;
+            @include font-setting($helvetica-neue-font, 1rem, 1.1875rem, 400, $black);
+            text-decoration: none;
+            cursor: pointer;
+            outline: none;
+
+            padding: 0.25rem 0;
+
+            position: relative;
+            transition: 0.3s $cubic;
+
+            &::after {
+                position: absolute;
+                content: '';
+
+                width: 100%;
+                height: 1px;
+
+                background-color: $pink;
+
+                transform: scaleX(0);
+                transform-origin: center;
+                transition: 0.3s $cubic;
+
+                bottom: 0;
+                left: 0;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+
+                width: 100%;
+                height: 1px;
+
+                background-color: #E2ECF5;
+                bottom: 0;
+                left: 0;
+            }
+
+            &:hover,
+            &:active {
+                color: $pink;
+                transition: 0.3s $cubic;
+
+                &:after {
+                    transform: scaleX(1);
+                    transform-origin: center;
+                    transition: 0.3s $cubic;
+                }
+            }
+        }
+    }
 }

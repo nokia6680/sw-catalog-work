@@ -20,7 +20,8 @@
             left: 0;
             bottom: 0;
             right: 0;
-            object-fit: contain;
+            object-fit: cover;
+            object-position: top;
             width: 100%;
             height: 100%;
         }
@@ -71,5 +72,33 @@
         display: none;
         @include font-setting($helvetica-neue-font, 1.4375rem, 1.75rem, 550, $white);
         text-align: left;
+    }
+}
+
+@media only screen and (max-width: 719px) {
+    .preview {
+        &__frame {
+            padding-bottom: 133.33333333333334%;
+
+            &-image {
+                object-fit: cover;
+            }
+        }
+
+        &__wrapper {
+            bottom: 1.25rem;
+            left: 1.5rem;
+            transform: none;
+        }
+
+        &__info {
+            width: 100%;
+        }
+
+        &__title {
+            font-size: 2rem;
+            line-height: 2.375rem;
+            margin-bottom: 0;
+        }
     }
 }

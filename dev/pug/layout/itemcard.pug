@@ -20,7 +20,7 @@ html(lang="ru-RU")
     body.body-itemcard
         include ../modules/header/header
         main.main.main--card
-            +breadcrumb([["Главная ", "/index.html"], ["Шампанские и игристые вина ", "#"], ["Chianti Riserva ", "#"]])
+            +breadcrumb([["Каталог ", "/catalog.html"], ["Вино Johnson Estate Sauvignon Blanc ", "#"]])
             
             section.itemcard
                 .itemcard__head
@@ -70,6 +70,7 @@ html(lang="ru-RU")
                             button(type="button").gallery__next-th
                     <!--Блок информации о продукте-->
                     .itemcard__info
+                        b.itemcard__price 1 005 ₽
                         ul.itemcard__specs
                             for i in specsItems
                                 li.itemcard__specs-item

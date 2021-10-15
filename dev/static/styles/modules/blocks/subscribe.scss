@@ -17,6 +17,27 @@
         max-width: 1160px;
 
         @include flex-setting(row, flex-start, center);
+
+        &.passed {
+            justify-content: center;
+            height: 50px;
+
+            .subscribe__content {
+                display: none;
+            }
+
+            .subscribe__submit {
+                display: none;
+            }
+
+            .subscribe__title {
+                width: 100%;
+                margin-bottom: 0;
+                text-align: center;
+                transition: 0.3s $cubic;
+                align-self: center;
+            }
+        }
     }
 
     &__title {

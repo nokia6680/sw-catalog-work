@@ -22,19 +22,19 @@
 
     &__slider {
         width: 100%;
-        
-        .swiper-wrapper {
-            width: 100%;
-            display: grid;
-            grid-template-areas:
-                'block1 block2 block3'
-            ;
+    }
 
-            grid-template-columns: 560px 260px 260px;
-            grid-column-gap: 2.5rem;
-            justify-content: space-between;
-            align-content: start;
-        }
+    &__contents {
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+            'block1 block2 block3'
+        ;
+
+        grid-template-columns: 560px 260px 260px;
+        grid-column-gap: 2.5rem;
+        justify-content: space-between;
+        align-content: start;
     }
 
     &__block {
@@ -121,6 +121,7 @@
             width: 100%;
             height: 100%;
             @include flex-setting(column, flex-start, flex-start);
+
         }
     }
 
@@ -207,10 +208,8 @@
 
 @media only screen and (max-width: 719px) {
     .order {
-        padding: 5rem 0 1.75rem 1.5rem;
+        padding: 5rem 0 1.75rem 0;
         background-color: transparent;
-
-        overflow: hidden;
 
         &__wrapper {
             width: 100%;
@@ -225,19 +224,45 @@
             font-size: 2rem;
             line-height: 2.375rem;
             margin-bottom: 3.375rem;
+            margin-left: 1.5rem;
             max-width: 70%;
         }
 
         &__slider {
             width: 100%;
-            margin-bottom: 5rem;
+            @include flex-setting(row, flex-start, flex-start);
+        }
 
-            .swiper-slide {
-                max-width: 285px;
-            }
+        &__contents {
+            width: 100%;
+            margin-bottom: 5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            flex-wrap: nowrap;
+            gap: 1.25rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            margin-bottom: 3.375rem;
+
+            -ms-overflow-style: none;
+            overflow: -moz-scrollbars-none;
+
+            &::-webkit-scrollbar { width: 0; }
         }
 
         &__block {
+            flex: none;
+            scroll-snap-align: center;
+
+            margin-bottom: 0;
+            max-width: 285px;
+
+            @include gapFallback(1.25rem);
+
             &-body {
                 padding: 3.125rem 3.375rem 1.6875rem 3.375rem;
                 border-color: #E2ECF5;
@@ -252,6 +277,8 @@
             }
 
             &.--sw-desktop {
+                display: flex;
+
                 .order__block-item {
                     padding: 3.125rem 3.375rem 1.6875rem 3.375rem;
                     border: 1px solid #E2ECF5;
@@ -276,7 +303,7 @@
 
         &__details {
             margin-top: 0;
-            padding-left: 0;
+            padding-left: 1.5rem;
             padding-right: 1.5rem;
         }
 

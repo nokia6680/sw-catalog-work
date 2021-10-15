@@ -22,14 +22,22 @@
 
     &__body {
         width: 100%;
-        @include flex-setting(row, space-between, flex-start);
+        display: grid;
+        grid-template-areas:
+            'info person'
+            'service person'
+        ;
 
+        grid-template-columns: 56.89655172413793% 39.6551724137931%;
+        grid-column-gap: 2.5rem;
+        justify-content: start;
+        align-items: start;
         margin-bottom: 3.625rem;
     }
 
     &__info {
+        grid-area: info;
         width: 100%;
-        max-width: 660px;
 
         @include flex-setting(column, flex-start, flex-start);
 
@@ -48,6 +56,7 @@
     }
 
     &__services {
+        grid-area: service;
         width: 100%;
 
         @include flex-setting(column, flex-start, flex-start);
@@ -125,9 +134,8 @@
     }
 
     &__person {
+        grid-area: person;
         width: 100%;
-        max-width: 460px;
-
         background-color: $white;
 
         @include flex-setting(column, flex-start, flex-start);
@@ -197,56 +205,6 @@
             margin-bottom: 0;
         }
     }
-
-    &__contacts {
-        width: 100%;
-        @include flex-setting(column, flex-start, flex-start);
-
-        &-item {
-            width: 100%;
-            @include flex-setting(row, flex-start, center);
-        }
-
-        &-city,
-        &-link {
-            @include font-setting($helvetica-neue-font, 0.9375rem, 1.125rem, 400, #6d6d6d);
-            text-decoration: none;
-        }
-
-        &-city {
-            margin-right: 0.25rem;
-        }
-
-        &-link {
-            transition: 0.4s $cubic;
-
-            &:first-of-type {
-                margin-right: 0.875rem;
-
-                position: relative;
-
-
-                &::after {
-                    position: absolute;
-                    content: '/';
-
-                    @include font-setting($helvetica-neue-font, 0.9375rem, 1.125rem, 400, #6d6d6d);
-
-                    width: 6px;
-                    height: 15px;
-
-                    top: 0;
-                    right: -0.625rem;
-                }
-            }
-
-            &:hover,
-            &:active {
-                color: $pink;
-                transition: 0.4s $cubic;
-            }
-        }
-    }
 }
 
 @media only screen and (max-width: 719px) {
@@ -263,6 +221,8 @@
         }
 
         &__body {
+            display: flex;
+            justify-content: flex-start;
             margin-bottom: 4.1875rem;
             flex-direction: column;
             align-items: center;
@@ -378,37 +338,6 @@
 
             &:last-of-type {
                 margin-bottom: 0;
-            }
-        }
-
-        &__contacts {
-            &-item {
-                flex-wrap: wrap;
-                margin-bottom: 0.875rem;
-
-                &:last-of-type {
-                    margin-bottom: 0;
-                }
-            }
-
-            &-city,
-            &-link {
-                font-size: 1rem;
-                line-height: 1.1875rem;
-            }
-
-            &-city {
-                width: 100%;
-                margin-right: 0;
-            }
-
-            &-link {
-                &:first-of-type {
-                    &::after {
-                        font-size: 1rem;
-                        line-height: 1.1875rem;
-                    }
-                }
             }
         }
     }

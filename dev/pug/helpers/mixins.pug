@@ -50,8 +50,9 @@ mixin itemCard(type, link, image, articul, name, originLink, origin, colorLink, 
                 a(href="" +colorLink target="_self").item__details-link=color + ', '
                 a(href="" +sugarLink target="_self").item__details-link=sugar + ', '
                 a(href="" +volumeLink target="_self").item__details-link=volume + ' л'
-            b.item__price=price + '₽'
-                
+            .item__checkout
+                b.item__price=price + '₽'
+                button(type="button").item__buy
 mixin priveListItem(description, type)
     li(class="swp__list-item " +type)
         span

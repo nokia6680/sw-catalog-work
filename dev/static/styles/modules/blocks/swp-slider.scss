@@ -1,31 +1,41 @@
 .swp-slider {
     width: 100%;
-    @include flex-setting(column, flex-start, center);
-
-    background-color: #fff;
+    margin: 0 auto;
 
     padding-top: 10rem;
     padding-bottom: 10rem;
 
     position: relative;
 
-    &__wrapper {
+    @include flex-setting(column, center, center);
+
+    &__summary {
         width: 100%;
         max-width: 1160px;
+        display: grid;
+        grid-template-columns: 800px 1fr;
         position: relative;
+
         overflow: hidden;
     }
 
+    &__wrapper {
+        width: 100%;
+        max-height: 540px;
+
+        &.swiper-container-text {
+            .swp-slider__item:last-child {
+                .swp-slider__description {
+                    max-width: 558px;
+                }
+            }
+        }
+    }
+
     &__item {
-        display: grid;
-        grid-template-columns: 800px 1fr;
-        justify-content: start;
-        align-items: stretch;
+        @include flex-setting(column, center, center);
         width: 100%;
         height: 100%;
-        min-height: 480px;
-
-        background-color: $white;
 
         &:first-of-type {
             position: relative;
@@ -40,7 +50,7 @@
 
                 position: absolute;
 
-                top: 0;
+                bottom: 0;
                 right: 3.75rem;
 
                 &-image {
@@ -85,7 +95,7 @@
                 height: 293px;
                 position: absolute;
                 right: 3.75rem;
-                top: 5.625rem;
+                top: 9.625rem;
 
                 &-image {
                     width: 100%;
@@ -100,7 +110,7 @@
         width: 100%;
         height: 100%;
 
-        @include flex-setting(column, flex-start, flex-start);
+        @include flex-setting(column, center, flex-start);
         background-color: $white;
         padding: 0;
     }
@@ -113,7 +123,7 @@
     }
 
     &__head {
-        @include font-setting($helvetica-neue-font, 1.4375rem, 1.75rem, 500, $black);
+        @include font-setting($helvetica-neue-font, 1.4375rem, 1.75rem, 550, $black);
         max-width: 732px;
         margin-bottom: 2.1875rem;
         text-align: left;
@@ -202,6 +212,14 @@
     .swp-slider {
         padding-top: 1.875rem;
         padding-bottom: 1.875rem;
+
+        &__summary {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
 
         .swiper-container-text {
             order: 2;

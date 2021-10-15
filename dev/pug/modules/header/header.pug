@@ -39,8 +39,7 @@ header.header
             ul.nav__controls-list
                 for i in headBtn
                     li(class="nav__controls-item " +i.type)
-                        a(href="" +i.link target="_self").nav__controls-link=i.name
-                
+                        a(href="" +i.link target="_self" class="nav__controls-link " +i.type)=i.name
             button(type="button").nav__catalog.js-catalog Каталог
             button(type="button").nav__opener.js-opener
         ul.nav__menu.menu

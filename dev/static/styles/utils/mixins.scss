@@ -44,6 +44,16 @@ $units: 1px !default;
     align-items: $align;
 }
 
+@mixin gapFallback($gap) {
+    @supports not (aspect-ratio: 1 / 1) {
+        margin-right: $gap;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
 @mixin checkbox-default {
     display: inline-block;
     vertical-align: middle;
