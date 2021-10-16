@@ -22,9 +22,11 @@ html(lang="ru-RU")
             +breadcrumb([["Главная ", "/index.html"], ["Заказ ", "#"]])
             .success
                 .success__wrapper
-                    h1.success__title Спасибо за оформление заказа
-                    p.success__description Спасибо за оформление заказа! Наш сотрудник свяжется с вами в ближайшее время
-
+                    h1.success__title Спасибо за оформление
+                    p.success__description Для оформления заказа обратитесь к своему персональному менеджеру или свяжитесь с нами по контактам:
+                    .success__contacts
+                        a(href="tel:+74955106865" target="_blank").contacts__link +7 495 510 6865
+                        a(href="mailto:vip@simple.ru" target="_blank").contacts__link vip@simple.ru
                     .success__controls
                         button(type="button").success__btn Распечатать заказ
                         a(href="catalog.html" target="_self").success__link Вернуться в каталог

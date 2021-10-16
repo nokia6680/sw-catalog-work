@@ -35,8 +35,7 @@
     }
 
     &__link,
-    &__copy,
-    &__origin {
+    &__copy{
         @include font-setting($helvetica-neue-font, 0.75rem, 1.125rem, 400, #9F9F9F);
         text-decoration: none;
     }
@@ -44,22 +43,6 @@
     &__link {
         transition: 0.2s ease-in;
         cursor: pointer;
-
-        &:hover,
-        &:active,
-        &:focus {
-            color: $pink;
-            transition: 0.2s ease-in;
-        }
-    }
-
-    &__origin {
-        display: none;
-    }
-
-    &__origin a {
-        color: #9F9F9F;
-        transition: 0.2s ease-in;
 
         &:hover,
         &:active,
@@ -89,7 +72,7 @@
         &__block {
             width: 100%;
 
-            @include flex-setting(row, flex-start, center);
+            @include flex-setting(row, flex-start, flex-start);
 
             &:first-child {
                 width: 100%;
@@ -98,11 +81,12 @@
 
             &:nth-child(2) {
                 width: 100%;
-                margin-bottom: 2.5rem;
+                margin-bottom: 1.1875rem;
             }
 
             &:nth-child(3) {
                 width: 100%;
+                margin-bottom: 1.875rem;
             }
 
             &:last-child {
@@ -111,7 +95,7 @@
 
             &:first-child {
                 .footer__link:first-child {
-                    margin-right: 2.375rem;
+                    margin-right: 1.375rem;
                 }
             }
         }

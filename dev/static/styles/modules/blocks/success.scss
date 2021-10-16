@@ -27,7 +27,19 @@
         text-align: left;
         max-width: 490px;
 
-        margin-bottom: 7.125rem;
+        margin-bottom: 3.125rem;
+    }
+
+    &__contacts {
+        width: 100%;
+
+        @include flex-setting(column, flex-start, flex-start);
+
+        margin-bottom: 4rem;
+
+        .contacts__link:first-of-type {
+            margin-right: 1.25rem;
+        }
     }
 
     &__controls {

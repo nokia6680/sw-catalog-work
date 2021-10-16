@@ -25,19 +25,6 @@ body {
     &::-webkit-scrollbar { width: 0; }
 }
 
-.body-height {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    main {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-}
-
 *,
 *::after,
 *::before {
@@ -136,7 +123,7 @@ select {
     }
 
     @media only screen and (min-width: 720px) {
-        .header__catalog {
+        .nav__catalog {
             visibility: hidden;
             pointer-events: none;
             transform: scale(0);
