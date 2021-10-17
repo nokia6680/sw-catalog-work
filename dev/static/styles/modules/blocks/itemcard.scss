@@ -92,7 +92,6 @@
 
     &__info {
         width: 100%;
-        max-height: 685px;
 
         @include flex-setting(column, space-between, flex-start);
 
@@ -106,6 +105,7 @@
     &__description {
         @include font-setting($helvetica-neue-font, 0.875rem, 1.25rem, 400, $black);
         text-align: left;
+        margin-bottom: 2rem;
     }
 
     &__specs {

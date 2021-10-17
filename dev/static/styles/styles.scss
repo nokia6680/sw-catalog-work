@@ -197,5 +197,17 @@ select {
     padding-top: calc(4.9375rem + 2.625rem);
     margin: 0 auto;
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
 //Модули
 @import "modules/modules";
