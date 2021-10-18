@@ -6,12 +6,14 @@
         width: 100%;
         @include flex-setting(row, flex-start, center);
         max-width: 1160px;
+        flex-wrap: wrap;
     }
 
     &__item {
         width: auto;
         padding-right: 1.25rem;
         position: relative;
+        display: block;
 
         &:last-child {
             margin-right: 0;
@@ -22,7 +24,8 @@
         @include font-setting($helvetica-neue-font, 0.75rem, 0.75rem, 400, #767A82);
         text-decoration: none;
         transition: 0.2s ease-in;
-
+        white-space: normal;
+        word-break: break-all;
         cursor: pointer;
         outline: none;
 
@@ -48,5 +51,18 @@
         padding-left: 1.5rem;
         padding-right: 1.5rem;
         margin-bottom: 0;
+
+        &__item {
+            display: none;
+
+            &:first-child,
+            &:nth-child(2) {
+                display: block;
+            }
+
+            &:nth-child(2) .breadcrumbs__divider {
+                display: none;
+            }
+        }
     }
 }

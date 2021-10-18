@@ -1,0 +1,86 @@
+.popup-age {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    @include flex-setting(column, center, center);
+
+    background: rgba(128, 128, 128, 0.2);
+    backdrop-filter: blur(80px);
+
+    z-index: 999;
+    display: none;
+
+    &.active {
+        display: flex;
+    }
+
+    &__wrapper {
+        width: 100%;
+        max-width: 90%;
+
+        @include flex-setting(column, flex-start, center);
+
+        padding: 1.875rem 1.5rem 3rem 1.5rem;
+
+        background-color: $white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 16px 1px rgba(0, 0, 0, 0.4);
+
+        animation: fade 2s $cubic 1 forwards;
+    }
+
+    &__nr {
+        @include font-setting($geometria-font, 4rem, 1, 700, $pink);
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        @include font-setting($helvetica-neue-font, 1rem, 1.25rem, 550, $black);
+        text-align: center;
+        margin-bottom: 1.25rem;
+    }
+
+    &__description {
+        @include font-setting($helvetica-neue-font, 0.875rem, 1.125rem, 400, $black);
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__submit {
+        @include flex-setting(column, center, center);
+        @include font-setting($helvetica-neue-font, 1.25rem, 1.5rem, 400, $white);
+
+        width: 100%;
+        padding: 0;
+        height: 50px;
+
+        background-color: $pink;
+        border: 1px solid $pink;
+
+        cursor: pointer;
+        outline: none;
+
+        transition: 0.2s $cubic;
+
+        &:hover,
+        &:active {
+            color: $pink;
+            background-color: $white;
+            transition: 0.2s $cubic;
+        }
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .popup-age {
+        &__wrapper {
+            width: 100%;
+            max-width: 400px;
+        }
+    }
+}

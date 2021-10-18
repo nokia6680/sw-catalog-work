@@ -1,8 +1,9 @@
 .popup-rules {
     position: fixed;
+    margin: 0 auto;
     left: 50%;
-    bottom: 1rem;
     transform: translateX(-50%);
+    bottom: 1rem;
     z-index: 99;
     width: 90%;
 
@@ -14,7 +15,7 @@
     border-radius: 5px;
     box-shadow: 1px 1px 16px 1px rgba(0, 0, 0, 0.4);
 
-    animation: fadeIn 2s $cubic 1 forwards;
+    animation: 2s fadeInNorm 1 forwards;
 
     &__description {
         @include font-setting($helvetica-neue-font, 1rem, 1.5rem, 400, $black);
@@ -34,58 +35,6 @@
                 transition: 0.3s $cubic;
             }
         }
-    }
-
-    &__check {
-        width: 100%;
-
-        @include flex-setting(row, flex-start, flex-start);
-
-        margin-bottom: 1.5rem;
-    }
-
-    &__checkbox {
-        display: none;
-    }
-
-    &__label {
-        @include font-setting($helvetica-neue-font, 0.75rem, 1.2, 400, $black);
-        position: relative;
-        cursor: pointer;
-    }
-
-    &__checkbox + label {
-        padding-left: 2rem;
-    }
-
-    &__checkbox + label::before {
-        position: absolute;
-        content: '';
-
-        width: 16px;
-        height: 16px;
-
-        border: 1px solid $pink;
-        border-radius: 4px;
-        background-color: $white;
-
-        top: -1px;
-        left: 0;
-    }
-
-    &__checkbox:checked + label::after {
-        position: absolute;
-        content: '';
-
-        width: 16px;
-        height: 16px;
-
-        border: 1px solid $pink;
-        border-radius: 4px;
-        background-color: $pink;
-
-        top: -1px;
-        left: 0;
     }
 
     &__submit {
@@ -115,56 +64,29 @@
 
 @media only screen and (min-width: 1366px) {
     .popup-rules {
-        width: 70%;
+        width: 100%;
+        max-width: 800px;
         bottom: 2rem;
-        padding: 2rem 3.25rem;
+        padding: 2.25rem 2.25rem;
 
-        display: grid;
-        grid-template-areas:
-            'description button'
-            'checkbox button'
-        ;
-
-        grid-template-columns: 70% 1fr;
-        grid-column-gap: 2rem;
-        align-items: сутеук;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
 
         &__description {
-            grid-area: description;
-            font-size: 1.5rem;
+            display: block;
+            font-size: 1.125rem;
             line-height: 1.2;
             text-align: left;
-            margin-bottom: 2rem;
-        }
-
-        &__check {
             margin-bottom: 0;
-        }
-
-        &__label {
-            font-size: 1.5rem;
-        }
-
-        &__checkbox + label {
-            padding-left: 3rem;
-        }
-
-        &__checkbox + label::before {
-            width: 24px;
-            height: 24px;
-            border-radius: 6px;
-        }
-
-        &__checkbox:checked + label::after {
-            width: 24px;
-            height: 24px;
-            border-radius: 6px;
+            max-width: 80%;
+            margin-right: 2rem;
         }
 
         &__submit {
-            grid-area: button;
-            font-size: 2rem;
-            height: 80px;
+            max-width: 240px;
+            font-size: 1.5rem;
+            height: 60px;
         }
     }
 }

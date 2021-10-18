@@ -27,7 +27,9 @@
         @include flex-setting(column, flex-start, flex-start);
 
         padding: 1.875rem 1.875rem 3rem 3.125rem;
+        box-shadow: 1px 1px 16px 1px rgba(0, 0, 0, 0.4);
 
+        animation: fade 2s $cubic 1 forwards;
         background-color: $white;
     }
 
@@ -87,30 +89,18 @@
 
         align-self: flex-end;
     }
-
-    &__frame {
-        width: 100%;
-        height: 100%;
-        @include flex-setting(column, center, center);
-
-        overflow: hidden;
-
-        &-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top;
-        }
-    }
 }
 
 @media only screen and (max-width: 719px) {
     .greeting {
         position: absolute;
         justify-content: flex-start;
+        padding-top: 2%;
 
         &__wrapper {
-            padding: 2.125rem 1.5rem 2.125rem 1.5rem;
+            position: relative;
+            padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+            max-width: 96%;
         }
 
         &__closer {
@@ -118,15 +108,30 @@
             height: 25px;
 
             position:absolute;
-            top: 2.125rem;
+            top: 1.5rem;
             right: 1.5rem;
 
             margin-bottom: 0;
         }
 
+        &__title {
+            margin-bottom: 1.125rem;
+        }
+
         &__subtitle {
-            font-size: 1.25rem;
-            line-height: 1.5rem;
+            font-size: 0.875rem;
+            line-height: 1.1875rem;
+            margin-bottom: 1rem;
+        }
+
+        &__description {
+            font-size: 0.75rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        &__sign {
+            max-width: 50%;
         }
     }
 }

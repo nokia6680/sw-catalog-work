@@ -18,6 +18,13 @@
         box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
 
         z-index: 10;
+
+        .nav__catalog {
+            visibility: visible;
+            transform: scale(1);
+            pointer-events: all;
+            transition: 0.4s $cubic;
+        }
     }
 }
 

@@ -1,9 +1,17 @@
 $(function() {
     $(window).scroll(function() {
+        var catalog = document.querySelector('.menu');
+        var navCatalog = document.querySelector('.nav');
+        var bodyIndex = document.querySelector('.body-index');
+
         if ($(this).scrollTop() >= 80) {
             $('header').addClass('scrolling');
+            catalog.classList.remove('index-active');
+            navCatalog.classList.remove('catalog-opened');
+
         } else {
             $('header').removeClass('scrolling');
+            catalog.classList.add('index-active');
         }
     });
 });
@@ -42,8 +50,8 @@ var navOpener = document.querySelector('.js-opener');
 if (catOpener) {
     catOpener.addEventListener('click', function () {
         navCat.classList.toggle('catalog-opened');
-        catalogBody.classList.toggle('opened');
         catOpener.classList.toggle('active');
+        catalogBody.classList.toggle('opened');
         navList.classList.remove('active');
     });
 };

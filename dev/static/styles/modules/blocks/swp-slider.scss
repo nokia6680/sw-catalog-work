@@ -13,7 +13,7 @@
         width: 100%;
         max-width: 1160px;
         display: grid;
-        grid-template-columns: 800px 1fr;
+        grid-template-columns: 1fr;
         position: relative;
 
         overflow: hidden;
@@ -22,6 +22,11 @@
     &__wrapper {
         width: 100%;
         max-height: 540px;
+        overflow: hidden;
+
+        &.swiper-container-images {
+            display: none;
+        }
 
         &.swiper-container-text {
             .swp-slider__item:last-child {
@@ -223,10 +228,15 @@
 
         .swiper-container-text {
             order: 2;
+
+            .swp-slider__frame {
+                display: none;
+            }
         }
 
         .swiper-container-images {
             order: 1;
+            display: flex;
         }
 
         &__item {
