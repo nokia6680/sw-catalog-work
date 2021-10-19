@@ -9,10 +9,12 @@
 
     @include flex-setting(column, center, center);
 
-    background: rgba(128, 128, 128, 0.2);
+    background-color: rgba(128, 128, 128, 0.2);
     backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
 
     z-index: 999;
+
     display: none;
 
     &.active {
@@ -72,6 +74,14 @@
             color: $pink;
             background-color: $white;
             transition: 0.2s $cubic;
+        }
+    }
+
+    @supports not (aspect-ratio: 1 / 1) {
+        .popup-age {
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            background-color: rgba(0, 0, 0, 0.8);
         }
     }
 }

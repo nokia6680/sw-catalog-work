@@ -17,10 +17,11 @@
         grid-template-areas:
             'logo logo'
             'details list'
+            'connect list'
         ;
 
         margin-bottom: 0.5rem;
-        align-items: end;
+        align-items: start;
         justify-content: start;
 
         padding-top: 6.5625rem;
@@ -88,6 +89,7 @@
     }
 
     &__list {
+        grid-area: list;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -142,7 +144,26 @@
     }
 
     &__connect {
-        display: none;
+        grid-area: connect;
+        @include font-setting($helvetica-neue-font, 0.9375rem, 1.125rem, 400, $darkgray);
+
+        text-align: left;
+        max-width: 327px;
+
+        &-link {
+            color: $darkgray;
+            text-decoration: underline;
+            transition: 0.4s $cubic;
+
+            cursor: pointer;
+
+            &:hover,
+            &:active {
+                color: $pink;
+                text-decoration-color: $pink;
+                transition: 0.4s $cubic;
+            }
+        }
     }
 }
 
@@ -210,26 +231,9 @@
         }
 
         &__connect {
-            display: block;
-            @include font-setting($helvetica-neue-font, 1rem, 1.1875rem, 400, $darkgray);
-
-            text-align: left;
+            font-size: 1rem;
+            line-height: 1.1875rem;
             max-width: 95%;
-
-            &-link {
-                color: $darkgray;
-                text-decoration: underline;
-                transition: 0.4s $cubic;
-
-                cursor: pointer;
-
-                &:hover,
-                &:active {
-                    color: $pink;
-                    text-decoration-color: $pink;
-                    transition: 0.4s $cubic;
-                }
-            }
         }
     }
 }

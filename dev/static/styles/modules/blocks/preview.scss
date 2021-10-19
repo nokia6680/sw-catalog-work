@@ -100,8 +100,11 @@
         }
 
         &__wrapper {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
             bottom: 1.25rem;
-            left: 1.5rem;
+            left: 0;
+            right: 0;
             transform: none;
         }
 

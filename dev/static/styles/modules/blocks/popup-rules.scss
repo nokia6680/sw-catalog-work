@@ -17,6 +17,8 @@
 
     animation: 2s fadeInNorm 1 forwards;
 
+    display: none;
+
     &__description {
         @include font-setting($helvetica-neue-font, 1rem, 1.5rem, 400, $black);
         margin-bottom: 1.25rem;

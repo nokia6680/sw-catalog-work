@@ -89,6 +89,14 @@
 
         align-self: flex-end;
     }
+
+    @supports not (aspect-ratio: 1 / 1) {
+        .greeting {
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    }
 }
 
 @media only screen and (max-width: 719px) {

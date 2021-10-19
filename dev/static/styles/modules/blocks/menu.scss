@@ -5,9 +5,7 @@
     padding-top: 5.3125rem;
     min-height: 880px;
     @include flex-setting(column, flex-start, flex-start);
-
     background-color: $white;
-    gap: 1.375rem;
 
     border-bottom: 1px solid #e6e6e6;
     transition: 0.4s $cubic;
@@ -17,6 +15,7 @@
         max-width: 840px;
         transition: 0.4s $cubic;
         border-left: 1px solid #e6e6e6;
+
         .menu__item {
             pointer-events: auto;
             transform: scale(1) translateY(0px);
@@ -40,6 +39,8 @@
         opacity: 0;
         transition: transform 0.5s $cubic, opacity 0.6s $cubic;
 
+        margin-bottom: 1.375rem;
+
         @for $i from 1 through $menuItems {
             &:nth-child(#{$i}) {
                 transition-delay: #{0.56 - ($i * 0.07)}s;
@@ -58,6 +59,10 @@
                 transition: 0.2s ease-in;
                 padding-top: 1.25rem;
             }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 
@@ -121,15 +126,15 @@
             transition: 0.3s ease-in-out;
         }
     }
+}
 
-    @supports not (aspect-ratio: 1 / 1) {
-        .menu__item {
-            margin-bottom: 1.375rem;
+@supports (aspect-ratio: 1 / 1) {
+    .menu__item {
+        margin-bottom: 0;
+    }
 
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
+    .menu {
+        gap: 1.375rem;
     }
 }
 
@@ -168,13 +173,21 @@
         }
 
         &.opened {
-            max-height: 640px;
+            max-height: 100vh;
+            overflow-y: scroll;
             padding-top: 3.375rem;
-            padding-bottom: 2.5rem;
+            padding-bottom: 6.25rem;
             padding-left: 1.5625rem;
             border-left: none;
             max-width: 100%;
             transition: 0.4s $cubic;
+
+            z-index: 99;
+
+            -ms-overflow-style: none;
+            overflow: -moz-scrollbars-none;
+
+            &::-webkit-scrollbar { width: 0; }
 
             &::after {
                 max-height: 56px;

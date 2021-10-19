@@ -22,18 +22,20 @@
     &__filter {
         width: 100%;
         @include flex-setting(row, flex-start, center);
-        margin-bottom: 2.8125rem;
+        margin-bottom: 0.8125rem;
 
         &-list {
             width: 100%;
             @include flex-setting(row, flex-start, center);
             flex-wrap: wrap;
-            gap: 2rem 3rem;
         }
 
         &-item {
             width: auto;
             @include flex-setting(column, center, center);
+
+            margin-right: 3rem;
+            margin-bottom: 2rem;
         }
 
         &-btn {
@@ -133,6 +135,7 @@
         &-item {
             width: auto;
             margin-right: 1.375rem;
+            @include flex-setting(column, center, center);
 
             &:last-child {
                 margin-right: 0;
@@ -140,6 +143,7 @@
         }
 
         &-link {
+            @include flex-setting(column, center, center);
             @include font-setting($helvetica-neue-font, 1.0625rem, 1.25rem, 550, #cecece);
             text-decoration: none;
             transition: 0.2s ease-in;
@@ -225,14 +229,18 @@
         }
     }
 
-    @supports not (aspect-ratio: 1 / 1) {
-        .catalog__filter-list {
-            margin-bottom: 0.8125rem;
-        }
+    @supports (aspect-ratio: 1 / 1) {
+        .catalog__filter {
+            margin-bottom: 2.8125rem;
 
-        .catalog__filter-item {
-            margin-right: 3rem;
-            margin-bottom: 2rem;
+            &-list {
+                gap: 2rem 3rem;
+            }
+
+            &-item {
+                margin-right: 0;
+                margin-bottom: 0;
+            }
         }
     }
 }
@@ -250,6 +258,8 @@
         }
 
         &__filter {
+            margin-bottom: 2.8125rem;
+
             &-list {
                 flex-direction: row;
                 justify-content: flex-start;
@@ -268,8 +278,6 @@
                 overflow: -moz-scrollbars-none;
 
                 &::-webkit-scrollbar { width: 0; }
-
-                gap: 3.125rem;
             }
 
             &-item {
@@ -279,6 +287,9 @@
                 margin-bottom: 0;
 
                 @include gapFallback(1.25rem);
+
+                margin-right: 3.125rem;
+                margin-bottom: 0;
             }
 
             &-btn {
@@ -319,14 +330,14 @@
             display: none;
         }
 
-        @supports not (aspect-ratio: 1 / 1) {
+        @supports (aspect-ratio: 1 / 1) {
             .catalog__filter-list {
-                margin-bottom: 0
+                gap: 3.125rem;
             }
 
             .catalog__filter-item {
-                margin-right: 3.125rem;
                 margin-bottom: 0;
+                margin-right: 0;
             }
         }
     }
