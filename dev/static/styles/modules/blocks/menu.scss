@@ -2,8 +2,8 @@
     width: 100%;
     max-width: 0;
     overflow: hidden;
-    padding-top: 5.3125rem;
     min-height: 880px;
+    padding-top: 5.3125rem;
     @include flex-setting(column, flex-start, flex-start);
     background-color: $white;
 
@@ -15,10 +15,11 @@
 
     border-bottom: 1px solid #e6e6e6;
     transition: 0.4s $cubic;
+    aspect-ratio: none;
 
     &.opened {
         padding-left: 4.75rem;
-        max-width: 840px;
+        max-width: 847px;
         transition: 0.4s $cubic;
         border-left: 1px solid #e6e6e6;
 
@@ -114,29 +115,6 @@
             }
         }
     }
-
-    &__sublink {
-        display: block;
-        margin-left: 1.25rem;
-        margin-bottom: 1.0625rem;
-
-        @include font-setting($helvetica-neue-font, 0.9375rem, 1, 400, #6D6D6D);
-
-        text-decoration: none;
-        position: relative;
-
-        transition: 0.3s ease-in-out;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        &:hover,
-        &:active {
-            color: $pink;
-            transition: 0.3s ease-in-out;
-        }
-    }
 }
 
 @supports (aspect-ratio: 1 / 1) {
@@ -146,6 +124,17 @@
 
     .menu__list {
         gap: 1.375rem;
+    }
+}
+
+@media only screen and (max-width: 1920px) {
+    .menu {
+        min-height: 0;
+        aspect-ratio: 16 / 16.6824644549763;
+
+        &.opened {
+            max-width: 46.35416666666667%;
+        }
     }
 }
 
