@@ -7,6 +7,12 @@
     @include flex-setting(column, flex-start, flex-start);
     background-color: $white;
 
+    position: absolute;
+    right: -3.125rem;
+    top: 57px;
+    max-width: 0;
+    z-index: 10;
+
     border-bottom: 1px solid #e6e6e6;
     transition: 0.4s $cubic;
 
@@ -135,6 +141,26 @@
 
     .menu {
         gap: 1.375rem;
+    }
+}
+
+@media only screen and (max-width: 1680px) {
+    .menu {
+        padding-top: 5.3125rem;
+        min-height: 100%;
+        right: 0;
+        aspect-ratio: 16 / 17.70114942528736;
+
+        &.opened {
+            padding-left: 5rem;
+            max-width: 41.43484626647145%;
+        }
+
+        &__link {
+            display: block;
+            padding-bottom: 0.625rem;
+            font-size: 0.9375rem;
+        }
     }
 }
 
