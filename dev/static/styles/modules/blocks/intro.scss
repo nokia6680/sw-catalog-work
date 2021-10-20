@@ -15,29 +15,13 @@
 
         width: 100%;
         height: 100%;
-
-        &::after {
-            position: absolute;
-            content: '';
-
-            width: 898px;
-            height: 724px;
-
-            background-image: url('../images/content/gates.png');
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            background-size: contain;
-
-            bottom: -2rem;
-            left: 1.125rem;
-        }
     }
 
     &__title {
         position: absolute;
 
         bottom: 6.25rem;
-        right: 12.125rem;
+        right: 14.5rem;
 
         @include font-setting($roboto-font, 3.125rem, 3.75rem, 500, $white);
         text-transform: uppercase;
@@ -51,42 +35,6 @@
         height: 0;
         overflow: hidden;
         @include flex-setting(column, center, center);
-
-        &::after {
-            position: absolute;
-            content: '';
-
-            width: 177px;
-            height: 177px;
-
-            background-image: url('../images/content/ball-big.png');
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            background-size: contain;
-
-            top: 3rem;
-            left: 21.875rem;
-        }
-
-        &::before {
-            position: absolute;
-            content: '';
-
-            width: 73px;
-            height: 74px;
-
-            background-image: url('../images/content/ball-small.png');
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            background-size: contain;
-
-            top: 7.1875rem;
-            right: 10rem;
-
-            transform: rotate(30deg);
-
-            z-index: 2;
-        }
 
         &-image {
             position: absolute;
@@ -120,21 +68,87 @@
     }
 
     &__annual {
-        width: 183px;
+        width: 150px;
         position: absolute;
         @include flex-setting(row, space-between, center);
 
-        top: 18.9375rem;
-        right: 17.1875rem;
+        top: 40%;
+        right: 20%;
         z-index: 2;
 
         span {
-            @include font-setting($roboto-font, 3.875rem, 4.625rem, 500, $white);
+            @include font-setting($roboto-font, 3.5rem, 3.75rem, 500, $white);
 
             &:last-child {
                 color: $darkred;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 1999px) {
+    .intro {
+
+        &__title {
+            right: 12.375rem;
+        }
+        
+        &__frame {
+            padding-bottom: 81.48148148148148%;
+        }
+
+        @supports (aspect-ratio: 16 / 13.03703703703704) {
+            .intro__frame {
+                padding-bottom: 0;
+            }
+
+            .intro__frame-image {
+                aspect-ratio: 16 / 13.03703703703704;
+            }
+        }
+
+        &__annual {
+            font-size: 3.875rem;
+            line-height: 4.625rem;
+            width: 183px;
+            top: 18.9375rem;
+            right: 25.46296296296296%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1919px) {
+    .intro {
+        grid-template-columns: 58.56515373352855% 1fr;
+
+        &__title {
+            right: 12.125rem;
+        }
+        &__frame {
+            padding-bottom: 90%;
+        }
+
+        &__annual {
+            width: 160px;
+            top: 37.83333333333333%;
+            right: 28%;
+        }
+
+        @supports (aspect-ratio: 16 / 14.4) {
+            .intro__frame {
+                padding-bottom: 0;
+            }
+
+            .intro__frame-image {
+                aspect-ratio: 16 / 14.4;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1365px) {
+    .intro {
+
     }
 }
 
@@ -144,15 +158,6 @@
         justify-content: start;
         align-items: start;
         overflow: hidden;
-
-        &__wrapper {
-            &::after {
-                width: 374px;
-                height: 300px;
-                bottom: -1rem;
-                left: -4rem;
-            }
-        }
 
         &__title {
             bottom: 2.375rem;
@@ -166,42 +171,27 @@
         }
 
         &__frame {
-            padding-bottom: 110%;
+            padding-bottom: 109.33333333333333%;
 
             &-image {
                 object-position: top;
             }
-
-            &::after {
-                width: 74px;
-                height: 74px;
-                top: 3rem;
-                left: 3.5rem;
-            }
-
-            &::before {
-                width: 30px;
-                height: 30px;
-
-                top: 4.5rem;
-                right: 5rem;
-            }
         }
 
-        @supports (aspect-ratio: 3 / 3.3) {
+        @supports (aspect-ratio: 16 / 17.49333333333333) {
             .intro__frame {
                 padding-bottom: 0;
             }
 
             .intro__frame-image {
-                aspect-ratio: 3 / 3.3;
+                aspect-ratio: 16 / 17.49333333333333;
             }
         }
 
         &__annual {
             width: 76px;
             top: 36.89%;
-            right: 37.86%;
+            right: 29.86666666666667%;
 
             span {
                 font-size: 1.625rem;

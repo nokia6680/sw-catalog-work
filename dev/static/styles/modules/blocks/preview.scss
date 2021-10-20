@@ -81,6 +81,20 @@
     }
 }
 
+@media only screen and (max-width: 1919px) {
+    .preview {
+        &__frame {
+            padding-bottom: 52.7086383601757%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1365px) {
+    .preview {
+
+    }
+}
+
 @media only screen and (max-width: 719px) {
     .preview {
         &__frame {

@@ -108,7 +108,7 @@ select {
         padding-top: 4.9375rem;
     }
 
-    @media only screen and (min-width: 1680px) {
+    @media only screen and (min-width: 1366px) and (max-width: 1999px) {
         .main {
             width: 100%;
             padding-top: 4.9375rem;
@@ -120,11 +120,10 @@ select {
             pointer-events: none;
         }
 
-
         .menu {
             &.index-active {
                 padding-left: 4.75rem;
-                max-width: 46.35416666666667%;
+                max-width: 41.43484626647145%;
                 transition: 0.4s $cubic;
                 border: none;
 

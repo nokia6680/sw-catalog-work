@@ -2,26 +2,24 @@
     width: 100%;
     max-width: 0;
     overflow: hidden;
-    min-height: 880px;
     padding-top: 5.3125rem;
     @include flex-setting(column, flex-start, flex-start);
     background-color: $white;
 
     position: absolute;
-    right: -3.125rem;
+    right: 0;
     top: 57px;
-    max-width: 0;
     z-index: 10;
-
-    border-bottom: 1px solid #e6e6e6;
     transition: 0.4s $cubic;
-    aspect-ratio: none;
+
+    min-height: 0;
+    height: calc(43.75vw * (12.85714285714286 / 16));
+    //aspect-ratio: 16 / 12.85714285714286;
 
     &.opened {
         padding-left: 4.75rem;
-        max-width: 847px;
+        max-width: 43.75%;
         transition: 0.4s $cubic;
-
         .menu__item {
             pointer-events: auto;
             transform: scale(1) translateY(0px);
@@ -126,23 +124,12 @@
     }
 }
 
-@media only screen and (max-width: 1920px) {
-    .menu {
-        min-height: 0;
-        aspect-ratio: 16 / 16.6824644549763;
-
-        &.opened {
-            max-width: 46.35416666666667%;
-        }
-    }
-}
-
-@media only screen and (max-width: 1680px) {
+@media only screen and (max-width: 1999px) {
     .menu {
         padding-top: 5.3125rem;
-        min-height: 100%;
-        right: 0;
-        aspect-ratio: 16 / 17.70114942528736;
+        min-height: 0;
+        height: calc(41.43484626647145vw * (17.70114942528736 / 16));
+        //aspect-ratio: 16 / 17.70114942528736;
 
         &.opened {
             padding-left: 5rem;
@@ -155,6 +142,16 @@
             font-size: 0.9375rem;
         }
     }
+}
+
+@media only screen and (max-width: 1919px) {
+    .menu {
+        height: calc(41.43484626647145vw * (20.35335689045936 / 16));
+    }
+}
+
+@media only screen and (max-width: 1365px) {
+
 }
 
 @media only screen and (max-width: 719px) {
@@ -203,7 +200,7 @@
             border-left: none;
             max-width: 100vw;
             transition: 0.4s $cubic;
-
+            height: 100vh;
             z-index: 99;
 
             -ms-overflow-style: none;

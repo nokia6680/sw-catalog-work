@@ -1,8 +1,12 @@
 .nav {
     width: 100%;
-    max-width: 1920px;
     @include flex-setting(row, flex-start, center);
     position: relative;
+
+    --width: calc(100% - 1820px);
+
+    padding-left: calc(var(--width) / 2);
+    padding-right: calc(var(--width) / 2);
 
     &::after {
         position: absolute;
@@ -21,7 +25,7 @@
     &.catalog-opened {
         &::after {
             opacity: 1;
-            right: 132px;
+            right: calc((var(--width) / 2) + 7rem);
             z-index: 2;
             transition: 0.2s ease-in;
         }
@@ -292,7 +296,7 @@
 
         &.active {
             &::before {
-                left: -38px;
+                left: -18px;
                 transition: 0.2s ease-in;
             }
         }
@@ -305,7 +309,7 @@
     &__contacts {
         position: absolute;
         top: 57px;
-        right: 132px;
+        right: calc((var(--width) / 2) + 7rem);
         max-height: 0;
         overflow: hidden;
         padding-left: 2.5rem;
@@ -375,12 +379,9 @@
     }
 }
 
-@media only screen and (max-width: 1680px) {
+@media only screen and (max-width: 1919px) {
     .nav {
         --width: calc(100% - 1300px);
-
-        padding-left: calc(var(--width) / 2);
-        padding-right: calc(var(--width) / 2);
 
         &::after {
             display: none;
@@ -543,58 +544,7 @@
         }
 
         &__contacts {
-            position: absolute;
-            top: 57px;
-            right: 132px;
-            max-height: 0;
-            overflow: hidden;
-            padding-left: 2.5rem;
-            padding-right: 2.5rem;
-            background-color: transparent;
-            @include flex-setting(column, flex-start, flex-start);
-            transition: 0.4s $cubic;
-            pointer-events: none;
-            z-index: 999;
-            border: 1px solid transparent;
-            border-top: none;
-
-            .contacts__block {
-                margin-bottom: 1.25rem;
-                transform: scale(1.15) translateY(-30px);
-                opacity: 0;
-                transition: transform 0.5s $cubic, opacity 0.6s $cubic;
-                @for $i from 1 through $contactsItems {
-                    &:nth-child(#{$i}) {
-                        transition-delay: #{0.56 - ($i * 0.07)}s;
-                    }
-                }
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-
-            &.opened {
-                background-color: $white;
-                padding-top: 2.5rem;
-                padding-bottom: 2.5rem;
-                max-height: 500px;
-                transition: 0.4s $cubic;
-                pointer-events: all;
-                border-color: #e6e6e6;
-
-                .contacts__block {
-                    pointer-events: auto;
-                    transform: scale(1) translateY(0px);
-                    will-change: transform;
-                    opacity: 1;
-                    @for $i from 1 through $contactsItems {
-                        &:nth-child(#{$i}) {
-                            transition-delay: #{0.06 * $i+0.2}s;
-                        }
-                    }
-                }
-            }
+            right: calc((var(--width) / 2) + 3rem);
         }
     }
 
