@@ -1,6 +1,6 @@
 .swp {
     width: 100%;
-
+    background-color: #FBF5EF;
     @include flex-setting(column, flex-start, center);
 
     margin: 0 auto;
@@ -167,6 +167,157 @@
     }
 }
 
+@media only screen and (max-width: 1365px) {
+    .swp {
+        padding-top: 2.25rem;
+
+        &__wrapper {
+            max-width: 640px;
+            grid-column-gap: 2.625rem;
+            margin-bottom: 4.375rem;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            &::after {
+                width: 129px;
+                height: 288px;
+
+                top: 10rem;
+                --width: calc(100% - 640px);
+                right: calc(var(--width) / 2);
+            }
+        }
+
+        &__link {
+            width: 284px;
+            height: 67px;
+
+            margin-bottom: 2.5rem;
+        }
+
+        &__details {
+            &-head {
+                font-size: 0.875rem;
+                line-height: 1.0625rem;
+                margin-bottom: 1.125rem;
+                max-width: 270px;
+            }
+
+            &-description {
+                font-size: 0.625rem;
+                line-height: 0.75rem;
+                margin-bottom: 0;
+                max-width: 254px;
+            }
+        }
+
+        &__list {
+            grid-column-gap: 1.25rem;
+            grid-row-gap: 1.25rem;
+
+            &-item {
+                span {
+                    width: 17px;
+                    height: 9px;
+                    margin-bottom: 1rem;
+                }
+
+                &.icon-1 {
+                    span {
+                        width: 12px;
+                        height: 10.5px;
+                    }
+                }
+
+                &.icon-2 {
+                    span {
+                        width: 11.7px;
+                        height: 11.7px;
+                    }
+                }
+
+                &.icon-3 {
+                    span {
+                        width: 14px;
+                        height: 9px;
+                    }
+                }
+
+                &.icon-4 {
+                    span {
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+
+                &.icon-5 {
+                    span {
+                        width: 9.6px;
+                        height: 11.2px;
+                    }
+                }
+
+                &.icon-6 {
+                    span {
+                        width: 13.8px;
+                        height: 8.6px;
+                    }
+                }
+
+                &.icon-7 {
+                    span {
+                        width: 10.2px;
+                        height: 10.2px;
+                    }
+                }
+
+                &.icon-8 {
+                    span {
+                        width: 17px;
+                        height: 9px;
+                    }
+                }
+
+                &.icon-9 {
+                    span {
+                        width: 10.2px;
+                        height: 11.2px;
+                    }
+                }
+            }
+
+            &-description {
+                font-size: 0.5626rem;
+                line-height: 0.8125rem;
+
+                &:nth-child(2) {
+                .swp__description {
+                        max-width: 70%;
+                    }
+                }
+
+                &:nth-child(5) {
+                    .swp__description {
+                        max-width: 60%;
+                    }
+                }
+
+                &:last-child {
+                    .swp__description {
+                        max-width: 65%;
+                    }
+                }
+            }
+        }
+
+        &__connect {
+            font-size: 0.625rem;
+            line-height: 0.75rem;
+            max-width: 254px;
+        }
+    }
+}
+
 @media only screen and (max-width: 719px) {
     .swp {
         &__wrapper {
@@ -208,12 +359,14 @@
                 line-height: 1.375rem;
 
                 margin-bottom: 1.25rem;
+                max-width: 100%;
             }
 
             &-description {
                 font-size: 1rem;
                 line-height: 1.1875rem;
                 margin-bottom: 0;
+                max-width: 100%;
             }
         }
 
@@ -227,6 +380,74 @@
                 span {
                     margin-bottom: 1.875rem;
                 }
+
+                &.icon-1 {
+                    span {
+                        width: 23.5px;
+                        height: 20.6px;
+                    }
+                }
+
+                &.icon-2 {
+                    span {
+                        width: 23px;
+                        height: 23px;
+                    }
+                }
+
+                &.icon-3 {
+                    span {
+                        width: 27.3px;
+                        height: 17.3px;
+                    }
+                }
+
+                &.icon-4 {
+                    span {
+                        width: 23.6px;
+                        height: 23.6px;
+                    }
+                }
+
+                &.icon-5 {
+                    span {
+                        width: 18.8px;
+                        height: 22.1px;
+                    }
+                }
+
+                &.icon-6 {
+                    span {
+                        width: 27px;
+                        height: 17px;
+                    }
+                }
+
+                &.icon-7 {
+                    span {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                &.icon-8 {
+                    span {
+                        width: 33.3px;
+                        height: 17.5px;
+                    }
+                }
+
+                &.icon-9 {
+                    span {
+                        width: 20px;
+                        height: 22px;
+                    }
+                }
+            }
+
+            &-description {
+                font-size: 0.75rem;
+                line-height: 0.875rem;
             }
         }
 

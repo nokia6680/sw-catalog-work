@@ -54,6 +54,35 @@
     }
 }
 
+@media only screen and (max-width: 1365px) {
+    .error {
+        padding-top: 3.125rem;
+        padding-bottom: 4.25rem;
+
+        &__wrapper {
+            width: 100%;
+            max-width: 640px;
+
+            &::before {
+                width: 506px;
+                height: 258px;
+                bottom: -60%;
+            }
+        }
+
+        &__title {
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+            margin-bottom: 1rem;
+        }
+
+        &__image {
+            width: 534px;
+            height: 243px;
+        }
+    }
+}
+
 @media only screen and (max-width: 719px) {
     .error {
         padding-bottom: 2.625rem;

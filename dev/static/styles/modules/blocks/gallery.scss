@@ -84,8 +84,27 @@
     }
 }
 
+@media only screen and (max-width: 1365px) {
+    .gallery {
+        padding-top: 3.125rem;
+
+        &__slider.gallery-top {
+            height: 310px;
+            max-height: 310px;
+        }
+
+        &__frame {
+            &-image {
+                max-height: 288px;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 719px) {
     .gallery {
+        padding-top: 0;
+        
         &__slider {
             width: 100%;
             overflow: hidden;

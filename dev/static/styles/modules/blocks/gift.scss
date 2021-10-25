@@ -179,6 +179,102 @@
     }
 }
 
+@media only screen and (max-width: 1365px) {
+    .gift {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+
+        &__wrapper {
+            grid-template-columns: 380px 1fr;
+            max-width: 640px;
+        }
+
+        &__info {
+            padding-top: 0;
+            max-width: 380px;
+        }
+
+        &__title {
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+            margin-bottom: 1.125rem;
+        }
+
+        &__description {
+            font-size: 0.875rem;
+            line-height: 1.0625rem;
+            margin-bottom: 1.125rem;
+        }
+
+        &__item {
+            padding-left: 1.5rem;
+            margin-bottom: 1.25rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            span {
+                display: inline-flex;
+                font-size: 0.75rem;
+                line-height: 1.2;
+            }
+
+            &.icon-1 {
+                &::after {
+                    width: 13px;
+                    height: 9px;
+                    top: 0.25rem;
+                }
+            }
+
+            &.icon-2 {
+                &::after {
+                    width: 15.5px;
+                    height: 14.6px;
+                    top: -0.125rem;
+                }
+            }
+
+            &.icon-3 {
+                &::after {
+                    width: 16.3px;
+                    height: 11.2px;
+                    top: 0.125rem;
+                }
+            }
+
+            &.icon-4 {
+                &::after {
+                    width: 14px;
+                    height: 14px;
+                    top: 0.3125rem;
+                }
+            }
+
+            &.icon-5 {
+                &::after {
+                    width: 15.6px;
+                    height: 12px;
+                    top: -0.125rem;
+                }
+            }
+        }
+
+        &__frame {
+            position: relative;
+            top: auto;
+            right: auto;
+            height: 320px;
+            max-height: 320px;
+
+            &-image {
+                max-height: 310px;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 719px) {
     .gift {
         padding: 5.125rem 1.5rem;

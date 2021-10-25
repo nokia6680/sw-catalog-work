@@ -111,6 +111,65 @@
     }
 }
 
+@media only screen and (max-width: 1365px) {
+    .contacts {
+        padding-top: 4.25rem;
+        padding-bottom: 4.25rem;
+
+        &__wrapper {
+            max-width: 100%;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 98px;
+            grid-column-gap: 3rem;
+        }
+
+        &__title {
+            font-size: 0.625rem;
+            margin-bottom: 0.625rem;
+        }
+
+        &__link {
+            display: inline-flex;
+            font-size: 0.625rem;
+            line-height: 0.75rem;
+            margin-bottom: 0.125rem;
+
+            &.--social {
+                max-width: 166px;
+            }
+        }
+
+        &__social {
+            margin-bottom: 0.625rem;
+
+            &-item {
+                width: 20px;
+                height: 20px;
+                margin-right: 0.625rem;
+                border-radius: 10px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            &-link {
+                border-radius: 10px;
+                .fa-facebook-f::before {
+                    font-size: 0.75rem;
+                }
+
+                .fa-instagram::before {;
+                    font-size: 0.75rem;
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 719px) {
     .contacts {
         padding-top: 3.125rem;
@@ -123,6 +182,18 @@
             grid-row-gap: 2.375rem;
             justify-content: start;
             align-items: start;
+
+            padding: 0;
+        }
+
+        &__title {
+            font-size: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        &__link {
+            font-size: 0.9375rem;
+            line-height: 1.2;
         }
 
         &__social {
@@ -143,11 +214,11 @@
                 border-radius: 16px;
 
                 .fa-facebook-f::before {
-                    font-size: 1.125rem;
+                    font-size: 1rem;
                 }
 
                 .fa-instagram::before {
-                    font-size: 1.125rem;
+                    font-size: 1rem;
                 }
             }
         }

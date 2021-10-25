@@ -19,7 +19,7 @@
         grid-template-columns: repeat(4, 1fr);
         grid-column-gap: 6.125rem;
         justify-content: start;
-        align-items: center;
+        align-items: start;
     }
 
     &__block {
@@ -31,6 +31,12 @@
             .footer__link:first-child {
                 margin-right: 1.75rem;
             }
+        }
+
+        &:nth-child(2) {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
         }
     }
 
@@ -53,6 +59,54 @@
     }
 }
 
+@media only screen and (max-width: 1365px) {
+    .footer {
+        padding-top: 2.25rem;
+        padding-bottom: 2.25rem;
+
+        &__wrapper {
+            max-width: 100%;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            grid-template-columns: 1fr 1fr 1fr 98px;
+            grid-column-gap: 3rem;
+        }
+
+        &__block {
+            width: 100%;
+
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            &:first-child {
+                order: 4;
+
+                .footer__link:first-child {
+                    margin-right: 0;
+                }
+            }
+
+            &:nth-child(2) {
+                order: 2;
+            }
+
+            &:nth-child(3) {
+                order: 3;
+            }
+
+            &:last-child {
+                order: 1;
+            }
+        }
+
+        &__link,
+        &__copy {
+            font-size: 0.625rem;
+        }
+    }
+}
+
 @media only screen and (max-width: 719px) {
     .footer {
         padding-top: 2.5rem;
@@ -67,6 +121,8 @@
             align-items: flex-start;
 
             grid-column-gap: 0;
+            padding-left: 0;
+            padding-right: 0;
         }
 
         &__block {
@@ -75,6 +131,7 @@
             @include flex-setting(row, flex-start, flex-start);
 
             &:first-child {
+                order: 1;
                 width: 100%;
                 margin-bottom: 1.1875rem;
             }
@@ -90,7 +147,9 @@
             }
 
             &:last-child {
+                order: 4;
                 width: auto;
+                margin-bottom: 1.875rem;
             }
 
             &:first-child {

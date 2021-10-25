@@ -277,6 +277,92 @@
     }
 }
 
+@media only screen and (max-width: 1365px) {
+    .item {
+        &__body {
+            min-height: 244px;
+            margin-bottom: 1rem;
+        }
+
+        &__head {
+            top: 0.625rem;
+            left: 0.625rem;
+            right: 0.625rem;
+        }
+
+        &__articul {
+            &-name,
+            &-nr {
+                font-size: 0.56rem;
+                line-height: 0.625rem;
+            }
+        }
+
+        &__wishlist {
+            background-size: 11.7px 10.6px;
+            width: 16px;
+            height: 16px;
+        }
+
+        &__frame {
+            height: 244px;
+
+            &-image {
+                max-height: 195px;
+            }
+        }
+
+        &__overlay {
+            &-count {
+                margin-bottom: 1.125rem;
+            }
+
+            &-btn {
+                font-size: 0.8125rem;
+                line-height: 0.9375rem;
+                width: 28px;
+                height: 28px;
+            }
+
+            &-input {
+                font-size: 0.8125rem;
+                line-height: 0.9375rem;
+                min-width: 28px;
+                max-width: 40px;
+                height: 28px;
+            }
+
+            &-cart {
+                font-size: 0.75rem;
+                line-height: 0.875rem;
+                padding: 0 2.25rem;
+                height: 28px;
+            }
+        }
+
+        &__name {
+            font-size: 0.625rem;
+            line-height: 0.75rem;
+            margin-bottom: 0.25rem;
+        }
+
+        &__details {
+            margin-bottom: 0.5rem;
+
+            &-link {
+                font-size: 0.625rem;
+                line-height: 0.75rem;
+                margin-right: 0.25rem;
+            }
+        }
+
+        &__price {
+            font-size: 0.875rem;
+            line-height: 1rem;
+        }
+    }
+}
+
 @media only screen and (max-width: 719px) {
     .item {
         padding: 0.625rem 0.625rem 0.625rem 1.5625rem;

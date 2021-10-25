@@ -70,7 +70,7 @@
     }
 
     &__title {
-        @include font-setting($geometria-font, 3rem, 3.625rem, 500, $white);
+        @include font-setting($geometria-font, 3rem, 3.625rem, 300, $white);
         margin-bottom: 2.75rem;
     }
 
@@ -91,7 +91,25 @@
 
 @media only screen and (max-width: 1365px) {
     .preview {
+        margin-bottom: 3.25rem;
 
+        &__frame {
+            padding-bottom: 69.44444444444444%;
+        }
+
+        &__wrapper {
+            bottom: 3.25rem;
+            left: 2.5rem;
+            transform: none;
+
+            width: 100%;
+            max-width: 640px;
+        }
+
+        &__title {
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+        }
     }
 }
 

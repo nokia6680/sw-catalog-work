@@ -1,18 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.67 23.68">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #700328;
-      }
-    </style>
-  </defs>
-  <g id="Слой_2" data-name="Слой 2">
-    <g id="Layer_1" data-name="Layer 1">
-      <g>
-        <rect class="cls-1" x="11.7" y="13.4" width="8.5" height="1.39"/>
-        <rect class="cls-1" x="11.7" y="16.18" width="8.5" height="1.39"/>
-        <path class="cls-1" d="M19.61,9.23V0H0V16.17H2.29l2.35,1.95L7,16.17H8.23v5.56h8.46L19,23.68l2.34-1.95h2.29V9.23ZM6.48,14.79,4.64,16.32,2.8,14.79H1.39V1.39H18.22V9.23h-10v5.56Zm15.81,5.55H20.88L19,21.87l-1.85-1.53H9.62V10.62H22.29Z"/>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.67 23.68"><defs><style>.cls-1{fill:#700328}</style></defs><g id="Слой_2" data-name="Слой 2"><g id="Layer_1" data-name="Layer 1"><path class="cls-1" d="M11.7 13.4h8.5v1.39h-8.5zm0 2.78h8.5v1.39h-8.5z"/><path class="cls-1" d="M19.61 9.23V0H0v16.17h2.29l2.35 1.95L7 16.17h1.23v5.56h8.46L19 23.68l2.34-1.95h2.29V9.23zM6.48 14.79l-1.84 1.53-1.84-1.53H1.39V1.39h16.83v7.84h-10v5.56zm15.81 5.55h-1.41L19 21.87l-1.85-1.53H9.62v-9.72h12.67z"/></g></g></svg>

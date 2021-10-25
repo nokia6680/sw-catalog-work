@@ -46,6 +46,14 @@
     }
 }
 
+@media only screen and (max-width: 1365px) {
+    .breadcrumbs {
+        &__list {
+            max-width: 640px;
+        }
+    }
+}
+
 @media only screen and (max-width: 719px) {
     .breadcrumbs {
         padding-left: 1.5rem;

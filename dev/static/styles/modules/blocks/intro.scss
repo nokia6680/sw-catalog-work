@@ -92,7 +92,7 @@
         &__title {
             right: 12.375rem;
         }
-        
+
         &__frame {
             padding-bottom: 81.48148148148148%;
         }
@@ -148,7 +148,39 @@
 
 @media only screen and (max-width: 1365px) {
     .intro {
+        grid-template-columns: 57.77777777777778% 1fr;
 
+        &__title {
+            font-size: 1.5rem;
+            line-height: 1.8125rem;
+            right: 2.25rem;
+            bottom: 5rem;
+        }
+
+        &__frame {
+            padding-bottom: 120.19230769230768%
+        }
+
+        &__annual {
+            width: 108px;
+            top: 36%;
+            right: 26.65384615384615%;
+
+            span {
+                font-size: 2.25rem;
+                line-height: 1;
+            }
+        }
+
+        @supports (aspect-ratio: 16 / 19.23076923076923) {
+            .intro__frame {
+                padding-bottom: 0;
+            }
+
+            .intro__frame-image {
+                aspect-ratio: 16 / 19.23076923076923;
+            }
+        }
     }
 }
 

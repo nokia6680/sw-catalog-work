@@ -108,7 +108,37 @@ select {
         padding-top: 4.9375rem;
     }
 
-    @media only screen and (min-width: 1366px) and (max-width: 1999px) {
+    @media only screen and (min-width: 720px) and (max-width: 1365px) {
+        .nav__catalog {
+            visibility: 0;
+            transform: scale(0);
+            pointer-events: none;
+        }
+
+        .menu {
+            &.index-active {
+                padding-left: 4rem;
+                max-width: 42.22222222222222%;
+                transition: 0.4s $cubic;
+                border: none;
+
+                .menu__item {
+                    pointer-events: auto;
+                    transform: scale(1) translateY(0px);
+                    will-change: transform;
+                    opacity: 1;
+
+                    @for $i from 1 through $menuItems {
+                        &:nth-child(#{$i}) {
+                            transition-delay: #{0.06 * $i+0.2}s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1366px) and (max-width: 1919px) {
         .main {
             width: 100%;
             padding-top: 4.9375rem;
@@ -140,6 +170,34 @@ select {
                     }
                 }
             }
+        }
+    }
+
+    @media only screen and (min-width: 1920px) {
+        .menu {
+            &.index-active {
+                padding-left: 4.75rem;
+                max-width: 43.75%;
+
+                .menu__item {
+                    pointer-events: auto;
+                    transform: scale(1) translateY(0px);
+                    will-change: transform;
+                    opacity: 1;
+
+                    @for $i from 1 through $menuItems {
+                        &:nth-child(#{$i}) {
+                            transition-delay: #{0.06 * $i+0.2}s;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav__catalog {
+            visibility: 0;
+            transform: scale(0);
+            pointer-events: none;
         }
     }
 }

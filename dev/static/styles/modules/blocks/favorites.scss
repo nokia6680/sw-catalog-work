@@ -30,6 +30,28 @@
     }
 }
 
+@media only screen and (max-width: 1365px) {
+    .favorites {
+        padding-top: 2.5rem;
+        margin-bottom: 2.625rem;
+
+        &__wrapper {
+            max-width: 640px;
+        }
+
+        &__title {
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+            margin-bottom: 3.375rem;
+        }
+
+        &__list {
+            grid-column-gap: 1.25rem;
+            grid-row-gap: 1.875rem;
+        }
+    }
+}
+
 @media only screen and (max-width: 719px) {
     .favorites {
         padding-top: 2.5rem;

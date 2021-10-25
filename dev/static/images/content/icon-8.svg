@@ -1,17 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.2 17.47">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #700328;
-      }
-    </style>
-  </defs>
-  <g id="Слой_2" data-name="Слой 2">
-    <g id="Layer_1" data-name="Layer 1">
-      <g>
-        <path class="cls-1" d="M4.55,1.6V4.55H1.6ZM1.33,5.89H5.89V1.34H21.44V16.13H1.33ZM4.26,0,0,4.26V17.47H22.78V0Z"/>
-        <polygon class="cls-1" points="25.01 1.88 31.95 1.88 31.95 15.71 25.01 15.71 25.01 16.96 33.2 16.96 33.2 0.64 25.01 0.64 25.01 1.88"/>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.2 17.47"><g id="Слой_2" data-name="Слой 2"><path d="M4.55 1.6v2.95H1.6zM1.33 5.89h4.56V1.34h15.55v14.79H1.33zM4.26 0L0 4.26v13.21h22.78V0zm20.75 1.88h6.94v13.83h-6.94v1.25h8.19V.64h-8.19v1.24z" fill="#700328" id="Layer_1" data-name="Layer 1"/></g></svg>

@@ -3,7 +3,7 @@
 
     @include flex-setting(column, center, center);
 
-    background-color: #E2ECF5;
+    background-color: $white;
 
     padding-top: 5.625rem;
     padding-bottom: 3.75rem;
@@ -101,7 +101,7 @@
             padding-bottom: 1.4375rem;
             text-align: left;
 
-            border-bottom: 1px solid $white;
+            border-bottom: 1px solid #D5DAE2;
         }
 
         &-list {
@@ -119,7 +119,7 @@
             padding-top: 1.4375rem;
             text-align: left;
 
-            border-bottom: 1px solid $white;
+            border-bottom: 1px solid #D5DAE2;
 
             max-height: 72px;
             overflow: hidden;
@@ -175,9 +175,10 @@
         @include flex-setting(column, flex-start, flex-start);
 
         border-radius: 10px;
-        border: 1px solid #E2ECF5;
+        border: 1px solid #D5DAE2;
 
         padding: 2.5rem 2.5rem;
+        box-shadow: 0px 14px 35px rgba(177, 207, 216, 0.2);
 
         position: relative;
 
@@ -218,6 +219,12 @@
         }
     }
 
+    &__bio {
+        width: 100%;
+        @include flex-setting(column, flex-start, flex-start);
+        margin-bottom: 2.5rem;
+    }
+
     &__name {
         @include font-setting($helvetica-neue-font, 2rem, 2.375rem, 550, $black);
         margin-bottom: 0.3125rem;
@@ -225,7 +232,6 @@
 
     &__position {
         @include font-setting($helvetica-neue-font, 1.25rem, 1.5rem, 400, $black);
-        margin-bottom: 2.5rem;
         max-width: 360px;
     }
 
@@ -241,12 +247,162 @@
     }
 }
 
+@media only screen and (max-width: 1365px) {
+    .corporate {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+
+        &__wrapper {
+            max-width: 640px;
+        }
+
+        &__title {
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+            margin-bottom: 1.125rem;
+        }
+
+        &__body {
+            display: grid;
+            grid-template-areas:
+                'info '
+                'person'
+                'service'
+            ;
+
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            grid-row-gap: 2.25rem;
+            justify-content: start;
+            align-items: start;
+            margin-bottom: 0;
+        }
+
+        &__info {
+            max-width: 420px;
+            margin-right: 0;
+            margin-top: 0;
+        }
+
+        &__description {
+            font-size: 0.875rem;
+            line-height: 1.0625rem;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &__services {
+            max-width: 420px;
+
+            &-title {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+                margin-bottom: 0;
+            }
+
+            &-item {
+                padding-top: 0.625rem;
+                max-height: 37px;
+
+                &::after {
+                    top:  0.625rem;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+            &-name {
+                font-size: 0.875rem;
+                line-height: 1.0625rem;
+                margin-bottom: 0.625rem;
+            }
+
+            &-text {
+                font-size: 0.625rem;
+                line-height: 0.75rem;
+                margin-bottom: 0.625rem;
+            }
+        }
+
+        &__person {
+            display: grid;
+            grid-template-areas:
+                'photo description1'
+                'bio description2'
+            ;
+
+            grid-template-columns: 220px 1fr;
+            grid-column-gap: 1.375rem;
+
+            padding: 1.375rem 1.375rem;
+
+            &::after {
+                width: 30px;
+                height: 24px;
+                top: 1.375rem;
+                right: auto;
+                left: calc(1.375rem + 188px);
+            }
+        }
+
+        &__photo {
+            grid-area: photo;
+
+            width: 72px;
+            height: 72px;
+            border-radius: 36px;
+
+            margin-bottom: 0.6875rem;
+        }
+
+        &__bio {
+            grid-are: bio;
+            margin-bottom: 0;
+        }
+
+        &__name {
+            font-size: 1.125rem;
+            line-height: 1.375rem;
+            margin-bottom: 0.125rem;
+        }
+
+        &__position {
+            font-size: 0.75rem;
+            line-height: 0.875rem;
+            margin-bottom: 0;
+            max-width: 205px;
+        }
+
+        &__about {
+            grid-area: description;
+            font-size: 0.625rem;
+            line-height: 0.75rem;
+            max-width: 95%;
+            margin-bottom: 0;
+
+            &:first-of-type {
+                grid-area: description1;
+            }
+
+            &:last-of-type {
+                grid-area: description2;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 719px) {
     .corporate {
         padding-top: 5rem;
         padding-bottom: 2.3125rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
+
+        &__wrapper {
+            padding: 0;
+        }
 
         &__title {
             font-size: 2rem;
@@ -260,6 +416,8 @@
             margin-bottom: 4.1875rem;
             flex-direction: column;
             align-items: center;
+
+            padding: 0;
         }
 
         &__info {
@@ -316,6 +474,7 @@
 
         &__person {
             order: 2;
+            display: flex;
 
             background-color: transparent;
 
