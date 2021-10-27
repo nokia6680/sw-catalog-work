@@ -43,6 +43,57 @@ const swiper3 = new Swiper('.custom-swiper', {
     navigation: {
         nextEl: '.custom__next',
         prevEl: '.custom__prev',
+    },
+
+    breakpoints: {
+        375: {
+            spaceBetween: 10,
+            slidesPerView: 1.2,
+            speed: 1300,
+            slideClass: 'custom__item',
+            speed: 1000,
+            effect: "creative",
+            touchRatio: 0.2,
+            slideToClickedSlide: true,
+            creativeEffect: {
+                prev: {
+                    translate: ["-120%", 0, -500],
+                },
+                next: {
+                    translate: ["120%", 0, -500],
+                },
+            },
+            controller: {
+                inverse: false,
+            },
+
+            navigation: {
+                nextEl: '.custom__next',
+                prevEl: '.custom__prev',
+            },
+        },
+
+        720: {
+            spaceBetween: 0,
+            slidesPerView: 1,
+            slideClass: 'custom__item',
+            speed: 1000,
+            effect: "creative",
+            touchRatio: 0.2,
+            slideToClickedSlide: true,
+            navigation: {
+                nextEl: '.custom__next',
+                prevEl: '.custom__prev',
+            },
+            creativeEffect: {
+                prev: {
+                    translate: ["-120%", 0, -500],
+                },
+                next: {
+                    translate: ["120%", 0, -500],
+                },
+            },
+        }
     }
 });
 

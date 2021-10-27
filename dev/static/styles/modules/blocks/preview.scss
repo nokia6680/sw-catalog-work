@@ -66,12 +66,13 @@
 
     &__info {
         @include flex-setting(column, flex-start, flex-start);
-        width: 52.9310344%;
+        width: 75%;
     }
 
     &__title {
-        @include font-setting($geometria-font, 3rem, 3.625rem, 300, $white);
+        @include font-setting($geometria-font, 3rem, 3.625rem, 400, $white);
         margin-bottom: 2.75rem;
+        text-transform: uppercase;
     }
 
     &__description {
