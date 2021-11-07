@@ -5,6 +5,28 @@ section.intro
         .intro__annual
             span 21
             span 22
+        .intro__balls
+            .ball1#ball1
+                svg(width="176" height="176" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    circle(cx="88" cy="88" r="88" fill="#9C4E31")
+                    circle(cx="88" cy="88" r="88" fill="url(#a)")
+                    defs
+                        radialGradient(id="a" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="rotate(72.112 2.61 20.200) scale(132.442)")
+                            stop(stop-color="#FFC9B4")
+                            stop(offset="1" stop-color="#FFC9B4" stop-opacity="0")
+            .ball2#ball2
+                svg(width="74" height="74" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    circle(cx="37" cy="37" r="37" fill="#5F0B1E")
+                    circle(cx="37" cy="37" r="37" fill="url(#c)")
+                    circle(cx="37" cy="37" r="37" fill="url(#b)" fill-opacity=".2")
+                    defs
+                        radialGradient(id="c" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="rotate(156.324 4.03 14.438) scale(40.4003)")
+                            stop(stop-color="#D55370")
+                            stop(offset="1" stop-color="#57091B")
+                        radialGradient(id="b" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="rotate(150.065 32.72 25.901) scale(63.8797)")
+                            stop
+                            stop(stop-opacity=".902")
+                            stop(offset="1" stop-opacity="0")
         picture.intro__frame
             source(media="(min-width: 2000px)" type="image/webp" srcset="static/images/content/intro-bg-lg.webp")
             source(media="(min-width: 2000px)" srcset="static/images/content/intro-bg-lg.jpg")
