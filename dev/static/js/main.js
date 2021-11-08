@@ -64,6 +64,14 @@ if (navOpener) {
     });
 };
 
+document.addEventListener("click", function(event) {
+	// If user clicks inside the element, do nothing
+	if (event.target.closest(".header, .menu")) return;
+
+	// If user clicks outside the element, hide it!
+	catalogBody.classList.remove("opened");
+});
+
 
 //var popupReactOpener = document.querySelector('.cart__submit');
 //var popupReactCloser = document.querySelector('.popup-reaction__closer');

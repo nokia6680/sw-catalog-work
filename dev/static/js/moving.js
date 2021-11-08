@@ -11,15 +11,15 @@ function getMousePos(xRef, yRef) {
         x: Math.floor(xRef - panelRect.left) / (panelRect.right - panelRect.left) * ball1.offsetWidth,
         y: Math.floor(yRef - panelRect.top) / (panelRect.bottom - panelRect.top) * ball1.offsetHeight
     };
-}
+};
 
 document.body.addEventListener("mousemove", function(e) {
     let mousePos = getMousePos(e.clientX, e.clientY),
         distX = mousePos.x - ball1CenterX,
         distY = mousePos.y - ball1CenterY;
     if (Math.abs(distX) < 1920 && distY < 1080) {
-        ball1.style.transform = "rotate(" + (3 * distY) / 0.12 + "deg"") translate(" + (-1 * distX) / 48 + "px," + (-1 * distY) / 48 + "px)";
-    }
+        ball1.style.transform = "translate(" + -1 * distX / 48 + "px," + -1 * distY / 48 + "px)";
+    };
 });
 
 const ballSecond = ball2.querySelector('svg');
@@ -34,13 +34,13 @@ function getMousePos2(xRef, yRef) {
         x: Math.floor(xRef - panelRect.left) / (panelRect.right - panelRect.left) * ball2.offsetWidth,
         y: Math.floor(yRef - panelRect.top) / (panelRect.bottom - panelRect.top) * ball2.offsetHeight
     };
-}
+};
 
 document.body.addEventListener("mousemove", function(e) {
     let mousePos = getMousePos2(e.clientX, e.clientY),
         distX = mousePos.x - ball2CenterX,
         distY = mousePos.y - ball2CenterY;
     if (Math.abs(distX) < 1920 && distY < 1080) {
-        ball2.style.transform = "translate(" + (-1 * distX) / 128 + "px," + (1 * distY) / 128 + "px)";
-    }
+        ball2.style.transform = "translate(" + -1 * distX / 128 + "px," + 1 * distY / 128 + "px)";
+};
 });
