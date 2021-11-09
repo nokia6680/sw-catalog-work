@@ -1,3 +1,13 @@
+mixin offerSlide(image)
+    picture.offer__frame.swiper-slide
+        source(media="(min-width: 1680px)" srcset="static/images/content/" +image + "-lg.webp" type="image/webp")
+        source(media="(min-width: 1680px)" srcset="static/images/content/" +image + "-lg.jpg")
+        source(media="(min-width: 1366px)" srcset="static/images/content/" +image + "-md.webp" type="image/webp")
+        source(media="(min-width: 1366px)" srcset="static/images/content/" +image + "-md.jpg")
+        source(media="(min-width: 720px)" srcset="static/images/content/" +image + "-tb.webp" type="image/webp")
+        source(media="(min-width: 720px)" srcset="static/images/content/" +image + "-tb.jpg")
+        source(srcset="static/images/content/" +image + "-mb.webp" type="image/webp")
+        img(src="static/images/content/" +image + "-mb.jpg").offer__frame-image
 mixin icon(name,mod)
     if(mod)
         svg(class="svg-sprite-icon icon-" + name + ' ' + mod)

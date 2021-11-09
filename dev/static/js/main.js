@@ -113,14 +113,14 @@ for (var i = 0; i < upperItem.length; i++) {
     });
 }
 
-var subscribeSubmit = document.querySelector('.subscribe__submit');
-var subscribeWrapper = document.querySelector('.subscribe__wrapper');
-var subscribeReaction = document.querySelector('.subscribe__title');
+//var subscribeSubmit = document.querySelector('.subscribe__submit');
+//var subscribeWrapper = document.querySelector('.subscribe__wrapper');
+//var subscribeReaction = document.querySelector('.subscribe__title');
 
-if (subscribeSubmit) {
-    subscribeSubmit.addEventListener('click', function () {
-        event.preventDefault();
-        subscribeWrapper.classList.add('passed');
-        subscribeReaction.innerText = 'Вы успешно подписались на рассылку';
-    });
-};
+//if (subscribeSubmit) {
+//    subscribeSubmit.addEventListener('click', function () {
+//        event.preventDefault();
+//        subscribeWrapper.classList.add('passed');
+//        subscribeReaction.innerText = 'Вы успешно подписались на рассылку';
+//    });
+//};

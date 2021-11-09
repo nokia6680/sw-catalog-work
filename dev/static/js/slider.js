@@ -130,6 +130,34 @@ const enableSwiper = function() {
     });
 };
 
+var offerSlider = new Swiper('.swiper-container-offer', {
+    spaceBetween: 0,
+    slidesPerView: 1,
+    speed: 1300,
+    effect: 'creative',
+    touchRatio: 0.2,
+    slideToClickedSlide: true,
+    loop: true,
+    creativeEffect: {
+        prev: {
+            shadow: true,
+            translate: ["-20%", 0, -1],
+        },
+        next: {
+            translate: ["100%", 0, 0],
+        },
+    },
+
+    autoplay: {
+        delay: 5000,
+    },
+
+    pagination: {
+        clickable: true,
+        el: ".swiper-pagination",
+    },
+});
+
 var swpText = new Swiper('.swiper-container-text', {
     spaceBetween: 0,
     slidesPerView: 1,
