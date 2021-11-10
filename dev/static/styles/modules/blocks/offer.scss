@@ -7,10 +7,13 @@
 
     &__slider {
         width: 100%;
+        @include flex-setting(column, flex-start, center);
+        overflow: hidden;
 
         .swiper-pagination {
-            width: auto;
+            width: 100%;
             @include flex-setting(row, center, center);
+            margin: 0 auto;
         }
 
         .swiper-pagination-bullet {
@@ -155,16 +158,16 @@
         }
 
         &__frame {
-            padding-bottom: 56.25%;
+            padding-bottom: 44.270833333333336%;
         }
     }
 
-    @supports (aspect-ratio: 16 / 9) {
+    @supports (aspect-ratio: 16 / 7.083333333333332) {
         .offer__frame {
             padding-bottom: 0;
 
             &-image {
-                aspect-ratio: 16 / 9;
+                aspect-ratio: 16 / 7.083333333333332;
             }
         }
     }
