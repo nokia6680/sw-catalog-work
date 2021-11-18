@@ -19,6 +19,7 @@ html(lang="ru-RU")
     body
         include ../modules/header/header
         main.main.main--card
+            
             +breadcrumb([["Главная ", "/index.html"], ["Корзина ", "#"]])
             
             section.cart
@@ -67,7 +68,7 @@ html(lang="ru-RU")
                             .cart__summary
                                 b.cart__summary-name Итого
                                 span.cart__summary-overall 1666 ₽
-                            button(type="submit").cart__submit Оформить заказ
+                            a(href="order.html" target="_self").cart__submit Перейти к оформлению заказа
             include ../modules/blocks/subscribe
             include ../modules/blocks/contacts
         include ../modules/footer/footer

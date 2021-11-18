@@ -1,0 +1,54 @@
+include ../helpers/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="utf-8")
+        title #{title}
+        <!--[if IE]>
+        meta(http-equiv='X-UA-Compatible', content="IE = edge")
+        <![endif]-->
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        meta(name="keywords" content="")
+        link(rel="stylesheet" type='text/css' href="static/css/styles.css") 
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+        link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")
+    body.body
+        include ../modules/header/header
+        main.main.main--card
+            +breadcrumb([["Главная ", "/index.html"], ["Оформление заказа ", "#"]])
+            section.checkout
+                .checkout__wrapper
+                    h1.checkout__title Оформление заказа
+                    p.checkout__description Для оформления заказа введите контактные данные
+                    
+                    form(action="" method="").checkout__form
+                        ul.checkout__list
+                            li.checkout__item
+                                label(for="tel").checkout__label
+                                input(type="tel" name="tel" id="tel" placeholder="Мобильный телефон" required).checkout__input.mask-phone
+                                span.checkout__error Телефон указан неверно. Должно быть 11 цифр, например: +7 (900) 800-70-60
+                            li.checkout__item
+                                label(for="mail").checkout__label
+                                input(type="email" name="mail" id="mail" placeholder="Ваш e-mail" required).checkout__input
+                                span.checkout__error Поле обязательное для заполнения
+                        .checkout__agreement
+                            input(type="checkbox" id="policy" name="policy").checkout__checkbox
+                            label(for="policy").checkout__agreement-label Согласен с 
+                                a(href="#" target="_blank") политикой обработки персональных данных
+                        .checkout__controls
+                            button(type="submit").checkout__submit Оформить заказ
+                            a(href="catalog.html" target="_self").checkout__return Вернуться в каталог
+            include ../modules/blocks/subscribe
+            include ../modules/blocks/contacts
+        include ../modules/footer/footer
+        script(src="static/js/vendor/jquery-3.3.1.min.js")
+        //script(src="static/js/vendor/libs.js")
+        script(src="static/js/main.js")
+        script(src="static/js/jquery.maskedinput.min.js")
+        script(src="static/js/mask.js")
+        script(src="static/js/select.js")
+        block script

@@ -209,7 +209,7 @@
         width: 100%;
         height: auto;
 
-        max-width: 300px;
+        max-width: 400px;
         align-self: flex-end;
 
         @include flex-setting(column, flex-start, flex-start);
@@ -283,7 +283,7 @@
 
         background-color: $pink;
         border: 1px solid $pink;
-
+        text-decoration: none;
         cursor: pointer;
         outline: none;
 
@@ -371,7 +371,7 @@
         }
 
         &__checkout {
-            max-width: 310px;
+            max-width: 400px;
             padding: 0;
         }
     }
