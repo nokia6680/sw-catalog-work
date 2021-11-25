@@ -34,12 +34,13 @@
 
         @include flex-setting(column, flex-start, flex-start);
 
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 
     &__item {
         width: 100%;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2.5rem;
+        position: relative;
 
         &:last-child {
             margin-bottom: 0;
@@ -56,15 +57,20 @@
         padding: 0.8125rem 0;
         transition: 0.4s $cubic;
 
-        &:invalid {
-            & + .checkout__error {
-                display: inline-flex;
-                transition: 0.4s $cubic;
-            }
+        &[type="email"] {
+            -webkit-appearance: none;
+            appearance: none;
         }
 
-        &:valid {
-            border-color: $pink;
+        &[type="email"] + .checkout__error--mail {
+            display: inline-block;
+            color: rgba(0, 0, 0, 0.24);
+            transition: 0.4s $cubic;
+        }
+
+        &[type="email"] + .checkout__error--mail.active {
+            display: inline-block;
+            color: $pink;
             transition: 0.4s $cubic;
         }
     }
@@ -73,6 +79,23 @@
         display: none;
         @include font-setting($roboto-font, 0.75rem, 0.875rem, 400, $pink);
         text-align: left;
+        transition: 0.4s $cubic;
+
+        &.success {
+            display: none;
+        }
+
+        &.active {
+            display: inline-block;
+            color: $pink;
+            transition: 0.4s $cubic;
+        }
+
+        &--tel {
+            position: absolute;
+            bottom: -2rem;
+            left: 0;
+        }
     }
 
     &__agreement {
@@ -92,6 +115,24 @@
                     color: $pink;
                     transition: 0.4s $cubic;
                 }
+            }
+        }
+    }
+
+    &__policy {
+        @include font-setting($roboto-font, 0.875rem, 1.0625rem, 400, rgba(0, 0, 0, 0.7));
+        text-align: center;
+        margin-bottom: 2rem;
+
+        a {
+            color: $black;
+            text-decoration: none;
+            transition: 0.4s $cubic;
+
+            &:hover,
+            &:active {
+                color: $pink;
+                transition: 0.4s $cubic;
             }
         }
     }
@@ -200,24 +241,15 @@
             margin-bottom: 3rem;
         }
 
-        &__agreement {
-            width: 100%;
-            margin-bottom: 3rem;
+        &__policy {
+            max-width: 50%;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
 
-            &-label {
-                @include font-setting($roboto-font, 0.875rem, 1.0625rem, 400, $black);
-
-                a {
-                    color: $black;
-                    transition: 0.4s $cubic;
-                    text-decoration: none;
-
-                    &:hover,
-                    &:active {
-                        color: $pink;
-                        transition: 0.4s $cubic;
-                    }
-                }
+        &__error {
+            &--tel {
+                bottom: -1.5rem;
             }
         }
 
@@ -291,28 +323,18 @@
 
         &__error {
             max-width: 80%;
-        }
 
-        &__agreement {
-            width: 100%;
-            margin-bottom: 3rem;
-
-            &-label {
-                @include font-setting($roboto-font, 0.875rem, 1.0625rem, 400, $black);
-
-                a {
-                    color: $black;
-                    transition: 0.4s $cubic;
-                    text-decoration: none;
-
-                    &:hover,
-                    &:active {
-                        color: $pink;
-                        transition: 0.4s $cubic;
-                    }
-                }
+            &--tel {
+                bottom: -2rem;
             }
         }
+
+        &__policy {
+            max-width: 30%;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
 
         &__checkbox {
             display: none;

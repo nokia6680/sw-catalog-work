@@ -29,16 +29,15 @@ html(lang="ru-RU")
                         ul.checkout__list
                             li.checkout__item
                                 label(for="tel").checkout__label
-                                input(type="tel" name="tel" id="tel" placeholder="Мобильный телефон" required).checkout__input.mask-phone
-                                span.checkout__error Телефон указан неверно. Должно быть 11 цифр, например: +7 (900) 800-70-60
+                                input(autocomplete="off" type="tel" name="tel" id="tel" placeholder="Мобильный телефон").checkout__input.mask-phone
+                                span.checkout__error.checkout__error--tel Телефон указан неверно. Должно быть 11 цифр, например: +7 (900) 800-70-60
                             li.checkout__item
                                 label(for="mail").checkout__label
-                                input(type="email" name="mail" id="mail" placeholder="Ваш e-mail" required).checkout__input
-                                span.checkout__error Поле обязательное для заполнения
-                        .checkout__agreement
-                            input(type="checkbox" id="policy" name="policy").checkout__checkbox
-                            label(for="policy").checkout__agreement-label Согласен с 
-                                a(href="#" target="_blank") политикой обработки персональных данных
+                                input(autocomplete="off" type="email" name="mail" id="mail" placeholder="Ваш e-mail*" required).checkout__input.checkout__input--mail
+                                span.checkout__error.checkout__error--mail *Поле обязательно для заполнения
+                        span.checkout__policy Нажимая кнопку, вы даёте своё согласие на 
+                            a(href='https://simplewine.ru/privacy_policy/' target="_blank") обработку персональных данных
+                            | .
                         .checkout__controls
                             button(type="submit").checkout__submit Оформить заказ
                             a(href="catalog.html" target="_self").checkout__return Вернуться в каталог
@@ -47,8 +46,9 @@ html(lang="ru-RU")
         include ../modules/footer/footer
         script(src="static/js/vendor/jquery-3.3.1.min.js")
         //script(src="static/js/vendor/libs.js")
-        script(src="static/js/main.js")
         script(src="static/js/jquery.maskedinput.min.js")
         script(src="static/js/mask.js")
+        script(src="static/js/main.js")
+        script(src="static/js/validate-enter.js")
         script(src="static/js/select.js")
         block script

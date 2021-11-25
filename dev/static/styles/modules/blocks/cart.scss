@@ -334,16 +334,9 @@
             line-height: 1.0625rem;
         }
 
-        &__controls {
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
         &__btn {
             &--delete {
-                order: 2;
-                margin-left: 1.5rem;
+                margin-left: 0;
                 background-size: 60%;
             }
         }
