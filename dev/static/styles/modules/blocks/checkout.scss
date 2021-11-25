@@ -61,18 +61,6 @@
             -webkit-appearance: none;
             appearance: none;
         }
-
-        &[type="email"] + .checkout__error--mail {
-            display: inline-block;
-            color: rgba(0, 0, 0, 0.24);
-            transition: 0.4s $cubic;
-        }
-
-        &[type="email"] + .checkout__error--mail.active {
-            display: inline-block;
-            color: $pink;
-            transition: 0.4s $cubic;
-        }
     }
 
     &__error {
@@ -96,27 +84,17 @@
             bottom: -2rem;
             left: 0;
         }
+
+        &--mail {
+            position: absolute;
+            bottom: -2rem;
+            left: 0;
+        }
     }
 
-    &__agreement {
-        width: 100%;
-        margin-bottom: 3rem;
-
-        &-label {
-            @include font-setting($roboto-font, 0.875rem, 1.0625rem, 400, $black);
-
-            a {
-                color: $black;
-                transition: 0.4s $cubic;
-                text-decoration: none;
-
-                &:hover,
-                &:active {
-                    color: $pink;
-                    transition: 0.4s $cubic;
-                }
-            }
-        }
+    &__rule {
+        @include font-setting($roboto-font, 0.625rem, 0.75rem, 400, rgba(0, 0, 0, 0.7));
+        margin-bottom: 1rem;
     }
 
     &__policy {

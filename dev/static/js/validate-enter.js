@@ -11,6 +11,7 @@ $(function() {
     var regExp2 = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
 
     $('[type="email"]').on('keyup', function() {
-        regExp2.test($(this).val()) ? $('.checkout__error--mail').removeClass('active') : $('.checkout__error--mail').addClass('active');
+        $('.checkout__error--mail').hide();
+        regExp2.test($(this).val()) ? $('.checkout__error--mail.success').show() : $('.checkout__error--mail.fail').show();
     });
 });

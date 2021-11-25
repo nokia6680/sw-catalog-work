@@ -34,7 +34,9 @@ html(lang="ru-RU")
                             li.checkout__item
                                 label(for="mail").checkout__label
                                 input(autocomplete="off" type="email" name="mail" id="mail" placeholder="Ваш e-mail*" required).checkout__input.checkout__input--mail
-                                span.checkout__error.checkout__error--mail *Поле обязательно для заполнения
+                                span.checkout__error.checkout__error--mail.success
+                                span.checkout__error.checkout__error--mail.fail Адрес электронной почты должен содержать @. В адресе "адрес" отсутствует символ "@"
+                        span.checkout__rule *Поле обязательно для заполнения
                         span.checkout__policy Нажимая кнопку, вы даёте своё согласие на 
                             a(href='https://simplewine.ru/privacy_policy/' target="_blank") обработку персональных данных
                             | .
