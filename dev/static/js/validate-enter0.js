@@ -24,7 +24,7 @@ function validationTel() {
 function validationMail() {
     let email = document.getElementById('mail').value;
     let text = document.querySelector('.checkout__error--mail');
-    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    let pattern = /^[^ ]+@[^ ]+\.[a-z]{1,3}$/;
 
     if (email.match(pattern)) {
         text.classList.add('hidden');
