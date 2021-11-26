@@ -64,18 +64,12 @@
     }
 
     &__error {
-        display: none;
         @include font-setting($roboto-font, 0.75rem, 0.875rem, 400, $pink);
         text-align: left;
         transition: 0.4s $cubic;
 
-        &.success {
-            display: none;
-        }
-
-        &.active {
-            display: inline-block;
-            color: $pink;
+        &.hidden {
+            opacity: 0;
             transition: 0.4s $cubic;
         }
 

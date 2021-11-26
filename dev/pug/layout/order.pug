@@ -25,17 +25,16 @@ html(lang="ru-RU")
                     h1.checkout__title Оформление заказа
                     p.checkout__description Для оформления заказа введите контактные данные
                     
-                    form(action="" method="").checkout__form
+                    form(action="" method="" id="form").checkout__form
                         ul.checkout__list
                             li.checkout__item
                                 label(for="tel").checkout__label
-                                input(autocomplete="off" type="tel" name="tel" id="tel" placeholder="Мобильный телефон").checkout__input.mask-phone
-                                span.checkout__error.checkout__error--tel Телефон указан неверно. Должно быть 11 цифр, например: +7 (900) 800-70-60
+                                input(autocomplete="off" type="tel" name="tel" id="tel" placeholder="Мобильный телефон" onkeydown="validationTel()").checkout__input.mask-phone
+                                span.checkout__error.checkout__error--tel
                             li.checkout__item
                                 label(for="mail").checkout__label
-                                input(autocomplete="off" type="email" name="mail" id="mail" placeholder="Ваш e-mail*" required).checkout__input.checkout__input--mail
-                                span.checkout__error.checkout__error--mail.success
-                                span.checkout__error.checkout__error--mail.fail Адрес электронной почты должен содержать @. В адресе "адрес" отсутствует символ "@"
+                                input(autocomplete="off" type="email" name="mail" id="mail" placeholder="Ваш e-mail*" required onkeydown="validationMail()").checkout__input
+                                span.checkout__error.checkout__error--mail
                         span.checkout__rule *Поле обязательно для заполнения
                         span.checkout__policy Нажимая кнопку, вы даёте своё согласие на 
                             a(href='https://simplewine.ru/privacy_policy/' target="_blank") обработку персональных данных
@@ -48,9 +47,8 @@ html(lang="ru-RU")
         include ../modules/footer/footer
         script(src="static/js/vendor/jquery-3.3.1.min.js")
         //script(src="static/js/vendor/libs.js")
-        script(src="static/js/jquery.maskedinput.min.js")
         script(src="static/js/mask.js")
         script(src="static/js/main.js")
-        script(src="static/js/validate-enter.js")
+        script(src="static/js/validate-enter0.js")
         script(src="static/js/select.js")
         block script
