@@ -13,6 +13,7 @@ html(lang="ru-RU")
         meta(name="keywords" content="")
         link(rel="stylesheet" type='text/css' href="static/css/styles.css")
         //link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        script(src="https://player.vimeo.com/api/player.js")
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
@@ -69,6 +70,13 @@ html(lang="ru-RU")
                                     input(type="number" name="card-quantity" id="card-quantity" placeholder="0").itemcard__quantity-input
                                     button(type="button").itemcard__quantity-increase +
                                 button(type="button").itemcard__purchase В корзину
+                                
+                    <!--Itemcard video-->
+                    .itemcard__video
+                        .itemcard__video-wrapper
+                            button(type="button").itemcard__video-closer
+                            .itemcard__video-player
+                                iframe(src="https://player.vimeo.com/video/636725488?h=18efca3d1f&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen).itemcard__video-frame
             include ../modules/blocks/subscribe
             include ../modules/blocks/contacts
         include ../modules/footer/footer
@@ -76,4 +84,5 @@ html(lang="ru-RU")
         //script(src="static/js/vendor/libs.js")
         script(src="static/js/main.js")
         script(src="static/js/select.js")
+        script(src="static/js/stop-vimeo.js")
         block script

@@ -88,10 +88,6 @@
                     cursor: pointer;
                     outline: none;
                 }
-
-                &.active {
-                    border-color: $pink;
-                }
             }
         }
     }
@@ -119,6 +115,7 @@
         &__slider.gallery-top {
             height: 310px;
             max-height: 310px;
+            margin-bottom: 1.25rem;
         }
 
         &__slider.gallery-thumbs {

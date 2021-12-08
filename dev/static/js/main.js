@@ -124,3 +124,26 @@ for (var i = 0; i < upperItem.length; i++) {
 //        subscribeReaction.innerText = 'Вы успешно подписались на рассылку';
 //    });
 //};
+
+var videoFrame = document.querySelector('.itemcard__body');
+var videoBtn = document.querySelector('.js-start-video');
+var videoCloser = document.querySelector('.itemcard__video-closer');
+var videoPlayer = document.querySelector('.itemcard__video-frame');
+
+if (videoBtn) {
+    videoBtn.addEventListener('click', function () {
+        event.preventDefault();
+        videoFrame.classList.add('video-active');
+    });
+};
+
+if (videoCloser) {
+    videoCloser.addEventListener('click', function () {
+        event.preventDefault();
+        videoFrame.classList.remove('video-active');
+
+        if (videoPlayer.src.startsWith("https://player.vimeo.com/")) {
+            videoPlayer.contentWindow.postMessage('{"method":"pause"}', "*");
+        }
+    });
+};
