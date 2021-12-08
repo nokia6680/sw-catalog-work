@@ -27,18 +27,32 @@
         text-align: left;
         max-width: 320px;
 
-        margin-bottom: 3.125rem;
+        margin-bottom: 2rem;
     }
 
     &__contacts {
         width: 100%;
-
         @include flex-setting(column, flex-start, flex-start);
+        margin-bottom: 7rem;
 
-        margin-bottom: 4rem;
+        &-item {
+            margin-bottom: 0.3125rem;
 
-        .contacts__link:first-of-type {
-            margin-right: 1.25rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-name {
+            @include font-setting($helvetica-neue-font, 1.25rem, 1.75rem, 400, $black);
+            text-decoration: none;
+            transition: 0.4s $cubic;
+        }
+
+        a:hover,
+        a:active {
+            color: $pink;
+            transition: 0.4s $cubic;
         }
     }
 
@@ -138,11 +152,16 @@
             line-height: 1.0625rem;
             max-width: 420px;
 
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.25rem;
         }
 
         &__contacts {
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
+
+            &-name {
+                font-size: 0.875rem;
+                line-height: 1.0625rem;
+            }
         }
 
         &__btn {
@@ -175,7 +194,16 @@
         &__description {
             font-size: 1.125rem;
             line-height: 1.5625rem;
-            margin-bottom: 3.125rem;
+            margin-bottom: 1.125rem;
+        }
+
+        &__contacts {
+            margin-bottom: 2.5rem;
+
+            &-name {
+                font-size: 1.125rem;
+                line-height: 1.5625rem;
+            }
         }
 
         &__controls {

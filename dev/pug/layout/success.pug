@@ -24,7 +24,15 @@ html(lang="ru-RU")
                 .success__wrapper
                     h1.success__title Спасибо за оформление
                     p.success__description Наш сотрудник свяжется с вами в ближайшее время.
-
+                    p.success__description Если у вас остались вопросы, вы можете обратиться к менеджеру.
+                    
+                    ul.success__contacts
+                        li.success__contacts-item
+                            span.success__contacts-name Черноиванова Наталья
+                        li.success__contacts-item
+                            a(href="tel:+79262081745" target="_self").success__contacts-name +7(926) 208-17-45
+                        li.success__contacts-item
+                            a(href="mailto:nchernoivanova@simple.ru" target="_self").success__contacts-name nchernoivanova@simple.ru
                     .success__controls
                         button(type="button").success__btn Распечатать заказ
                         a(href="catalog.html" target="_self").success__link Вернуться в каталог

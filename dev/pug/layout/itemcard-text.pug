@@ -32,42 +32,25 @@ html(lang="ru-RU")
                 .itemcard__body
                     <!--Галерея-->
                     .itemcard__gallery.gallery
-                        .gallery__slider.swiper-container-top.gallery-top
-                            //.swiper-wrapper
+                        .gallery__slider.gallery-top
                             .gallery__item
                                 picture.gallery__frame
                                     source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
                                     img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image
-                            //.fraction-pagination
-                        //.gallery__slider.swiper-container-thumbs.gallery-thumbs
-                            .swiper-wrapper
-                                .gallery__item.gallery__item--thumb.swiper-slide
-                                    picture.gallery__frame.gallery__frame--thumb
-                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
-                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image.gallery__frame-image--thumb
-                                .gallery__item.gallery__item--thumb.swiper-slide
-                                    picture.gallery__frame.gallery__frame--thumb
-                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
-                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image.gallery__frame-image--thumb
-                                .gallery__item.gallery__item--thumb.swiper-slide
-                                    picture.gallery__frame.gallery__frame--thumb
-                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
-                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image.gallery__frame-image--thumb
-                                .gallery__item.gallery__item--thumb.swiper-slide
-                                    picture.gallery__frame.gallery__frame--thumb
-                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
-                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image.gallery__frame-image--thumb
-                                .gallery__item.gallery__item--thumb.swiper-slide
-                                    picture.gallery__frame.gallery__frame--thumb
-                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
-                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image.gallery__frame-image--thumb
-                                .gallery__item.gallery__item--thumb.swiper-slide
-                                    picture.gallery__frame.gallery__frame--thumb
-                                        source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
-                                        img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image.gallery__frame-image--thumb
-                        //.gallery__controls
-                            button(type="button").gallery__prev-th
-                            button(type="button").gallery__next-th
+                            .gallery__item
+                                picture.gallery__frame
+                                    source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
+                                    img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image
+                        .gallery__slider.gallery-thumbs
+                            .gallery__item.gallery__item--thumb.active
+                                picture.gallery__frame.gallery__frame--thumb
+                                    source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
+                                    img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image.gallery__frame-image--thumb
+                            .gallery__item.gallery__item--thumb.video-item
+                                picture.gallery__frame.gallery__frame--thumb
+                                    source(type="image/webp" srcset="static/images/content/bottle-1.webp" )
+                                    img(itemprop="image" src="static/images/content/bottle-1.png").gallery__frame-image.gallery__frame-image--thumb
+                                button(type="button").gallery__btn.js-start-video
                     <!--Блок информации о продукте-->
                     .itemcard__info
                         b.itemcard__price 1 005 ₽
@@ -92,7 +75,5 @@ html(lang="ru-RU")
         script(src="static/js/vendor/jquery-3.3.1.min.js")
         //script(src="static/js/vendor/libs.js")
         script(src="static/js/main.js")
-        //script(src="https://unpkg.com/swiper/swiper-bundle.js")
-        //script(src="static/js/slider.js")
         script(src="static/js/select.js")
         block script

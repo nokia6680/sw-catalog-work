@@ -42,6 +42,15 @@ html(lang="ru-RU")
                         .checkout__controls
                             button(type="submit").checkout__submit Оформить заказ
                             a(href="catalog.html" target="_self").checkout__return Вернуться в каталог
+                        .checkout__help
+                            p.success__description Вы также можете оформить заказ или уточнить детали, связавшись с менеджером
+                            ul.success__contacts
+                                li.success__contacts-item
+                                    span.success__contacts-name Черноиванова Наталья
+                                li.success__contacts-item
+                                    a(href="tel:+79262081745" target="_self").success__contacts-name +7(926) 208-17-45
+                                li.success__contacts-item
+                                    a(href="mailto:nchernoivanova@simple.ru" target="_self").success__contacts-name nchernoivanova@simple.ru
             include ../modules/blocks/subscribe
             include ../modules/blocks/contacts
         include ../modules/footer/footer

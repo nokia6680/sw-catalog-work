@@ -98,9 +98,12 @@
         grid-template-areas:
             'frame info'
             'frame about'
+            'frame about'
+            'frame about'
         ;
 
         grid-column-gap: 2.5rem;
+        align-items: start;
     }
 
     &__gallery {
