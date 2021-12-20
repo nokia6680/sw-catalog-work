@@ -7,6 +7,10 @@
 @import "utils/item";
 @import "utils/breadcrumbs"; //@include sprites($spritesheet-sprites);
 
+:root {
+    --vh: 1vh;
+}
+
 html {
     font-family: 'Lato', Arial, serif;
     font-size: 16px;
@@ -99,6 +103,26 @@ select {
     .main {
         width: 100%;
         padding-top: 4.9375rem;
+    }
+}
+
+.body-video {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        position: absolute;
+        content: '';
+
+        width: 100vw;
+        height: calc(var(--vh, 1vh) * 200);
+
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        background-color: rgba(255, 255, 255, 0.7);
     }
 }
 

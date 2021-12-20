@@ -1,3 +1,15 @@
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+// We listen to the resize event
+window.addEventListener('resize', () => {
+  // We execute the same script as before
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
 $(function() {
     $(window).scroll(function() {
         var catalog = document.querySelector('.menu');
@@ -127,6 +139,7 @@ for (var i = 0; i < upperItem.length; i++) {
 
 var videoFrame = document.querySelector('.itemcard__body');
 var videoBtn = document.querySelector('.js-start-video');
+var body = document.querySelector('.body-itemcard');
 var videoCloser = document.querySelector('.itemcard__video-closer');
 var videoPlayer = document.querySelector('.itemcard__video-frame');
 
@@ -134,6 +147,8 @@ if (videoBtn) {
     videoBtn.addEventListener('click', function () {
         event.preventDefault();
         videoFrame.classList.add('video-active');
+        body.classList.add('body-video');
+        window.scrollTo(pageXOffset, 0);
     });
 };
 
@@ -141,6 +156,7 @@ if (videoCloser) {
     videoCloser.addEventListener('click', function () {
         event.preventDefault();
         videoFrame.classList.remove('video-active');
+        body.classList.remove('body-video');
 
         if (videoPlayer.src.startsWith("https://player.vimeo.com/")) {
             videoPlayer.contentWindow.postMessage('{"method":"pause"}', "*");
