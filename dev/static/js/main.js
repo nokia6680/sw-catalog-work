@@ -148,7 +148,7 @@ if (videoBtn) {
         event.preventDefault();
         videoFrame.classList.add('video-active');
         body.classList.add('body-video');
-        window.scrollTo(pageXOffset, 0);
+        window.scrollTo(pageXOffset, 200);
     });
 };
 
